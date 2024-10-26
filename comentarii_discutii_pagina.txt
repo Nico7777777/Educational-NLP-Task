@@ -1,0 +1,365 @@
+PAGINA 1
+====================================================================================================
+1 . user: AlecLC  | URL: https://leetcode.com/u/AlecLC/
+comment 1 : Am I the only one who stared at this for 5 minutes not understanding the difference between delete dupes 2 and delete dupes 1?
+==============================
+2 . user: Ramonsan07  | URL: https://leetcode.com/u/Ramonsan07/
+comment 1 : I hate linked list problems and the tons of edge cases you find yourself into when you solve them
+==============================
+3 . user: tanula  | URL: https://leetcode.com/u/tanula/
+comment 1 : description is poorly written. It should have said "find the duplicates and remove them all from the original list".
+==============================
+4 . user: BishalPoudel  | URL: https://leetcode.com/u/BishalPoudel/
+comment 1 : *** JUST IN CASE IF YOU WANT HINT ***
+==============================
+5 . user: Ajay_787  | URL: https://leetcode.com/u/Ajay_787/
+comment 1 : Solved in 20 mins feeling proud, I love LL
+==============================
+6 . user: vladiora  | URL: https://leetcode.com/u/vladiora/
+comment 1 : Test cases that I found useful:
+[]
+[1,1]
+[1,2,2]
+==============================
+7 . user: Vishesh2308  | URL: https://leetcode.com/u/Vishesh2308/
+comment 1 : (clickable)
+==============================
+8 . user: navinbisht1992  | URL: https://leetcode.com/u/navinbisht1992/
+comment 1 : In javascript list is
+list = { val: 0, next: null, };
+==============================
+comment 2 : and when this is returned it's [0] and not [].
+==============================
+comment 3 : So many issues in leetcode
+==============================
+9 . user: Tushar0903200  | URL: https://leetcode.com/u/Tushar0903200/
+comment 1 : Here my very bad intuition . Please don't cuss me . I am new to linked List. We can use get the length of the Linked list . Then we create another function in which we create another array of size n(which is the size of linked list) and use HashMap to check frequency of the elements in the array . If the frequency of element is 1 . Modify the array . Then in main function . Just add the elements of array in linked list .
+I know my solution is very bad but its my first intuition when i saw this question .
+==============================
+10 . user: gourav0_0  | URL: https://leetcode.com/u/gourav0_0/
+comment 1 : What should be time and space complexity for this problem
+==============================
+PAGINA 2
+====================================================================================================
+PAGINA 2
+====================================================================================================
+11 . user: bhavya21245  | URL: https://leetcode.com/u/bhavya21245/
+comment 1 : class Solution {
+public ListNode deleteDuplicates(ListNode head) {
+if(head.next==null || head==null){
+return head;
+}
+HashMap<Integer,Integer>map=new HashMap<>();
+ListNode dummy=new ListNode(0);
+==============================
+comment 2 : }
+This code is giving wrong answer for testcase [1,2,2] it is giving [1,2,2] instead of [1] can anyone pls tell
+what's the error??
+==============================
+12 . user: harsh3107  | URL: https://leetcode.com/u/harsh3107/
+comment 1 : just keep track of last node which is not repeating
+==============================
+13 . user: LeetCode  | URL: https://leetcode.com/u/LeetCode/
+comment 1 : This problem is the Daily LeetCoding Challenge for March, Day 9.
+==============================
+comment 2 : Feel free to share anything related to this problem here!
+==============================
+comment 3 : You can ask questions, discuss what you've learned from this problem, or show off how many days of streak you've made!
+==============================
+comment 4 : If you'd like to share a detailed solution to the problem, please create a new post in the discuss section and provide
+==============================
+comment 5 : 
+==============================
+comment 6 : 
+==============================
+comment 7 : 
+==============================
+comment 8 : 
+==============================
+14 . user: Musti_Don  | URL: https://leetcode.com/u/Musti_Don/
+comment 1 : Approach:
+==============================
+comment 2 : 
+==============================
+15 . user: neerajydv23  | URL: https://leetcode.com/u/neerajydv23/
+comment 1 : In the code, we are returning new head of linked list as "dummy.next" but in starting dummy is pointing towards head so as we move forward the head is changing or it might be getting removed if it is a duplicate then how is dummy.next returning the head of output linked list ?
+==============================
+16 . user: kshitij_2025  | URL: https://leetcode.com/u/kshitij_2025/
+comment 1 : plzz help - for input [1,1] it's showing runtime error
+==============================
+comment 2 : `class Solution {
+public:
+ListNode* deleteDuplicates(ListNode* head) {
+ListNode* curr=head;
+ListNode* dummyhead= new ListNode(0,head);
+ListNode* prev =dummyhead;
+if(head == NULL){
+return head;
+}
+while(curr != NULL && curr->next !=NULL){
+if(curr->val == curr->next->val ){
+while(curr->val == curr->next->val){
+curr=curr->next;
+}prev->next=curr->next;
+if(curr->next != NULL){
+curr=curr->next;}
+}else{
+prev=curr;
+curr=curr->next;
+}
+==============================
+comment 3 : 
+==============================
+17 . user: alexrlh2  | URL: https://leetcode.com/u/alexrlh2/
+comment 1 : I have an O(n) solution but it does not use the fact that the list is sorted. Can this fact be used to optimise in any way? If not, why is the list sorted in the challenge?
+==============================
+18 . user: thejus2003  | URL: https://leetcode.com/u/thejus2003/
+comment 1 : Trick is to use dictionary to store the frequency...infact the trick is to use dictionary for most linked list qns of this type
+==============================
+19 . user: ZgU6V2z0PL  | URL: https://leetcode.com/u/ZgU6V2z0PL/
+comment 1 : dude cant we just check
+this if prev != curr and curr != next
+then this node is unique ?
+why use extra space
+==============================
+20 . user: supahsilly12345  | URL: https://leetcode.com/u/supahsilly12345/
+comment 1 : I wrote 3 nested while loops and thought my solution was for sure cooked
+==============================
+PAGINA 3
+====================================================================================================
+PAGINA 3
+====================================================================================================
+21 . user: piyushhmishraaa  | URL: https://leetcode.com/u/piyushhmishraaa/
+comment 1 : am i the only one who didnt use the fact that the list is in sorted order?
+==============================
+22 . user: abmishra123  | URL: https://leetcode.com/u/abmishra123/
+comment 1 : test cases or dummy cases that i found useful.
+[1,1] [1,1,2] [1,1,2,2] [1,1,2,2,3]
+==============================
+23 . user: Armaan1811  | URL: https://leetcode.com/u/Armaan1811/
+comment 1 : I used brute force. unordered map - vector - sort vector - new list
+==============================
+24 . user: thesmashten  | URL: https://leetcode.com/u/thesmashten/
+comment 1 : This question destroyed my confidence in Linked Lists..
+==============================
+comment 2 : TBH linked lists are such a garbage data structure.
+==============================
+25 . user: semes  | URL: https://leetcode.com/u/semes/
+comment 1 : If you need to return [], just return null.
+==============================
+26 . user: vigneshbangaru69  | URL: https://leetcode.com/u/vigneshbangaru69/
+comment 1 : Wrong Answer
+63 / 166 testcases passed
+Input
+head =
+[-3,-1,0,0,0,3,3]
+Use Testcase
+Output
+[-1,-3]
+Expected
+[-3,-1]
+==============================
+comment 2 : 
+==============================
+27 . user: Priyanshu5603  | URL: https://leetcode.com/u/Priyanshu5603/
+comment 1 : [1, 2, 2] was a testcase I overlooked but was interesting.
+please consider this as well while writing the logic
+==============================
+28 . user: gauravkabra  | URL: https://leetcode.com/u/gauravkabra/
+comment 1 : The list is guaranteed to be sorted in ascending order.
+==============================
+comment 2 : It should be rewritten as The list is guaranteed to be sorted in non-descending order.
+==============================
+29 . user: umair42-dev  | URL: https://leetcode.com/u/umair42-dev/
+comment 1 : My input =[1,1,1,2,3] output=[2,3].
+My output for given input is same as it is explained in example.
+but in the test result the expected output is :1,2,3.. this question and its test cases needed to be reviewed.
+==============================
+30 . user: rajkumar_darshanala  | URL: https://leetcode.com/u/rajkumar_darshanala/
+comment 1 : The moment i realized that i have to remove all the nodes having duplicates. 🙂
+==============================
+comment 2 : I have solved 300 medium questions with this one. ✌️
+==============================
+PAGINA 4
+====================================================================================================
+PAGINA 4
+====================================================================================================
+31 . user: Dev-Luiz-Henrique  | URL: https://leetcode.com/u/Dev-Luiz-Henrique/
+comment 1 : Here is my solution: https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/solutions/5488244/c-best-explained-solution/
+==============================
+32 . user: whis-17  | URL: https://leetcode.com/u/whis-17/
+comment 1 : I thought it is piece of cake. But I was mistaken
+==============================
+33 . user: ShrimpTacos  | URL: https://leetcode.com/u/ShrimpTacos/
+comment 1 : Solve Remove Duplicates from Sorted List I first. It'll save you a lot of hassle on this problem.
+==============================
+34 . user: ramakrishna1607  | URL: https://leetcode.com/u/ramakrishna1607/
+comment 1 : I was able to solve almost all the medium level Linked list problems. This one feels kinda hard NGL.
+==============================
+35 . user: satyamkumarsingh705071  | URL: https://leetcode.com/u/satyamkumarsingh705071/
+comment 1 : Firstly we can check the value of current node to next node ? if not equal we can make a dummy node and add it...in case if equal store this value into a new variable and we can use another while loop to skip nodes until it is equal to value ..and then again add this node to dummy hence we can store all the unique elements
+overall time complexity O(n) and space complexity O(1)
+==============================
+36 . user: jumand  | URL: https://leetcode.com/u/jumand/
+comment 1 : CHECK HERE FOR COMPLETE DETAILED SOLUTION :
+==============================
+comment 2 : YOUTUBE
+==============================
+37 . user: Vishwas_726  | URL: https://leetcode.com/u/Vishwas_726/
+comment 1 : The Question is Awesome..
+==============================
+comment 2 : Solution : https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/solutions/5390760/java-beats-100-easy-code
+==============================
+38 . user: Chauhan_Abhishek_  | URL: https://leetcode.com/u/Chauhan_Abhishek_/
+comment 1 : Use 3 pointers : prev( jump leaving duplicates behind ) , curr (track duplicates) ,nxt(fresh element)
+==============================
+39 . user: Jyothi_prabha  | URL: https://leetcode.com/u/Jyothi_prabha/
+comment 1 : class Solution {
+public ListNode deleteDuplicates(ListNode head) {
+if(head==null || head.next==null) return head;
+==============================
+comment 2 : }
+==============================
+40 . user: Gajendra9109  | URL: https://leetcode.com/u/Gajendra9109/
+comment 1 : can we use the hashSet to solve this problem and how please anyone can explain it is possible or not .....
+==============================
+PAGINA 5
+====================================================================================================
+PAGINA 5
+====================================================================================================
+41 . user: joker-ksh  | URL: https://leetcode.com/u/joker-ksh/
+comment 1 : If my solution is of time O(n^2) with O(1) space. Is it optimized one??(If no recursion)
+==============================
+42 . user: aldeshov  | URL: https://leetcode.com/u/aldeshov/
+comment 1 : To solve using recursion:
+Try thinking about - what to return, what if head.val == head.next.val ? In this case we try to return furthest next element, which it's value element.val != head.val. Otherwise we set next of head to the node, which does not contain duplicated values, -> using recursion
+==============================
+43 . user: aldeshov  | URL: https://leetcode.com/u/aldeshov/
+comment 1 : Solved it using recursion. Just couple checks for head & head.next.
+==============================
+44 . user: altadasaiaditya999  | URL: https://leetcode.com/u/altadasaiaditya999/
+comment 1 : use two hashmaps one for counting occurrences and another for storing unique nodes
+==============================
+45 . user: halagholeh  | URL: https://leetcode.com/u/halagholeh/
+comment 1 : nice problem I like it
+==============================
+46 . user: omkar-nag2429  | URL: https://leetcode.com/u/omkar-nag2429/
+comment 1 : Python solution - O(n) time complexity, O(1) space complexity. Logic at the end.
+==============================
+comment 2 : Points to focus on:
+==============================
+47 . user: kbloed  | URL: https://leetcode.com/u/kbloed/
+comment 1 : Can anyone help me with this problem. I'm trying to solve in C but I've been facing the same problem over and over again, I had implemented some changes in order to avoid memory leaks once I deallocate memory. No matter what I change I came with that the same error keeps prompting all the time. Here it's the code:
+struct ListNode* deleteDuplicates(struct ListNode* head) {
+if(head == NULL || head->next == NULL) return head;
+==============================
+comment 2 : }
+And the error is related to this 22==ERROR: AddressSanitizer: heap-use-after-free on address 0x602000000090 at pc 0x564309abc79f bp 0x7ffecb303150 sp 0x7ffecb303140
+==============================
+48 . user: anirudhsingh03  | URL: https://leetcode.com/u/anirudhsingh03/
+comment 1 : What will be output if input=[1,1,1]
+==============================
+49 . user: trinhducthang201  | URL: https://leetcode.com/u/trinhducthang201/
+50 . user: Purpl3Mint  | URL: https://leetcode.com/u/Purpl3Mint/
+comment 1 : Hint to JS solution: you can get absolutely empty list [] by call (new ListNode()).next. If you call new ListNode() you get [0]
+==============================
+PAGINA 6
+====================================================================================================
+PAGINA 6
+====================================================================================================
+51 . user: mordansgaming  | URL: https://leetcode.com/u/mordansgaming/
+comment 1 : Consider using two distinct passes through the list to first identify and then remove duplicates. In the first pass, utilize a set to track all encountered values, marking duplicates as you go. This will allow you to identify which values occur more than once without altering the list structure. In the second pass, armed with the knowledge of which values are duplicates, traverse the list once more, this time removing nodes with values that appear in your duplicates set. Remember, the use of a dummy node can greatly simplify handling edge cases, especially when the head of the list might be removed. This approach leverages the efficiency of set operations and the simplicity of sequential traversal to achieve a clean, duplicate-free list.
+==============================
+52 . user: Anuj_Mishra04  | URL: https://leetcode.com/u/Anuj_Mishra04/
+comment 1 : do we need to change the original ll or we can reconstruct it into anoh]ther
+==============================
+53 . user: tomatod  | URL: https://leetcode.com/u/tomatod/
+comment 1 : It would be difficult for me to solve this question without bug if I have enough time. I don't want to run into this question in an interview...
+==============================
+comment 2 : Anyway, I think it's an easy and simple way to think that an node without duplicate value node before and after the node should be included in the answer.
+==============================
+54 . user: mohd_irfan0000  | URL: https://leetcode.com/u/mohd_irfan0000/
+comment 1 : if(current .val==current.next.val) store the value of current in duplicate int variable,
+==============================
+55 . user: its_oByes  | URL: https://leetcode.com/u/its_oByes/
+comment 1 : class Solution {
+public:
+ListNode* deleteDuplicates(ListNode* head) {
+map<int,int>mp;
+==============================
+comment 2 : };
+==============================
+comment 3 : why i am wrong ,while erasing the map
+==============================
+56 . user: etanila  | URL: https://leetcode.com/u/etanila/
+comment 1 : Tricky!
+==============================
+57 . user: marat61  | URL: https://leetcode.com/u/marat61/
+comment 1 : I think to make this task reasonably hard the real diapason should be much bigger than -100 <= Node.val <= 100
+==============================
+58 . user: grexgrub  | URL: https://leetcode.com/u/grexgrub/
+comment 1 : is it normal to convert a linked list to an array to solve this type of problem?
+==============================
+59 . user: iw33209jfdcifidfj93  | URL: https://leetcode.com/u/iw33209jfdcifidfj93/
+comment 1 : why is including this statement cause error and without this solution run :-
+if(pr) {pr->next = nullptr;delete pr;}
+is this delete keyword not used in leetcode ?
+==============================
+60 . user: saarthakmadaan2004  | URL: https://leetcode.com/u/saarthakmadaan2004/
+PAGINA 7
+====================================================================================================
+PAGINA 7
+====================================================================================================
+61 . user: mochiball123  | URL: https://leetcode.com/u/mochiball123/
+comment 1 : One of the tougher linkedlist problems
+==============================
+62 . user: vansh69  | URL: https://leetcode.com/u/vansh69/
+comment 1 : class Solution {
+public:
+ListNode* deleteDuplicates(ListNode* head) {
+==============================
+comment 2 : };
+==============================
+comment 3 : What's Wrong in this code ?
+I am getting wrong answer for
+head = [1,2,2]
+==============================
+comment 4 : Edit : I just added
+anstail->next = NULL;
+and it worked ;)
+==============================
+63 . user: firezdog  | URL: https://leetcode.com/u/firezdog/
+comment 1 : looking through the solutions and none of them seems particularly elegant so far :(
+==============================
+64 . user: tosolano  | URL: https://leetcode.com/u/tosolano/
+comment 1 : Is anyone else using Go and getting inconsistent results where certain test cases fail every frew runs, but pass on other runs, despite not changing the code? I'm not using any global variables or static variables and I'm declaring all of my variables before assigning them. The article on this issue only really covers C/C++,Java, and Python, so I wanted to know if anyone else has experienced this behavior? Thanks!
+==============================
+65 . user: Ayush_Agarwal_2003  | URL: https://leetcode.com/u/Ayush_Agarwal_2003/
+comment 1 : apparently I dont think there was any testcase to check whether u sorted the list or not , my solution passed completely even before I was done writing code for bubble sort
+==============================
+66 . user: APragnya  | URL: https://leetcode.com/u/APragnya/
+comment 1 : class Solution {
+public ListNode deleteDuplicates(ListNode head) {
+int count =0, rep;
+ListNode current = head;
+ListNode pos = null;
+while(current!=null){
+if(current.val != current.next.val){
+count++;
+current = current.next;
+continue;
+}
+==============================
+comment 2 : }
+==============================
+comment 3 : I get a null pointer exception in my code, Could somebody please help me understand the error
+==============================
+67 . user: vageshwari1062  | URL: https://leetcode.com/u/vageshwari1062/
+comment 1 : I am not getting this statement ListNode sentinel = new ListNode(0, head); in the leetcode solution and why can't we use ListNode sentinel = head; instead.
+==============================
+68 . user: HolyHorse  | URL: https://leetcode.com/u/HolyHorse/
+comment 1 : the ListNode class also should have previous node
+==============================
+69 . user: AnkushR10  | URL: https://leetcode.com/u/AnkushR10/
+comment 1 : https://github.com/AnkushRawat10601/Leetcode/blob/main/82_remove_duplicate_2.cpp
+==============================
