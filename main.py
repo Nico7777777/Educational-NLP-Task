@@ -306,8 +306,8 @@ def seek_for_responses(problem):
                 return
 
 def check_clean():
-    file_path1 = Path("discussion.csv")
-    file_path2 = Path("problemset.csv")
+    file_path1 = Path("datasets/discussion.csv")
+    file_path2 = Path("datasets/problemset.csv")
     if file_path1.is_file():
         file_path1.unlink()
     if file_path2.is_file():
@@ -324,8 +324,8 @@ if __name__=="__main__":
     # print("blabla 2")
 
     # check_clean()
-    csv_1 = open("problemset.csv", mode="a", newline="")
-    csv_2 = open("discussion.csv", mode="a", newline="")
+    csv_1 = open("datasets/problemset.csv", mode="a", newline="")
+    csv_2 = open("datasets/discussion.csv", mode="a", newline="")
 
     writer_1 = csv.writer(csv_1)
     writer_2 = csv.writer(csv_2)
