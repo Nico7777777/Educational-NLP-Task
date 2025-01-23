@@ -24,6 +24,11 @@ user_timeout = 3
 consent = False
 driver = None
 
+class UntrackedException(Exception):
+    def __init__(self, message):
+        self.message = message
+
+
 def dump_fremium_problems():
     global fremium_problems
     with open(FREE_PROBLEMS_FILE, "r") as g:
@@ -172,15 +177,19 @@ def do_consent():
         return
 
 def comment_wrapper_aux(com_anc):
-    # class = flex w-full flex-col py-3
-    sixth_parent_div = com_anc.find_element(By.XPATH, "ancestor::div[6]")
-    # class = mt-2 flex w-full flex-col text-label-2 dark:text-dark-label-2
-    second_child_div = sixth_parent_div.find_element(By.XPATH, "div[2]")
-    # class = FN9Jv
-    fourth_descendant_div = second_child_div.find_element(By.XPATH, "./descendant::div[4]")
-    # COMMENT TEXT
-    split_comment_texts = fourth_descendant_div.find_elements(By.XPATH, ".//p")
-    return sixth_parent_div, second_child_div, fourth_descendant_div, split_comment_texts
+    try:
+        # class = flex w-full flex-col py-3
+        sixth_parent_div = com_anc.find_element(By.XPATH, "ancestor::div[6]")
+        # class = mt-2 flex w-full flex-col text-label-2 dark:text-dark-label-2
+        second_child_div = sixth_parent_div.find_element(By.XPATH, "div[2]")
+        # class = FN9Jv
+        fourth_descendant_div = second_child_div.find_element(By.XPATH, "./descendant::div[4]")
+        # COMMENT TEXT
+        split_comment_texts = fourth_descendant_div.find_elements(By.XPATH, ".//p")
+        return sixth_parent_div, second_child_div, fourth_descendant_div, split_comment_texts
+    except Exception as e:
+        print(f"{e}")
+        raise UntrackedException("Comment_wrapper_aux")
 
 def get_date_(sixth_parent_div):
     date_tag = sixth_parent_div.find_element(By.XPATH, ".//span")
@@ -290,6 +299,9 @@ def seek_for_responses(problem):
                             writer_2.writerow([problem_name_, comment_id, parent_id, text, date, upvotes, username])
                 except StaleElementReferenceException:
                     break
+                except UntrackedException as e:
+                    print(f"{e}")
+                    break
 
             else:
                 if go_to_next_comment_page(driver):
@@ -334,15 +346,16 @@ if __name__=="__main__":
     # writer_2.writerow(["Problem Name", "Id", "Parent_Id", "Text", "Date", "Up Votes", "Username"])
 
     n = len(fremium_problems)
-    for i in range(2408, n):
+    pb = ["https://leetcode.com/problems/minimum-cost-to-cut-a-stick/"]
+    for i in range(len(pb)):
         print(f"Problema cu idx {i}")
-        problem = fremium_problems[i]
+        problem = pb[i]
         do_consent()
-        pb = fremium_problems[i]
+        pb = pb[i]
         driver.get(pb)
 
         # PROBLEM_NAME
-        problem_name = problem[problem.rfind('/')+1:]
+        problem_name = problem[problem.rfind('/')+1:-1]
         # DIFFICULTY, TOPICS
         dif, topics = get_difficulty(), get_topics()
         # ACCURACY, SUBMISSIONS, ACCEPTANCE_RATE
