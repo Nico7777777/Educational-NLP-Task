@@ -1,0 +1,1802 @@
+Problem_Name,Id,Parent_Id,Text,Date,Up_Votes,Username,Parent_Up_Votes,Parent_Date,Parent_Text
+"minimum-moves-to-capture-the-queen
+",66,62,same :( i spent my entire time even after the contest trying to come up with backtracking and still failed :(,"Jan 07, 2024",0,ritzo37,0,"Jan 07, 2024",I tried to do it by recusrion anyone else I think I was the stupid who thought of recursion directly although can be solved with just conditions.
+"find-the-student-that-will-replace-the-chalk
+",50,48,@zaskyou well then you'll have to wait,"Sep 03, 2024",0,jshim2705,6,"Sep 02, 2024","Is there a mistake in Hint 2?Hint 1: Subtract the sum of chalk from k until k is less than the sum of chalk.
+Hint 2: Now iterate over the array. If chalk[i] is less than k, this is the answer.It should be : if chalk[i] is BIGGER than k, because we are subtracting from k, and it gets smaller."
+"managers-with-at-least-5-direct-reports
+",6,1,"What is the problem with this ?
+select name
+from Employee
+where managerId in (select count(managerId) as idc from Employee
+group by managerId
+having idc >=5
+);","May 15, 2024",0,appie_pie,88,"May 11, 2023","Easiest with the right logic
+I never understood combining the table twice...select name from Employee where id in (select managerID from employee group by managerId having count(*)>=5);"
+"minimum-cost-to-convert-string-i
+",159,158,@neks yess actually true,"Jul 27, 2024",0,ShreyaGarg63,0,"Jul 27, 2024",Graphs and trees are the most difficult ones 😭😭
+"frequency-of-the-most-frequent-element
+",147,146,"@yao0103 any idea why ?
+cause its not the largest or any unusual testcase its simple right?","Feb 04, 2024",0,balajirai,0,"Feb 04, 2024",
+"array-prototype-last
+",37,35,Why would a programming exercise need to conform to some particular spec? The purpose of the problem is to force participants to implement a certain feature; ability to trivially delegate to an existing method would only detract from the value of the problem.,"May 27, 2023",0,tifv,1,"May 27, 2023","the Array.at() method has already shipped and supports negative indices. This question should be changed to not have that weird -1 requirement, to return undefined instead so that its at the very least compliant with what is the spec."
+"move-zeroes
+",216,214,"@d75324 the line 17 : nums = nums + [0]*num_zeros .
+This line adds zeros at the end of the list","Nov 06, 2023",0,suraj479,0,"Nov 06, 2023","Can anyone tell me what is wrong with my code ? This code is getting executed in Jupyter notebook but not in here.I am using python.num_zeros = nums.count(0)
+i=0
+length = len(nums)
+while i < length:
+if nums[i]==0:
+nums.pop(i)
+length = len(nums)
+else:
+i+=1
+nums = nums + [0]*num_zeros
+return nums"
+"rank-transform-of-an-array
+",19,15,thanks case bro,"Oct 02, 2024",4,Garv_Virmani,32,"Oct 02, 2024",TESTCASES--------------->
+"exclusive-time-of-functions
+",21,19,"I think the expected result is incorrect. I have previously successful submissions that are erring on this case now. My solution is [3,5,1] and they're expecting [2,6,1] which I calculated myself by hand and it should be [3,5,1]","May 03, 2024",0,arabisoft,11,"Apr 13, 2024","case 120
+n = 3, logs = [""1:start:0"",""0:start:2"",""1:start:3"",""2:start:4"",""2:end:4"",""0:end:6"",""1:end:7"",""1:end:8""]
+Is this a valid case??"
+"game-play-analysis-iv
+",38,33,"have you tried adding IFNULL ( ,0) to the formula? It worked for me, since there were cases where the result is null","May 17, 2023",0,Panda_30,9,"Mar 03, 2021","Got stuck with this question. My code can pass with the testing case but not the submission case.Hope someone can help correct my code. Thank you a lot.select round(count(distinct t.player_id)*1.0/(select count(distinct player_id) from Activity),2) as fraction
+from(
+select a.player_id as player_id
+from Activity a, Activity b
+where Datediff(day, a.event_date, b.event_date) = 1 AND a.player_id = b.player_id)t"
+"root-equals-sum-of-children
+",40,39,"Wow thanks, i just added .val to the right and left as you said, and then it worked lol","Sep 25, 2023",1,Mudi26,12,"Sep 06, 2023","Important Information:
+I'm using Ruby but hopefully this helps others too.This feels like a pretty mean trick for a beginner question."
+"two-sum
+",522,521,"Arrays begin from '0'. In this case array[0] = 0 and array[3]=0 ( [0,1,2,3] ->[0,4,3,0] ). So the answer is 0+0 = 0.
+You are interpreting it wrong.","Mar 06, 2024",0,Vamonosraza,0,"Mar 05, 2024","nums = [0,4,3,0]
+target = 0
+Output: [0,3]
+Could someone explain how the output of [0,4,3,0] is [0, 3].
+sum of nums[0] + nums[1] + nums[2] + nums[3] is 7. but the target is 0."
+"maximum-multiplication-score
+",64,63,Check the Solutions tab.,"Sep 16, 2024",0,radiosilence,0,"Sep 15, 2024",I'm a newbie here! can someone explain how to solve it???
+"flatten-nested-list-iterator
+",99,96,Keep in mind that the follow-up question during interviews is to implement this NestedIterator without copying all the contents of nestedList.,"Oct 20, 2023",0,aitachii,-5,"Oct 20, 2023",First time I say this but this one should be definitely an easy one.
+"maximize-score-of-numbers-in-ranges
+",31,30,definitely a medium-hard,"Sep 08, 2024",1,Cpt-DV,1,"Sep 08, 2024",doesn't feel like easy medium problem
+"minimum-absolute-difference
+",10,8,Dont' put solutions in discussion,"Aug 11, 2023",3,bjhhar6475,4,"Jan 08, 2023","Sorting makes this so easy.
+Tip:
+1. Sort array
+2. Iterate through the array and find minimum difference between adjacent integers(In sorted array minimum occurs only between adjacent integers).
+3. Iterate again ,if two adjacent integers difference is equals to minimum difference then add them to list(list).(Since difference occurs between adjacent integers, result list will also contains adjacent integers of sorted array).Refer this Java solution for reference:
+https://leetcode.com/problems/minimum-absolute-difference/solutions/3019044/java-easy-code-detailed-solution/"
+"fraction-to-recurring-decimal
+",2,1,"If you know about division and rational numbers you should know what repetition means.
+In any case, you can always write a testcase and see what the expected output is.","Sep 20, 2023",3,BitBlaster,27,"May 17, 2020","There are a lot of ambiguities in this question that make it impossible to solve without guessing what is meant. Perhaps this is a good interview question, because you can see if the candidate will talk through the ambiguities, but it is not a good leetcode question because short of submitting solutions with my interpretations, and checking to see if they pass or fail, I have no way of knowing what is actually intended by the question.For example, how many digits of precision should I return? Should I truncate or round to get this precision? The question asks that I enclose a ""repeating part"" of the decimal in parantheses. Does that mean I put parantheses around any repetition - e.g. 0.661 should be 0.(6)1 because 6 repeated twice? Or just repetition that goes to the end of the length of my output string? Do I mark repeatign digits or repeating sequences?"
+"most-frequent-even-element
+",6,5,"sure, think of sorting the array.","Nov 16, 2024",0,The_King_of_Versailles,2,"Oct 12, 2024","Is there a way to approach this without the usage of Map ?
+Thanks"
+"count-of-smaller-numbers-after-self
+",20,18,"I tried DP, realized that linear time is impossible, modified to a n*(logn) solution with binary search. It's not much but it's honest work!","Dec 22, 2023",1,chibi_chihiro,9,"Apr 04, 2021",What is the idea behind the merge sort? And how does someone come up with such solution when seeing this problem? I'm curious about the thinking process behind it.
+"delete-nodes-from-linked-list-present-in-array
+",110,109,"@cursed_archer What's wrong with a a bool vector of size 1e5 for a O(1) space solution? It's a data structure that is completely unaffected by the input size, thus not affecting space complexity at all.","Sep 06, 2024",0,E3FxGaming,0,"Sep 06, 2024",Can you solve it with O(N) time complexity and O(1) Space complexity (without extra mem)?
+"car-fleet
+",25,24,"Each car has the same speed and the positions are unique, so the answer must be 6 since no car will ever catch up to a car in front of it. While cars in positions 8,7,6 do arrive to the target in the first iteration, they do not arrive at the same time. An example where two cars become a single fleet as they reach the target would be: target = 5, position=[1,2], speed=[4,3]. The cars in this example become a single fleet right at the destination point because the car in position 1 catches up to the car in position 2 at the moment they both reach target.","Oct 15, 2023",5,NoahDoll,32,"Feb 04, 2023","This below use case:
+target =10
+position =[8,3,7,4,6,5]
+speed =[4,4,4,4,4,4]I think the correct answer is 2, but their test case returns 6.This is the rule: If a car catches up to a car fleet right at the destination point, it will still be considered as one car fleet.8,7,6 arrive together at the first iteration , then the rest arrive in second iteration. How do they get 6?"
+"score-of-a-string
+",21,20,@vekp 😂😂,"Oct 07, 2024",0,Karan_Aggarwal,38,"Apr 14, 2024","Just to point out ""| x - y |"" means use absolute value. (turns negatives to positives) ...I wish my life had a Math.Abs() function."
+"maximum-subarray-min-product
+",3,1,"don't quite agree here , but again a good blend of concepts in one question.
+might be difficult if not comfortable with monotonic stacks.","Mar 29, 2024",0,XRancher_1232,73,"May 10, 2021",I think it's harder than typical medium. anyone agrees?
+"magnetic-force-between-two-balls
+",35,33,"@sanyammahajan09 read problem again
+if not then solve other problem like this(binary search on answer)
+I used to skip these type of question , but after solving 3-4 question on this topic i can do in 1 pass easily","Jun 20, 2024",1,Iconic_RJ,125,"Jan 26, 2023","""Wabba lubba dubb duubb !!""
+Rick Sanchez-(Earth C-137)"
+"fair-distribution-of-cookies
+",31,28,"Thank you, another problem was accepted.","Jul 01, 2023",1,AnywaySo,14,"Oct 13, 2022","This problem is the same as
+1723. Find Minimum Time to Finish All Jobs"
+"minimum-replacements-to-sort-the-array
+",2,1,Because the writer was busy to interview with other companies (like us),"Nov 25, 2024",0,sulerhy,120,"Aug 30, 2023","as usual, useless example 2, what's the purpose of it? 😁"
+"patching-array
+",200,199,"[1,2] is already present as it's equivalent to [3] -- both sum to 3.","Jun 16, 2024",0,4onen,0,"Jun 16, 2024","Someone may have already pointed this out. But first example explanation is missing the combination [1, 2].
+Now if we add/patch 2 to nums, the combinations are: [1], [2], [3], [1,3], [2,3], [1,2,3].This is pretty confusing since at a quick glance it implies we are summing subsets, not subsequences as there are only 5 subsets (excluding empty subset) in a list of size 3, while there are 6 subsequences (again excluding empty set)."
+"number-of-flowers-in-full-bloom
+",45,40,think about it,"Oct 11, 2023",0,123GJWEQ2,3,"Oct 11, 2023","After reading hint 1, the problem becomes easy.
+But how does one come up with observation like this?"
+"longest-subsequence-with-limited-sum
+",152,147,Why do we have to sort as they are asking to check for the subsequence? Won't the order be changed?,"Dec 25, 2022",0,nikhil_25,0,"Dec 19, 2022",
+"sliding-window-maximum
+",283,281,@Bantydeni Thanks for your review .,"May 31, 2023",0,kumaramarjeet001,0,"May 30, 2023","passed 41 / 51 testcases passed
+The case is 836 array elements are given, the expected array element are same as but there is mismatch in
+result output and excpected output . Please help !int i = 0 ;
+int j = 0 ;
+// List for storing negative element
+List maxArray = new ArrayList<>() ;
+List ansArray = new ArrayList<>() ;"
+"min-cost-to-connect-all-points
+",105,104,esse hi nahi banti 1000 crore ki company bro!,"Sep 15, 2023",0,khaimekhush,0,"Sep 15, 2023",why editorial is locked everyday now
+"sum-of-absolute-differences-in-a-sorted-array
+",44,43,"@BalajiT2004 Length of the given Array , also i think it should be (n-i) rather than (n-1)","Nov 25, 2023",0,ArinGopalan,6,"Nov 25, 2023","(a-x) +(b-x)+...(z-x) is actually (a+b+...+z) - x*(n-1).
+You can find the sum of all array in one traversal just once.
+Replace x with the value of each a[i] and build your answer."
+"cherry-pickup-ii
+",139,138,You mean no path crossing?? If that is the case we just need to put an extra check on all the 9 possible combination and check if any of the column number of the first robot crossing the 2nd robot....✔,"Jun 15, 2024",0,Joy1654,0,"Feb 11, 2024",If you can solve this then the interviewer may ask to find the disjoint path of two robots (that do not intersects) with max number of cherries. Stay alert and remember it can be worse.So do you have this question aboved in an interview? (Does the interviewer ask for disjoints?)
+"minimum-number-of-days-to-make-m-bouquets
+",49,45,"Take a salute from me bro..
+The test 91st test case caused integer overflow..","Jun 19, 2024",0,Dhruv66889,27,"Jul 06, 2023","Use if((long)m*k>n) return -1; instead of if(m*k>n) return -1; to avoid integer overflow.
+Thank me later😊"
+"minimum-penalty-for-a-shop
+",4,1,"Next Target: 500
+All the Best!","Aug 29, 2023",1,Slegendz,52,"Aug 29, 2023",200 questions completed :-)
+"find-k-th-smallest-pair-distance
+",25,24,"Answering for others : the search space is not apparent, you can find Kth largest element in a sorted array just by the index, you can find a number just less than equal to num in an array with a simple binary search - but for operating on pairs the search space would be of O(n
+2
+) elements which we cant do.","Aug 14, 2024",0,sarpalmadhav,31,"Oct 29, 2017","See several binary search for the answer approaches. They binary search the boundary of the distance: [0, longest distance]. Can anyone explain why the binary search result must be one of the distances of some pair ?"
+"number-of-good-leaf-nodes-pairs
+",260,258,Only manage to come up with O(N2) solution,"Jul 18, 2024",0,legiatuan1998,0,"Jul 18, 2024",This should be hard ...
+"two-sum-ii-input-array-is-sorted
+",69,66,two pointer approach,"Jan 30, 2023",0,adityadixit7054,3,"Apr 28, 2022",Is there some simple proof that it's impossible to get less than O(n)?
+"rotate-string
+",38,34,"Brillliant, man!","Feb 09, 2023",0,brutuss,13,"Jan 30, 2023","In java ::
+Steps. : first compare the length of s and goal if not equals then return false. if the return is true then we can add s+s and then from that we need to get the substring if its avilable then return true else return false;solutions :::
+https://leetcode.com/problems/rotate-string/submissions/888244223/"
+"move-zeroes
+",35,33,"But they said that relative order should not be changed. While moving elements, we unfollow that restriction.","Jun 12, 2024",1,chetanwandre2005,31,"Oct 26, 2023","Pseudocode:
+[1]- Initialize a pointer 'left' to 0, and 'right' to the next element 1.
+[2]- Iterate through the list using a 'right' pointer starting at 1 and moving to the right.
+[3]- If the element at the 'left' pointer is non-zero, update 'left' to 'right' and continue to the next iteration.
+[4]- If the element at the 'right' pointer is 0, continue to the next iteration without making any changes.
+[5]- If the element at the 'right' pointer is non-zero, swap the elements at 'left' and 'right' to move the non-zero element to the 'left' position, then increment 'left'.
+[6]- Continue this process for all elements in the list.
+[7]- The function does not return anything but modifies the input list 'nums' in-place."
+"sales-analysis-iii
+",35,34,"for any future readers, the key word That made this incorrect is ""only"" sold between those dates. otherwise, this query would've been fine","Nov 25, 2024",0,mlafl,3,"Dec 07, 2020","Not sure why the following query is incorrect?
+select distinct(s.product_id), p.product_namefrom Sales sleft join Product pon s.product_id= p.product_idwhere s.sale_date>='2019-01-01' and s.sale_date<='2019-03-31'"
+"design-twitter
+",24,23,"You do both, for a celebrity you rank the followers - basically like a LRU for very few celebrities and for the remaining bunch you update the news feed async.","Oct 22, 2023",0,naroju,29,"May 04, 2018","As you may know, there are 2 main approaches for this design:Which is better and why?I beleive that this is not an algorithmic/design problem this is a UX problem. Regardless of the actual complexities. Let's say that we have 2 users the first has 1M followers (people following him/her), let's call this user and the second user is following 1M other users and let's call this user ."
+"minimum-time-to-complete-trips
+",32,30,"Here is the Code Link for Reference :-
+https://leetcode.com/problems/minimum-time-to-complete-trips/solutions/3266933/binarysearch-approach-explained-in-steps/","Mar 07, 2023",0,cOde_Ranvir25,11,"Mar 07, 2023","Here is an Approach Using Binary Search :-1.Initialize a lower bound lo to 1 and an upper bound hi to the maximum possible long value.2.Enter a loop that continues until the lower bound is greater than or equal to the upper bound.3.In each iteration of the loop, calculate the midpoint between the lower and upper bounds using the formula mid = lo + (hi - lo) / 2.4.Calculate the number of completed trips that can be made in the mid time using a for loop that iterates over each time in the time array."
+"average-selling-price
+",213,212,use and in place of where,"Aug 03, 2024",0,user3350jE,0,"Jul 05, 2024","select p.product_id, ifnull(round(sum(price*units)/sum(units),2),0) as average_price
+from prices p
+left join unitssold u on p.product_id = u.product_id
+where purchase_date between start_date and end_date
+group by product_idthis is giving error in 16th test case that i am not getting product_id with null purchases
+but if i use left join with ifnull clause it should workCan someone please explain?"
+"frog-jump
+",14,10,"or one can store it in a map and use that only, instead of searching again and again in O(logn) you can once iterate throught the array then search in O(1)","Aug 27, 2023",10,Shubham_Raj22,17,"Aug 27, 2023","Again a DP problem. Since the array stones is ascending, one can use binary search to find the next jump"
+"find-champion-ii
+",34,33,@aayushmohite23 Arey SIR !🫡,"Nov 27, 2024",0,palashmahajan22,11,"Nov 26, 2024","If anyone does not know Kahn's algorithm, no worries, assume distance between each edge as 1 and use Dijkstra to find distance of each node from each node and then check if any node is unreachable from every node.
+PS : This solution beats only 5 % 😂"
+"maximum-sum-queries
+",16,15,U can refer to my solution,"Jun 17, 2023",1,shahjainam961,0,"Jun 17, 2023","good ole 1404var maximumSumQueries = function(n1, n2, q) {
+return q.reduce((a,c,i) => {
+let k = n1.reduce((a2,c2,i2) => {
+if(c2 >= c[0] && n2[i2] >= c[1]){
+let num = c2 + n2[i2]
+num > a2 && (a2 = num)
+}
+return a2
+},0)
+k == 0 ? a.push(-1) : a.push(k)
+return a
+},[])
+}"
+"path-sum-iii
+",15,12,"Adding this testcase was just a dick move, after spending so much time understanding the solution","Aug 07, 2024",3,CaptainDeadpool,122,"Dec 06, 2022","For those who couldn't pass this test case.
+[1000000000,1000000000,null,294967296,null,1000000000,null,1000000000,null,1000000000]
+0
+Just change it to long, bc it's integer overflow.
+Check for more details:
+https://leetcode.com/problems/path-sum-iii/solutions/2658840/java-pass-new-test-case-with-dfs-map-o-n/"
+"path-crossing
+",53,52,@shresth28 Means that I couldn' t wait to see the new jokes about the leetcode intern after solved a easy problem again :),"Dec 23, 2023",0,UserNameZ,2,"Dec 23, 2023",Daily question -> Daily check-in -> Daily intern joke
+"remove-adjacent-almost-equal-characters
+",22,21,@aanya_969 run from 1 till len-1,"Dec 09, 2023",0,directioner1d,0,"Dec 09, 2023",try greedy maintain previous ascii and each step check abs difference
+"all-oone-data-structure
+",127,126,"@sultanalif533 Quite Acceptable, but you are adding elements to a map and also calling functions recursively worst case of that is O(n), most of the submissions have similar time complexity","Sep 30, 2024",0,Morampudi_Gopi_Prashanth_Raju,0,"Sep 29, 2024",I'm sure O(1) makes no sense here
+"maximum-points-after-enemy-battles
+",67,66,maybe yes,"Jul 06, 2024",0,pranshul_777,0,"Jul 06, 2024",Am I the only one who returned int instead of long and got int overflows errors in hidden test cases. Wasted 35 min in the contest because of this and had to take the L.
+"kth-smallest-element-in-a-sorted-matrix
+",2,1,@ckvb18 yeah exactlyy,"Oct 29, 2024",0,kylehue,58,"Jun 02, 2023","The example test cases are not illustrative; it would be better if they included something like matrix=[[1,2],[1,3]] and k=2 here."
+"delete-characters-to-make-fancy-string
+",42,41,Me Too,"Nov 01, 2024",0,mohammed_asan,5,"Nov 01, 2024",I'm surprised I didnt see stack in the tags.
+"single-number-iii
+",2,1,"bro, you should write this blog editorial. thanks.","Jul 03, 2024",2,codersolanki,1.1K,"Sep 25, 2015","If you were stuck by this problem, it's easy to find a solution in the discussion. However, usually, the solution lacks some explanations.I'm sharing my understanding here:The two numbers that appear only once must differ at some bit, this is how we can distinguish between them. Otherwise, they will be one of the duplicate numbers.One important point is that by XORing all the numbers, we actually get the XOR of the two target numbers (because XORing two duplicate numbers always results in 0). Consider the XOR result of the two target numbers; if some bit of the XOR result is 1, it means that the two target numbers differ at that location."
+"minimum-operations-to-form-subsequence-with-target-sum
+",4,2,They heard you and channged it to hard ;),"Aug 27, 2023",2,Arshy_2807,16,"Aug 27, 2023",One of the hardest medium question ever seen on Leetcode!
+"sliding-puzzle
+",87,83,How did you calculate that there are 21 maximum steps possible?,"Nov 25, 2024",1,pavanpandya,3,"Nov 25, 2024","There are at max 21 steps to solve any of these puzzles.
+The following testcases represent each of the step counts:"
+"swim-in-rising-water
+",22,20,excuse me?,"Feb 15, 2024",1,moyezr,28,"Aug 16, 2023","If anyone having trouble understanding the question :
+Here we have to find the path which has lowest maximum cell value."
+"minimized-maximum-of-products-distributed-to-any-store
+",43,40,"is 'LC brain' a new term for ability to solve questions just because you have solved similar ones recently? If so, I love it, cuz that's what LC is about 😃😃","Nov 14, 2024",0,sarpalmadhav,15,"Nov 14, 2024",if not for LC brain (binary search for the past few problems) I might not have intuited it.
+"leaf-similar-trees
+",136,134,"@Mirshod because the ordering of the leaf nodes may not be the same for the two binary trees. The 2nd leaf might appear in the left half of the first tree, but might come in the 2nd half of the second tree. So, we should check the leaf nodes via depth, not breadth :)","Jan 09, 2024",0,Eaglesight02,0,"Jan 09, 2024",why can not this problem be solved using BFS?
+"rotate-string
+",245,244,"bruh this is no tip, its literally the solution. This is the discussion section. Stop posting solutions here.","Nov 03, 2024",0,gudesaisanjana,-2,"Mar 05, 2023","class Solution {
+public boolean rotateString(String s, String goal) {}"
+"number-of-senior-citizens
+",13,12,have u ever seen a leetcode hard? before,"Aug 29, 2024",0,anirudhgv,42,"Aug 01, 2024",This should be leetcode hard :(
+"water-bottles
+",51,46,"You are essentially calculating the sum of the digits of numBottles in base numExchange.
+I don't believe that can be done in less than O(log
+m
+n), where m = numExchange and n = numBottles.","Jul 07, 2024",0,glugglug,19,"Jul 07, 2024","There is an O(1) solution.
+Have a nice weekend."
+"find-valid-matrix-given-row-and-column-sums
+",42,41,I first time solved all questions in contest and it got unrated :(,"Jul 21, 2024",0,Tejas3019,17,"Jul 20, 2024",A Nice Matrix week* Thanks Leetcode but don't you think that your'e cancelling the contests really quick??? Agreed?
+"split-strings-by-separator
+",20,16,"Same problem , got any solution please share","Aug 27, 2024",0,E_Sujit,0,"May 16, 2024",why String[] temp = s.split(String.valueOf(separator)); does not work in Java?
+"average-selling-price
+",43,40,@jargolastik gpt :D,"Jan 01, 2024",0,Muhammad_Latif,27,"Jul 13, 2023","Is this really an easy level task lol?
+Used three CTE to solve it"
+"make-sum-divisible-by-p
+",88,87,"Yes, it is possible using the prefix sum memoization. Look into
+https://leetcode.com/problems/subarray-sum-equals-k/description/
+(premium :( ) https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/description/","Oct 03, 2024",0,dsapelnikov,2,"Oct 03, 2024",Got the intuition that we need a subarray whose modulo residue with p is same as total sum of array . But could not find a way to search such subarray in O(n) time.
+"string-compression
+",500,499,"@PAIN_an_c Thanks, man! This comment really helped me to understand what this problem was all about.","Mar 02, 2023",0,olehn,0,"Jan 02, 2023",why is this answer wrong ??
+"swap-nodes-in-pairs
+",6,1,"@sufyankhot I think here is two problems in one: if you want this problem to be easy, swap the Values. If you want this problem to be medium, swap the Nodes!","Oct 08, 2024",0,IS_Koshi,230,"Jan 23, 2024","ffs stop bragging ""its easy it should be marked easy"". yeah def it is easy for you and me, but its def not easy for the ones who are just starting, they will lose their motivation by looking at your comments."
+"monthly-transactions-i
+",10,9,Pay attention everyone - 'Y' and not 'y'. 'y' will give you the last 2 digits of the year (instead of 4),"Sep 20, 2024",0,Hadarct,28,"Jul 18, 2023","Date_format() will help you truncate the date column to monthshttps://devdocs.io/mariadb/date_format/indexdate_format(trans_date, '%Y-%m')"
+"find-the-duplicate-number
+",312,311,Easy if you already know the answer. Otherwise its impossible to come up with slow - fast pointer on its own.,"Mar 24, 2024",1,PiyushRaj27,0,"Mar 24, 2024",probably the most easy one in this march leetcode challenge
+"restore-the-array
+",13,12,@kushalnagwanshicloud true,"Jun 19, 2024",0,pavansai66,8,"Apr 23, 2023",Is it wrong that I'm starting to like these tabulation problems?
+"maximum-number-of-occurrences-of-a-substring
+",9,8,"@sanket516
+Key here is that yes we want to find a substring from min to max size
+But the trick here is to recognize that if we have a minSize 3 and maxSize 5
+We can identify that substring 3 will be in substring 4 and substring 5
+Which means we only have to check the min size","Mar 24, 2024",1,bdb74,18,"Mar 23, 2023",Second rule should be 'The substring size must be minSize'. The only thing medium about this question is having to figure out how useless maxSize is.
+"contains-duplicate-iii
+",13,10,"because it is not just equals to, its equals to and less than for both the valueDiff and the indexDiff","May 24, 2023",3,sifisom599,18,"Sep 12, 2019","nums = [1,0,1,1], k = 1, t = 2.
+Why result is true?"
+"vowels-of-all-substrings
+",3,2,The same as the point for asking almost any other problem in Algorithm section. To check how a person can think and solve a problem.,"Jun 26, 2023",5,nekrand,8,"Nov 07, 2021",What is the point for asking these kind of question??
+"maximum-number-of-words-found-in-sentences
+",22,21,"@WooHyeon Hwang It is irrelevant with such a small input constraint in which both solutions have a T.C of O(N), nothing related with how the code is structured.","Sep 28, 2024",0,ejini6969,0,"Mar 19, 2024","Why is the solution that separates the logic into the mostWordsFound function and other functions faster than mostWordsFound function alone???
+use java..."
+"find-the-duplicate-number
+",99,97,"@1234567s i think you would have to sort first which would align with the listed O(nlogn) time complexity vs O(logn) for binary search, but they listed the input array as being unmodified so i'm not sure what they were cookin","May 22, 2024",0,JacobNickerson,11,"Mar 24, 2024","Let me know if i missed any algorithm
+Analysis of algorithms:"
+"sign-of-the-product-of-an-array
+",32,31,Bro don't multiply everything just check no. of elements that are negative and check if no. of negative elements in an array is even or odd then you can 1 or -1 and also check if the element is 0 then return 0 immediately,"Mar 24, 2023",0,eakesh_07,3,"Dec 27, 2022","This is normal way to find it run each and every Testcase :
+I runed it on : [9,72,34,29,-49,-22,-77,-17,-66,-75,-44,-30,-24]
+: [41,65,14,80,20,10,55,58,24,56,28,86,96,10,3,84,4,41,13,32,42,43,83,78,82,70,15,-41]
+they successfully work.so, Here I did to find length and create a loop until n-1
+and I taken a variable with double datatype because Data can be huse after multiply.
+class Solution {
+public int arraySign(int[] nums) {
+int n = nums.length;
+double pro = 1;
+for(int i=0; i<n; i++){
+pro *= nums[i];
+}
+if(pro>0){
+return 1;
+}
+else if(pro<0){
+return -1;
+}
+return 0;
+}
+}"
+"minimum-number-of-operations-to-make-array-empty
+",63,62,its because the number of 14 is 10 aim is to minimize it then as per your solution 10%2==0 then 10/2 =5 and 12 is 9 9/3 = 3 so 5+3=8 but if u look carefully 14 can be in 6 + 4 so 2 + 2 = 4 and same for 9 i.e 3 4+3 = 7,"Jan 04, 2024",0,ayush_raj6,3,"Jan 04, 2024","confused
+nums = [14,12,14,14,12,14,14,12,12,12,12,14,14,12,14,14,14,12,12]
+output: 8
+expected: 7"
+"fizz-buzz
+",44,43,"The description explicitly says: > string array answer (1-indexed)
+which highlight ""1-indexed"" .
+Maybe to avoid confusion with 0%3 and 0%5 , maybe because some questions at LC is using index 1 explicitly for answers (I'm not sure - I'm not into solving LC).","May 02, 2023",1,ducquoc,2,"Feb 16, 2023","The problem ask for this:
+answer[i] == i (as a string) if none of the above conditions are true.But the example doesn't return that:
+Output: [""1"",""2"",""Fizz""]It return 1 for index 0. Why is that?"
+"greatest-common-divisor-traversal
+",108,106,"gcd(4, 12) = 4
+gcd(12, 3) = 3
+4 -> 12 -> 3","Feb 25, 2024",0,playwmadness,0,"Feb 25, 2024",For example 3 how is it possible we can traverse 4 --> 3? Isn't the GCD 1? or 3 --> 8 also similarly the GCD is 1?
+"out-of-boundary-paths
+",132,131,"Hi @Alex mercer Would you please watch this video and see if it's understandbale?
+Thankss","Jan 26, 2024",0,LearnWithEmKay,0,"Jan 26, 2024",OMG these recent mediums are HARD for MEEEEEEE cant pass all test cases
+"grumpy-bookstore-owner
+",11,7,"Hey dude @lebon, thanks for such an interesting intuition , btw I solved it in 2023 and at that time I think this question description was much more terrific . I am solving it now and I found it to be a fixed sliding window just by looking at it. Solving it again because ""You know just for the sake of a badge : ) "". Just kidding , great day ahead man !!","Jun 21, 2024",2,datalinx,152,"Oct 10, 2023",Explanation is poor as hell !!!
+"find-the-sum-of-subsequence-powers
+",27,25,It's tricky to optimize,"Mar 30, 2024",0,adarsh_20_03,0,"Mar 30, 2024",it looks like pick and not pick problem why the Acceptance Rate is too low ??
+"find-the-minimum-and-maximum-number-of-nodes-between-critical-points
+",72,71,"@olzh06 you're correct, my god why didn't i see it 🤦","Jul 06, 2024",0,hisyamsk,1,"Jul 05, 2024","The test case [5,3,1,2,5,1,2.1,5,4,4,4,3,4,2,1] returned an empty expected output and causes all other test cases to fail when run. Anyone experiencing this or it's just me?"
+"create-a-dataframe-from-list
+",2,1,on top menu,"Jan 22, 2024",0,hui23,10,"Oct 23, 2023",How to submit?
+"power-of-two
+",105,104,I don't know how to make code have color in the discussion section,"Jul 06, 2024",0,py_user123,0,"Jul 06, 2024","This is a ""1-liner"" of python3.I just did the dumbest way possible. Since n is limited by n**32 - 1, so I just solved it by typing every possible case.
+This is time complexity O(1), since there is no loop in this code.class Solution: def isPowerOfTwo(self, n: int) -> bool: return n == 2**0 or n == 2**1 or n == 2**2 or n == 2**3 or n == 2**4 or n == 2**5 or n == 2**6 or n == 2**7 or n == 2**8 or n == 2**9 or n == 2**10 or n == 2**11 or n == 2**12 or n == 2**13 or n == 2**14 or n == 2**15 or n == 2**16 or n == 2**17 or n == 2**18 or n == 2**19 or n == 2**20 or n == 2**21 or n == 2**22 or n == 2**23 or n == 2**24 or n == 2**25 or n == 2**26 or n == 2**27 or n == 2**28 or n == 2**29 or n == 2**30 or n == 2**31 or n== 2**32 - 1"
+"non-decreasing-subsequences
+",18,16,My solution is not being accepted for the same. I can't figure out what I am doing wrong.,"Jan 20, 2023",3,gauraVSomani,5,"Mar 13, 2017","When I run my code(accepted) using [1,2,3,8,9,10,1,1,1,1,1] as test case, it doesn't match the given expected answer, but it's still accepted. Is anybody had the same situation?"
+"max-dot-product-of-two-subsequences
+",96,94,"116 is the max dot product of the subsequence?
+and the subsequence should be [-3,-8,3,-10] [-9,-8,5,-1] ?","Oct 08, 2023",0,omkarshendge619,0,"Oct 08, 2023","[-3,-8,3,-10,1,3,9]
+[9,2,3,7,-9,1,-8,5,-1,-1]Extra test case , Check before submitting ."
+"find-the-winner-of-the-circular-game
+",5,1,"Here you go, guys:","Jul 08, 2024",7,SSHshadow2222,248,"Jul 08, 2024",Leetcode please for the love of god don't use black lines on grey background.
+"find-the-pivot-integer
+",35,30,Can you share the thought process behind it?,"Mar 13, 2024",1,amandollar,21,"Mar 23, 2023","int sum = (n + 1) * n / 2;
+int pivot = (int) Math.sqrt(sum);
+return pivot * pivot == sum ? pivot : -1;"
+"find-if-array-can-be-sorted
+",137,136,"@Sajib67 thank you so much, i made the mistake of thinking that the bits should be together as well.
+for e.g. 6 is 110, then it can only be swapped with 1100, 11000, 110000 etc.","Nov 06, 2024",0,dhumrpaan,0,"Nov 06, 2024","why is the output of the testcase [6,96,20] true?"
+"minimum-difficulty-of-a-job-schedule
+",46,41,@darkpotter hi! binary search is not possible as our answer need to be monotonic in nature to apply binary search but here there are some numbers in between possible answers which can never be our answer no matter how we iterate in bool function,"Dec 29, 2023",0,Gladvenom,13,"Mar 13, 2021","Hi Guys,I wanted to ask if this problem can be solved by binary search? like 1011. Capacity To Ship Packages Within D DaysSince, it also looks like similar problem.Can anyone tell, why it cannot be done ?"
+"even-odd-tree
+",25,23,Dry ahh jokes .... Thats why she left,"May 05, 2024",0,Dane101,16,"Feb 29, 2024","Ex:Why are you such a pro in tree data structures?Me: Well, you see, trees are like relationships. They have branches, some are rooted, and occasionally, you'll find some leaves trying to disconnect. But unlike you, a tree is always there to provide structure, support, and most importantly, it never leaves me hanging!"
+"reverse-words-in-a-string
+",11,6,@Naga sri ram,"Jun 19, 2024",5,ejini6969,177,"Jul 13, 2023","some of the easy one looks medium , medium one looks easy .... did anyone feel like that"
+"maximum-xor-for-each-query
+",57,54,Yes. NOTE: I work in the computer network industry where these are used a lot,"Nov 08, 2024",0,ashwin_nat,5,"Nov 08, 2024",Has anyone actually been asked a bit manipulation question in an interview???
+"count-subarrays-where-max-element-appears-at-least-k-times
+",186,185,"How do you think we can apply monotonic stack? Nothing comes to my mind regarding that, since we only care about the occurrences of the Maximum number.","Mar 29, 2024",0,LearnWithEmKay,0,"Mar 29, 2024","Would monotonic stack work here? I thought it was similar that we only care about largest/smallest value, and the # of subarrays it is affecting"
+"meeting-rooms-iii
+",23,20,Thanks :),"Jan 11, 2024",0,phase2_goyaltu,30,"Aug 29, 2023","I used Integer types and finally managed to pass all tests. The main issue that caused me to fail on the 80/82 and 81/82 test cases is that when the end times are equal, the PriorityQueue should also compare the room numbers."
+"count-common-words-with-one-occurrence
+",10,8,use count function,"Jun 01, 2024",0,Abdul_Qavi,0,"May 13, 2023",is there any other solution except HashMap ?. Can we solve this problem using any other possible way ?Ask Question
+"spiral-matrix-iii
+",18,13,@MrVedant666 looks like you need to grow up .,"Aug 08, 2024",0,Antiseptic,293,"Mar 27, 2024","dekh rahe ho Binod, kaise kaise questions bana ke candidates ko reject kiya ja sakta h"
+"keyboard-row
+",2,1,lol,"Mar 25, 2024",0,risabhuchiha,45,"Dec 02, 2022",the number of loops in this solution may exceed the number of minutes you spend on it :)
+"design-hashmap
+",46,45,"@BiggestChungus ""Chaining"" is one way to resolve hash collisions.","Oct 05, 2023",1,psionl0,3,"Oct 04, 2023",Use linked list and hash function if you really want to learn something.
+"sum-of-digits-of-string-after-convert
+",41,36,@SSHshadow2222 weirdo freak,"Feb 13, 2024",8,avi94,24,"Apr 26, 2023","Am I the only one who felt this is not an easy level problem to solve? If not, please reply with ""you need to study more"" so that I can grind more. If its an easy please upvote. By this, I can assess where I stand."
+"count-unguarded-cells-in-the-grid
+",34,33,"Why? It's O(mn), you literally can't get better complexity. Even if you've somehow written algorithm that doesn't go cell by cell, but instead somehow deducts answer from guards and walls, in worst case scenario, they can still occupy every cell in the grid in, which is still O(mn)","Nov 21, 2024",3,michalsuch429,5,"Nov 21, 2024",I thought 4nm would for sure TLE
+"maximum-strength-of-k-disjoint-subarrays
+",10,9,"i was wondering for 1 hr thinking why it was timing out, u saved me thanks","Mar 11, 2024",0,21Cash,6,"Mar 10, 2024","If anyone here is doing the question in O(N* K * 2) using recursive dp in C++ and still getting TLE
+Mostly everyone is getting this wrong
+useinstead of"
+"shortest-distance-after-road-addition-queries-i
+",137,136,"i did , it worked, but how","Nov 16, 2024",0,dhanush__27,0,"Aug 05, 2024","If your are solving it with plain BFS , then must use visited array to avoid TLE."
+"minimum-suffix-flips
+",4,3,There is another very similar question that is essentially the same problem but using light bulbs (on/off) instead of a binary string. I think it was blindly copied and pasted from there.,"Oct 18, 2024",0,BlackStallion456,2,"Oct 16, 2024",I love how the hint out of nowhere switches from bit flips to light bulbs :) The superficial randomness of that move is hillarious :P
+"furthest-building-you-can-reach
+",19,17,"@mac_gillicutty This actually works (and can be made even faster than you suggest), unlike this ""Tip""'s idea.","Feb 17, 2024",0,sergei99,125,"Feb 17, 2024",
+"find-all-duplicates-in-an-array
+",164,163,"that's O(n) space, not O(1)","Mar 25, 2024",2,Mister_CK,0,"Mar 25, 2024",hash-map is key
+"maximum-ice-cream-bars
+",16,13,"@djslim Yes, return false","Jan 06, 2023",0,XJRr8TyB,135,"Jan 06, 2023",Easiest Medium ever seen
+"minimum-common-value
+",13,12,Can you explain why HashSet is not optimal?,"Mar 09, 2024",0,zyy13,38,"Mar 09, 2024","A Friendly Tips -
+Don't use HashSet:- It's not optimal
+Brute Force:- TLE
+Use 2 Pointer:- Imagine nums1 as your Crush and nums2 as You, embarking on your journey together. When your Crush finds something common with You, she will respond by saying, 'You deserve better.'Another Tips : use this to get a better run time-
+if (nums1[nums1.length-1] < nums2[0] || nums2[nums2.length-1] < nums1[0]) return -1; //In Java"
+"calculator-with-method-chaining
+",13,11,I was also getting this error when I was returning this.result from every functions. Then I tried changing it to returning this only except the getResult function. I don't know why this works. If anyone knows please tell.,"May 18, 2024",0,Dinesh_k40,1,"Feb 10, 2024","Line 140 in solution.js
+throw err;
+^
+TypeError: calculator.subtract is not a function
+Line 107: Char 45 in solution.js (Object.)
+Line 16: Char 8 in runner.js (Object.runner)
+Line 66: Char 26 in solution.js (Object.)
+at Module._compile (node:internal/modules/cjs/loader:1376:14)
+at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+at Module.load (node:internal/modules/cjs/loader:1207:32)
+at Module._load (node:internal/modules/cjs/loader:1023:12) i dont know why it is getting"
+"unique-paths-iii
+",46,42,"Take a look at the dimensions of visited. It should be have the same dimensions as grid, that is m x n.
+Can you spot the one character that needs to be changed?","Dec 31, 2022",0,siebenschlaefer,1,"Dec 31, 2022","==31==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6040000002c8 at pc 0x000000347a28 bp 0x7ffea72c7e40 sp 0x7ffea72c7e38
+READ of size 8 at 0x6040000002c8 thread T0
+#3 0x7f0b0c76e0b2 (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+Address 0x6040000002c8 is a wild pointer.
+Shadow bytes around the buggy address:
+0x0c087fff8000: fa fa fd fd fd fd fd fd fa fa 00 00 00 00 00 06
+0x0c087fff8010: fa fa fd fd fd fd fd fd fa fa fd fd fd fd fd fa
+0x0c087fff8020: fa fa fd fd fd fd fd fd fa fa fd fd fd fd fd fa
+0x0c087fff8030: fa fa fd fd fd fd fd fd fa fa fd fd fd fd fd fa
+0x0c087fff8040: fa fa fd fd fd fd fd fd fa fa 00 00 00 00 00 fa
+=>0x0c087fff8050: fa fa fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa
+0x0c087fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+0x0c087fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+0x0c087fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+0x0c087fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+0x0c087fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+Addressable: 00
+Partially addressable: 01 02 03 04 05 06 07
+Heap left redzone: fa
+Freed heap region: fd
+Stack left redzone: f1
+Stack mid redzone: f2
+Stack right redzone: f3
+Stack after return: f5
+Stack use after scope: f8
+Global redzone: f9
+Global init order: f6
+Poisoned by user: f7
+Container overflow: fc
+Array cookie: ac
+Intra object redzone: bb
+ASan internal: fe
+Left alloca redzone: ca
+Right alloca redzone: cb
+Shadow gap: cc
+==31==ABORTING"
+"maximum-sum-of-3-non-overlapping-subarrays
+",7,5,great,"Apr 23, 2024",0,singhneeruk,3,"Mar 13, 2024","Choose 3 subarrays. They must be non-overlapping. Their TOTAL sum must be the maximum among all such combinations.
+For example:
+Input: nums = [1,2,1,2,6,7,5,1], k = 2
+Use sliding window to find subarrays: [3,3,3,8,13,12,6] (the sum of k elements from 0th index is 3, 4th index is 13,....)Now if we become greedy and choose (val = 13, index = 4), we can't choose 8 or 12. The maximum sum we can achieve is 13+6+3 = 22.
+If we choose 12 at first, the maximum sum could achieve is 12+8+3 = 23. And hence we should go with these subsets: (0, 3, 5) or (1, 3, 5). Out of these, (0,3,5) is lexicographically smaller so that is our answer."
+"longest-unequal-adjacent-groups-subsequence-ii
+",35,34,"I have got this memoisation approach during the contest.
+Here is the code.","Oct 15, 2023",0,anuron_das,0,"Oct 14, 2023",anyone with memoisation approch ??
+"longest-happy-string
+",5,1,bro is the three eyed raven,"Oct 16, 2024",17,vedangc03,88,"Oct 13, 2024","Keep count of a, b and c inserted to string consecutively....and for the rest think and type out all the edge cases.PS: And I have a feeling this question is gonna be asked this week, so PRE-SOLVED it."
+"first-unique-character-in-a-string
+",144,143,Nothing wrong with a respite question nor in giving beginners a bit of confidence.,"Feb 05, 2024",1,psionl0,0,"Feb 05, 2024","LeetCode at least give easy medium level question , what's the point of question like these ? Now it feels like I didn't do any coding today."
+"best-team-with-no-conflicts
+",35,30,There's no limit.,"Jan 31, 2023",1,XTJ0127ABC,5,"Jan 31, 2023",Does the size of the basketball team has a limit? Or should we add to the team as much members as possible?
+"continuous-subarrays
+",2,1,Same thought here!,"Sep 14, 2023",1,mithindev,16,"Jul 25, 2023","It took sometime to realize that,
+In example 1, the reason why sub arrays [5,4,2] or [5,4,2,4] is not included in the solution is due to the fact that nums[0] - nums[2] exceeds 2. 5-2=3 which is greater than 2. taking any 2 index into consideration the unsigned difference should be less than or equal to 2."
+"jump-game-iv
+",15,13,"For me, 31/33 :(","Mar 05, 2023",0,kaichamp101,9,"Mar 05, 2023",TLE on 22/33 😭
+"merge-triplets-to-form-target-triplet
+",11,6,cuz you have done 500 problems and it's easy for you:),"Aug 16, 2023",5,Lhy121125,13,"Apr 07, 2023",Why this question is even in the medium list....🤔🤔
+"number-of-arithmetic-triplets
+",7,6,I think using a Set should suffice,"May 27, 2024",0,cg32485,18,"Jul 29, 2023","My approach simple, store all the elements in Hashmap and check of( map[nums[I]-diff] and map[nums[I]+diff]) and increase count if above condition is true... suggestions are welcome to make the approach efficient😇"
+"minimum-increment-to-make-array-unique
+",249,246,You're only allowed to increment (increase not decrease). So you'd go 2 => 8 (6 moves),"Jun 14, 2024",1,ManipulativeMicrobe,0,"Jun 14, 2024","If the test case is [1,2,2,3,4,5,6,7]. why the output is 6 not 2 ?
+can't I just move 2 to 0?"
+"all-paths-from-source-to-target
+",31,30,"You can use hash map, or use List>","Aug 11, 2023",0,mochiball,2,"Dec 30, 2022",Can someone please tell me how do we create this int[][] graph (adjacency list) in java? As in initialize graph.
+"longest-increasing-subsequence
+",12,7,@user8675309 sahi me,"Jan 31, 2024",1,mepradeepkr,1.1K,"Jan 05, 2024",I wish everyone who comes across this message attains their dream job in 2024!
+"find-the-maximum-sum-of-node-values
+",2,1,This is even funnier with your profile photo.,"May 20, 2024",2,LingKong39,255,"May 19, 2024",fuck you alice
+"binary-subarrays-with-sum
+",2,1,Congratulation bro for completing 1000 problem,"Nov 08, 2024",1,Prashant__s,301,"Mar 14, 2024",This marks my 800th problem on LeetCode! My next goal is 1000.
+"excel-sheet-column-title
+",17,15,for 52 what is the answer,"Aug 22, 2023",0,adityashivhare7291,82,"Jul 13, 2015","consider the letter 'A' to have a value of 1, 'B'->2 ..... 'Z'->26
+note that in the above notation, values are 1-basedhere our Radix (R) == 26the final value of a number X Y Z = X * R^2 + Y * R + Zthis looks similar to base-10 decimal number but the biggest difference is that the numbers on every digit starts with 1, instead of 0., and the max on each digit goes up to R (Radix) instead of R-1for example
+Z== Radix
+then next number is AA = R + 1 = Z+1
+ZZ = R * R + R
+next number is AAA = 1*R^2 + 1 * R + 1 = ZZ +1"
+"sort-array-by-increasing-frequency
+",264,262,@zabaxa It can be solved in O(N) using counting sort.,"Jul 23, 2024",0,rambosalad,0,"Jan 05, 2024",can this challenge be solved using an O(n) Time Complexity solution?
+"split-a-string-in-balanced-strings
+",3,1,https://leetcode.com/problems/split-a-string-in-balanced-strings/solutions/2444611/easy-c-solution-faang-optimized/,"Nov 18, 2022",0,AdityaBhate,136,"Oct 16, 2019",The problem statement is correct but the examples listed are confusing. This should be one of the examples so that people don't mistake the question as asking us to match with 'L's on one side and 'R's on the other side. The 'R's and 'L's can be in any order as long as there is an equal number of them in the substring.
+"maximum-profit-in-job-scheduling
+",46,45,u dont include the TLE testcases :-,"Jan 06, 2024",0,vishakha036,8,"Jan 06, 2024","Be aware of possible TLEs, for which a testcase can be found under
+1235_Maximum_Profit_in_Job_Scheduling.txt
+Smaller testcases:"
+"contains-duplicate
+",247,245,Only its low efficiency:,"Sep 10, 2023",1,sergei99,0,"Sep 09, 2023","class Solution(object):
+def containsDuplicate(self, nums):
+smap = {}"
+"uncommon-words-from-two-sentences
+",26,21,use string stream,"Sep 17, 2024",2,niteshsaxena03,40,"Jan 18, 2023","This question looks easy on the surface, but it is not as easy as it seems!"
+"minimum-deletions-to-make-string-balanced
+",48,47,"Not required, its a simple count problem.","Jul 30, 2024",7,Vsoni27,4,"Jul 30, 2024",DP is really a good method to solve this problem.
+"maximum-sum-of-distinct-subarrays-with-length-k
+",313,311,i m stuck on the same test case,"Nov 06, 2022",0,Minatokun,0,"Nov 06, 2022","79/82 test cases passed!Failed output
+Output: 705082704
+Expected: 5000050000`class Solution {
+public long maximumSubarraySum(int[] nums, int k) {
+HashMap<Integer, Integer> map = new HashMap<>();"
+"number-of-atoms
+",325,324,"@anujmore You're welcome! If you need any further help, feel free to ask, I'll be sure to reply if i can help.","Jul 15, 2024",1,zabaxa,0,"Jul 14, 2024",When do we need to add and when do we need to multiply the formula?
+"wiggle-sort-ii
+",34,33,My bad. I was returning a new array rather than modifying in place. Misread the problem.,"May 30, 2024",0,deuberger,0,"May 30, 2024",This problem is broken (at least for me). I hardcoded my output to match the expected output below and still the first test case keeps failing saying the output is the same as the input.InputOutput
+"determine-if-two-strings-are-close
+",76,75,same,"Jan 14, 2024",1,1101aytida,2,"Aug 10, 2023","why is this incorrect?
+`
+if (word1.size() != word2.size()) return false;set words_1{word1.begin(), word1.end()};set words_2{word2.begin(), word2.end()};return equal(words_1.begin(), words_1.end(), words_2.begin(), words_2.end()) && ;
+`fails on 132 testcase:
+
+expected false, but:"
+"minimum-time-to-make-rope-colorful
+",10,7,"@sarpalmadhav Was not to me :( , I straight up sorted colors in ascending order based on neededTime, then checked for neighbours if they are same, then figured out vacant balloons is not a gap.","Dec 27, 2023",0,AgX111,55,"Oct 03, 2022","1.Here vacant site is not considered as gap, if the balloon before vacant site is equal to the balloon after vacant site that also need to be taken care of."
+"number-of-atoms
+",110,109,us bro us. every single time you think you understand organic chemistry something will pop out of now where and bite you in your arse.,"Jul 14, 2024",0,SILICON-HAWK,2,"Jul 14, 2024","Chemistry in Coding. Great, just what I needed—a flashback to my JEE days where chemistry and I had a toxic relationship!"
+"minimum-number-of-taps-to-open-to-water-a-garden
+",118,117,"The central one, obviously.","Sep 01, 2023",0,sergei99,0,"Aug 31, 2023","[4,0,0,0,4,0,0,0,4]how this T.C require only 1 tap?"
+"magnetic-force-between-two-balls
+",83,82,Gubba nub nub doo rah kah,"Jun 20, 2024",0,chijk,4,"Jun 20, 2024",wubba lubba dub duuuuuuuuuuuuuuuuuuub
+"filling-bookcase-shelves
+",44,39,"Add this MLE Testcase for the O(n
+3
+) dynamic programming solution:","Jul 31, 2024",1,aitachii,34,"Jul 31, 2024",TESTCASES------------>
+"maximum-number-of-non-overlapping-substrings
+",6,5,Can you share the solution here ? Trying to learn how to implement this with graphs..,"Oct 24, 2024",0,parthasarathydNU,2,"Feb 20, 2024","I got the intuition it is graph but can't get it,, so watched the solution took 2 hrs to understand and code but fails and fails but finally i myself found the error and debug it and that feeling my god😊. Even though it took 3 hrs i feel it is worth."
+"number-of-digit-one
+",3,1,"@pranavop2580 thanks you deserve a cookie for this, the description is pretty bad","Apr 23, 2024",3,grindman,68,"Dec 24, 2022","for intput = 13for 1 (count += 1 means count = 1)
+for 10 (count += 1 means count = 2)
+now for 11 here ( count += 2 means count = 4)
+then for 12 (count += 1 means count = 5)
+and for 13 (count += 1 means count = 6)so the output = 6"
+"delete-node-in-a-bst
+",49,48,"Yes, very much🙂","Jul 15, 2024",0,Joy1654,1,"Jun 18, 2024",Should the answer also be a BST ?
+"number-of-dice-rolls-with-target-sum
+",30,28,"As everyone knows that it is done to avoid overflow problem, and some have discussed that it is a big enough prime number which is easy to remember, But why we need prime number?
+The answer is when we work on module over fractions i.e where there is numerator and denominator there we can't go with simple modulo logic which we used in multiplication, addition etc., for more detail please refere chinese remainder theorem for modules","Dec 26, 2023",2,i-var,16,"Aug 13, 2019",Why must the answer be returned modulo 10^9 + 7?
+"number-of-good-leaf-nodes-pairs
+",266,264,"alright i found tree is not unique so i solve it by storing root instead of root->val (leaf nodes)
+but it is showing tle","Jul 18, 2024",0,priyanshyadav,0,"Jul 18, 2024","can anyone tell me why my method is not working so i find all leaf nodes then using double forloop
+i find lca and by that lca i find distance btw the lca to one leaf node to another leaf node and add them up to find distance btw them and compare with maxdistance and do count++
+it is working for 29 testcases but after that sad:("
+"trips-and-users
+",6,1,"@chaosxlive yaa exactly so you need one more condition as
+request_at BETWEEN DATE(""2013-10-01"") AND DATE(""2013-10-03"")","Jul 26, 2023",2,gjs190201,83,"Oct 07, 2022",A test case seems wrong:Both the client and driver are not banned:
+"ugly-number-ii
+",3,1,"find all the number multiple of 2,3 and 5 and return the nth number","Aug 18, 2024",3,Baskar_66,283,"Aug 18, 2024",I don't even understand the problem. Ugly question
+"shortest-bridge
+",15,12,I am thinking about this solution.,"May 21, 2023",2,cecilia5,21,"Apr 11, 2019","I know this is beyond this problem, but when I first read this question I ignored ""there're two islands"" and thought about half an hour without any idea.
+Now I've solved this problem and start thinking about this again. What if there're more than 2 islands?
+I haven't got my answer from search engine because I don't know how to describe this question, so can somebody give me a link to such solution?"
+"average-selling-price
+",49,46,"These are equivalent statements. Some coders might prefer one or the other, but the output is the same.","Aug 04, 2023",0,AeonixClist,18,"Dec 04, 2020","Hi,
+Can someone please explain the logic of start date and end date - I know there's duplication but why are we doing this like the between thing as mentioned below to get it correct? Please explainu.purchase_date >= p.start_date and u.purchase_date <= p.end_dateORpurchase_date BETWEEN start_date AND end_date"
+"count-triplets-that-can-form-two-arrays-of-equal-xor
+",46,45,"It wouldn't be wrong to say that the constraints are just fine - In case of array of size 1, you can find zero triplets with i < j and zero would be valid answer to a somewhat valid question.","May 30, 2024",0,sarpalmadhav,8,"May 30, 2024","Wrong constraint !!!
+Description : 0 <= i < j <= k < arr.length
+Constraints : 1 <= arr.length <= 300
+Problem : If i must smaller than j, the array length must be at least 2"
+"shortest-distance-after-road-addition-queries-i
+",19,17,Happy Birthday!,"Nov 27, 2024",1,_BREEZE_,70,"Nov 27, 2024","Today is my birthday, makes me glad Leetcode chose a problem that seems to be fun 😌"
+"expression-add-operators
+",88,87,you have extra spaces there,"Apr 01, 2024",0,davidsergeev973,0,"Jan 16, 2023",It seems that the order of the results matters but I can't figure out what the pattern is.Any idea how to mitigate this after collecting all the solutions?
+"string-compression
+",380,375,Send the code,"Sep 07, 2023",0,tridibghosh_11,0,"Sep 07, 2023","why does my output show this?
+[""a"",""a"",""b"",""b""] where another online compiler gives correct output.
+[""a"",""2"",""b"",""2"",""c"",""3""]"
+"minimum-operations-to-make-binary-array-elements-equal-to-one-i
+",3,1,"Small addition: there is also old task which is more complex variant of this one: https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/description/
+Anyone who solved it and remember about that task can just copypaste old code with few corrections and it gonna work with new task. There are also proofs that greedy approach works correctly for those type of tasks. You can find them in comments & solutions for old task. To be honest I would rate this task as medium-easy and hard version as medium-hard. They both not very complex.","Jun 24, 2024",1,AlexPG,22,"Jun 22, 2024","Just after 10 mins of the contest i have seen 3k solutions accepted (and around 2-2.5k for 2nd version of this question)
+Am i Dumb or people have really become smart!!😓"
+"concatenated-words
+",10,7,"but the min length is 1
+string can not be empty
+also question states that only lowercase alphabets are there
+so no blank space is there
+so I can't understand how that part of code even bothered","Jan 27, 2023",3,AkashAgarwal00,14,"Jul 27, 2018","Initially I failed the last test cases.
+My idea was, if there is empty string in the given list, then all the non-empty string can be regarded as a concatenated word of an empty string and itself. So once I found an empty string, I return all the non-empty ones. And it seems that this assumption is not right since I passed all the cases after changing this.
+This is what made me confused, what do you guys think."
+"lucky-numbers-in-a-matrix
+",34,33,"Thanks for this.
+See you tomorrow.","Jul 19, 2024",0,psharma11_be21,27,"Jul 19, 2024",TESTCASES-------------------->
+"binary-tree-pruning
+",14,13,https://leetcode.com/problems/binary-tree-pruning/solutions/140075/4ms-c-solution-without-recursion/,"Feb 04, 2023",0,Four0One,1,"May 04, 2019",I checked the discussion. most are using recursion.Is there any solution not using recursion? how to use stack to solve this problem?
+"word-pattern
+",46,42,"yeah lol, for quite sometime didn't understand why dog cat cat dog was working but not that one, then it hit me 😂","Feb 17, 2024",0,mendi,14,"Jun 30, 2023","For javascript/typescript leetcoders. Watch out ""constructor"" for when using plain object ({}). Test case 40 has ""constructor"" to fail the codes using plain objects. Use Map instead of plain objects."
+"find-duplicate-subtrees
+",10,9,Congratulations my friend!,"Feb 28, 2023",2,Movsar,40,"Feb 28, 2023",my first badge : )
+"maximize-greatness-of-an-array
+",5,3,"You're right, it is not necessary to use sorting here. The official hint is for freshmen.","Mar 19, 2023",0,brinuke,5,"Mar 18, 2023","O(nlogn) is accepted, but if you want more of a challenge, there is a less obvious O(n) solution to find."
+"smallest-range-covering-elements-from-k-lists
+",147,145,"@4onen so the result is the range [a,b] which b-a mininum, a minimum and {a,b} belong to all list?","Oct 13, 2024",1,haucle,0,"Oct 13, 2024","I don't understand example 1, why not return [0,5]?"
+"reconstruct-itinerary
+",2,1,Hahahaaha... funniest comment ever,"Feb 03, 2024",1,Syed_Bilal,408,"Sep 14, 2023",ME:
+"sort-characters-by-frequency
+",5,1,"I think, it's fixed now. I use some test cases. My output was different but accepted.","Feb 07, 2024",3,hafid-hub,80,"Nov 07, 2016","I think there is an issue with the test cases. I am getting wrong answer on this test case ""loveleetcode"". The official answer is ""eeeeoollvtdc"" while I get the answer ""eeeeoolltvcd"". According to the problem statement this answer should be correct as the characters with same frequency can be arranged in any order.Thanks"
+"count-alternating-subarrays
+",7,3,"same..first I changed my answer variable to long, still got runtime error, then I changed everything to long and it was accepted. Feels so bad to get wrong submissions in cases like these😥","Mar 31, 2024",1,satstar,9,"Mar 31, 2024",Use Long!! 😭 resulted in 2 wrong submissions!
+"find-score-of-an-array-after-marking-all-elements
+",21,20,"Here is the code link for reference:-)
+https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements/solutions/3457725/easiest-solution-priorityqueue/","Apr 26, 2023",0,cOde_Ranvir25,0,"Apr 26, 2023","Here is an Approach :-)Create a priority queue to store the unmarked integers in the array. The priority queue will be sorted in ascending order of the integers. In case of a tie, the one with the smallest index is selected.Initialize a boolean array ""seen"" of size n (n = length of nums) to keep track of marked elements. Mark all elements as ""false"".Initialize a variable ""score"" to 0.While the priority queue is not empty, repeat the following steps:
+a. Remove the element with the smallest value from the priority queue.
+b. Check if the element is already marked. If it is, move to the next element.
+c. If the element is not marked, add its value to the score.
+d. Mark the element as seen by setting the corresponding index in the ""seen"" array to true.
+e. If the element has adjacent elements, mark them as seen too."
+"find-customer-referee
+",26,25,"@anushka42003 NULL is basically an 'unknown' value. and you cannot compare any attribute with an unknown or let's say a missing value.
+any comparison operation (>, <, =, >=, <=, != or <>) will give either TRUE or FALSE as an output, except the case of NULL. for that, we need to you ""IS"" or ""IS NOT"".","Mar 01, 2024",2,anish_sule,41,"Dec 06, 2022","I suppose it would be helpful to know that = NULL and a function isNull () works differently. Well, apparently, ""=Null"" doesn't work at all."
+"design-add-and-search-words-data-structure
+",12,7,"@Nikhil Arora The only thing I got from reporting stuff is their boilerplate ""Thank you for your time, we don't care ..."". When they accept one of your test cases let me know. Look at the first 100 problems in their problem list (e.g. 3sum). Those problems have been there for years. Nevertheless, several of those problems still have ambiguous or wrong problem descriptions, weak tests, misleading constraints and whatnot. I don't want to know how many hours have been wasted by users reporting stuff (and again, I myself have spent some time writing detailed reports). One thing is certain: if they did take user feedback seriously those problems would definitely have improved at this point","Mar 19, 2023",0,Electron1997,42,"Jan 28, 2022","I must confess, I totally dislike these types of problems on leetcode.It is unclear which solution complexity is intended, and almost any brute-force solution passes with some heuristics on top of that.For example, just caching the answers worked for me. Here, in discussions, I see a lot of solutions that group all the words by size. However, it is quite obvious that both heuristics are extremely easy to break. So the actual reason all of that works is a set of unbelievably weak tests.Seeing these heuristics work may create the wrong impression of being the ""correct"" approaches. They are not, and it could be very misleading."
+"consecutive-numbers
+",136,135,they need consecutive number count and not only count,"Jul 18, 2024",0,mahantadattu,0,"Jun 24, 2024",SELECT COUNT(DISTINCT num) AS ConsecutiveNums FROM Logs GROUP BY num HAVING COUNT(num) >= 3; can anyone tell me how this is wrong?
+"find-closest-number-to-zero
+",4,1,because u might be storing only the magnitude of -1321 as ur ans,"Mar 04, 2023",0,HNcodes,8,"Feb 09, 2023","My output:
+1321Expected Output:
+-1321Can someone please explain why?"
+"greatest-common-divisor-of-strings
+",350,349,"got it from stdout by printing gcd, it prints","Sep 03, 2023",0,zatha,0,"Sep 03, 2023","return str1[:gcd(len(str1),len(str2))] if str1+str2==str2+str1 else """"
+i don't know how it was executed, where is the gcd definition, it internally defined or imported in leetcode iimplementation"
+"calculate-money-in-leetcode-bank
+",65,64,"It's reserved keyword, analog of the this, in Python","Dec 11, 2023",0,VMAtm,0,"Dec 11, 2023",what is the self means?
+"number-of-beautiful-pairs
+",15,14,you can get first digit without using helper function also :),"Jul 29, 2023",0,SahilNikam,0,"Jul 29, 2023","To solve this problem, we can use the given helper functions gF and gL (getFirstDigit and getLastDigit) to extract the first and last digits of a given number. Then, we need to calculate the GCD (greatest common divisor) of the first digit of nums[i] and the last digit of nums[j] for all valid pairs (i, j) and count the beautiful pairs where the GCD is equal to 1."
+"find-the-pivot-integer
+",23,18,,"Mar 13, 2024",7,Msey,38,"Nov 27, 2022",Four solutions possible;
+"delete-characters-to-make-fancy-string
+",22,17,i used two pointer also,"Nov 01, 2024",0,RaunakKunti,22,"Nov 01, 2024",anyone use two pointer?
+"profitable-schemes
+",76,75,Here are some problems that build upon Knapsack concept:,"Aug 02, 2024",0,rohis,0,"Apr 21, 2023",Can somebody provide more Knapsack problems please
+"binary-tree-tilt
+",33,32,"yes it is,","Apr 17, 2024",0,arurahul16,0,"Nov 30, 2023",havent tried to solve but is this really a easy question?
+"single-number-iii
+",78,77,@Yaoshiko upvotami almeno così facciamo karma,"May 31, 2024",0,Sebat,1,"May 31, 2024",nicola io mollo
+"maximum-number-of-moves-in-a-grid
+",49,44,"Thanks, totally thought it was you could start from any position in the first row and didn't realize it was from the first column.","Oct 29, 2024",4,holfeld,10,"Oct 29, 2024","If you are not able to understand the second test case, then you should give a second read to the second line of the question!
+Keep Coding!"
+"minimum-number-of-seconds-to-make-mountain-height-zero
+",39,38,me also but not is one go.,"Sep 22, 2024",0,anas980,1,"Sep 22, 2024",broo i solved it in one go using priority queue
+"list-the-products-ordered-in-a-period
+",76,75,Because you are writing unit>=100 before group by and hence no output is coming in ypur case. First u have to group them and then find the final answer of each group having units of at least 100,"May 18, 2023",2,im_rish97,0,"Apr 29, 2023","select p.product_id, p.product_name, sum(o.unit) as unit from products p
+left join orders o on p.product_id = o.product_id
+where unit>=100 and o.order_date between '2020/02/01' and '2020/02/28'
+group by p.product_idwhy this is not working??"
+"walking-robot-simulation
+",15,12,Here's a fun edge case:,"Sep 04, 2024",8,aitachii,57,"Sep 04, 2024",TESTCASES------------------>
+"frog-position-after-t-seconds
+",10,9,"@abmiitd It's been a quite, anw,
+cause vertice 7 is not a end node then frog cant stay in 7 for 7 second!","Jan 18, 2024",1,Yongbi,9,"Sep 26, 2020","8
+[[2,1],[3,2],[4,1],[5,1],[6,4],[7,1],[8,7]]
+7
+7Expected is 0
+but it is undirected graph and hence expected should be 0.25"
+"minimum-number-of-operations-to-sort-a-binary-tree-by-level
+",9,6,Nice profile picture,"Aug 31, 2023",0,sdsohaibali,2,"Aug 17, 2023",Problem will be reduced to find the minimum number of moves required to sort an array. Hint:- sort + store indexes.
+"count-the-number-of-fair-pairs
+",200,199,"nums[2] = 9
+nums[3] = 2","Nov 13, 2024",0,aitachii,0,"Nov 13, 2024","IF lower = 11 and upper is also 11
+how can we get pair = (2,3)"
+"contains-duplicate-ii
+",97,96,Aggred,"May 15, 2024",0,velocity_mass,1,"May 15, 2024",There are soo much bad descriptions in this world.. This question's description is one of them
+"find-minimum-in-rotated-sorted-array
+",39,36,your wish is granted ny child,"Jun 18, 2024",7,LAKSHYABHARDWAJ1509,14,"Dec 19, 2020",Please change the difficulty tag to medium.
+"minimum-number-of-taps-to-open-to-water-a-garden
+",93,92,"@sergei99 : I agree, that was mentioned in the editorial too. But somehow I feel, this problem is a combination of below three problems. This can be solved using sweep line. That's my intuition. But I could not get the exact answer.","Sep 01, 2023",0,umaparvat,0,"Sep 01, 2023","I thought this problem can be solved using sweep line/line sweep.
+Input: n = 5, ranges = [3,4,1,1,0,0]
+so the garden range as per problem -> (0,5) inclusive
+now the intervals are [(-3,3), (-3, 5), (1,3), (2,4), (4,4), (5,5)]
+dict => {-3: 2, 1:1, 2:1, 3: -2, 4:-1, 5: 0}
+`
+d = defaultdict(int)
+for idx in range(len(ranges)):
+start = idx-ranges[0]
+end = idx+ranges[1]
+d[start] += 1
+d[end] -= 1
+prev = 0
+c = 0
+garden = [0, n]
+for key in sorted(d):
+prev += d[key]
+if prev:
+c += 1
+return 1 if c >= garden[1]+1-garden[0] else -1"
+"4sum
+",3,1,"""hell yea "" moment","Oct 18, 2024",1,Jhonny_T,364,"Jan 04, 2024",Passing all test cases of this problem is more satisfying than having an actual foursome
+"count-all-possible-routes
+",13,12,If you know any dynamic programming this is more of a medium. It doesn't have any fancy tricks and it's just memoizing on fuel and current locations.,"Jun 25, 2023",0,AssortedFantasy,40,"Jun 25, 2023",Please stop with the hards on the weekend
+"longest-word-in-dictionary-through-deleting
+",6,1,"@josephding0609 I had the same confusion, too. Probably because we both used a Map/Dictionary based approach. Note that the characters cannot be rearranged. So it isn't possible to derive ""awe..."" from the string ""aew..."" by deleting one or more characters.","Jan 02, 2023",2,qwerty7325,43,"May 06, 2017","Hello,I have a testcase that failed.The input:""aewfafwafjlwajflwajflwafj""
+[""apple"",""ewaf"",""awefawfwaf"",""awef"",""awefe"",""ewafeffewafewf""]The output for this one in the testcase is ""ewaf""but I think it is ""awefawfwaf"", which is the longest string."
+"bitwise-and-of-numbers-range
+",9,7,"nice approach , but it's still showing TLE","Jun 03, 2024",0,RishabhAnand20,57,"Mar 27, 2020","At first, it is easy to think of the brute force solution, BIT_AND all the way from m to n.But we doesn't need to calculate all of them.Notice: whenever we reach t = 2^k, the last k binary digits of t are all 0!When we meet the first 2^k above m, the result will be 0. No matter what is following.Let t be the first 2^k above m, that is, 2^(k - 1) <= m < 2^k = t"
+"maximum-score-words-formed-by-letters
+",133,131,"You can only form all the words of a subset if the necessary number of letters are present in letters. For example if words = [ ""abc"" , ""cd""] , letters = [ 'c' , 'c' , 'd' , 'b'] . You can only form the susbet [ ""cd"" ] with letters, because 'a' is not present in letters therefore we cannot form ""abc"".","May 24, 2024",0,GodOfm4a1,0,"May 24, 2024",What is the role of repeating letters in this question? Since we don't need to decrease the frequency of the letter once used in making other word.
+"watering-plants
+",26,25,it's easy cause you memorized the solution. nobody cares,"Aug 29, 2024",0,owenwu4,0,"Dec 27, 2022",easy problem
+"shortest-subarray-with-sum-at-least-k
+",87,84,99 + 48 > 140 so 2,"Dec 17, 2022",2,anubhavnegi54,2,"Nov 24, 2018","Need to find total number of elements in shortest sub array with sum k.One of the test case failing for me.Array :[48,99,37,4,-31]
+k : 140Expected output is 2 here where 3 is the correct answer."
+"maximum-number-of-vowels-in-a-substring-of-given-length
+",16,14,so much cheerful,"May 05, 2023",0,Jobababa,23,"May 05, 2023","I was worried about tackling a difficult problem, but I'm grateful that LeetCode presented a manageable challenge this time. thank you!!!
+Edit: I know what's waiting for us tomorrow, but let's celebrate what we have now."
+"distribute-candies
+",2,1,@kd_5304 same,"Feb 04, 2023",0,papitochi,35,"Jan 13, 2023","me after watching that this question has 1.2k likes and 1.2k dislikes.""Perfectly balanced, as all things should be."""
+"word-break-ii
+",57,55,"pick not pick wont work because u have to make string such that all the letters of s come up into our final string which we would push into ans vector, u cant skip any characters","May 25, 2024",0,smitk03,1,"May 25, 2024","I had a backtracking pick and not pick solution that passed 15 test cases instead of partition technique.
+how you guys figure it out to use partition not pick and not pick technique."
+"number-of-wonderful-substrings
+",42,39,A more cynical point of view is that it is hints give solution week.,"Apr 30, 2024",3,Oliver_Day,12,"Apr 30, 2024",Its looking like a bit manipulation week ?
+"find-the-student-that-will-replace-the-chalk
+",40,39,I feel you bro. #metoo.,"Sep 02, 2024",1,adarsh0nayak,21,"Sep 02, 2024",I always feel dumb when a question is difficult for me but then I see solution. So sad
+"reorganize-string
+",76,74,s and Output contain differenct characters. In sorted order:,"Aug 24, 2023",1,siebenschlaefer,0,"Aug 23, 2023","s = ""ogccckcwmbmxtsbmozli""Output : ""czcxcwctmsmlmkoiogbg""Expected : ""cocgcickmlmsmtbwbxoz""in the description it is written that Return any possible rearrangement of s or return """" if not possible
+But it is showing wrong ans."
+"rising-temperature
+",58,56,"we need to rearrange this query a little bit as follows
+with CTE as (
+select
+id,recordDate as [date], temperature as temp,
+lag(temperature) over(order by recordDate,id) as prev_temp,
+lag(recordDate) over(order by recordDate,id) as prev_date
+from Weather
+)","Jan 24, 2023",0,abebe_1983,8,"Nov 28, 2021","SELECT id
+FROM
+(
+SELECT id, recordDate, temperature AS today_temp, LAG(temperature,1) OVER (ORDER BY recordDate) AS yesterday_temp, LAG(recordDate,1) OVER (ORDER BY recordDate) AS yes_dateFROM Weather
+) AS temp_table"
+"sliding-puzzle
+",105,101,@Aetherus thanks for boosting my confidence,"Nov 25, 2024",1,CodeYogic,2,"Nov 25, 2024","I am a beginner ! looking at today's problem
+I AM DED , i know i should atleast try , but i can't even do it in real life without brute force ;("
+"count-of-substrings-containing-every-vowel-and-k-consonants-ii
+",57,54,"iqeaouq,qeaouqi,iqeaouqi","Sep 30, 2024",0,prince_cingh,0,"Sep 29, 2024","word = ""iqeaouqi""
+k = 2
+accepted ans = 3, how?
+my ans = 2 only
+iqeaou and eaouqianyone ?"
+"minimum-bit-flips-to-convert-number
+",31,28,@Arcturus_22 thanks bro,"Sep 11, 2024",-1,Garv_Virmani,14,"Sep 11, 2024","Take XOR of start and goal
+Count set bits(popcount in C++)"
+"constrained-subsequence-sum
+",8,5,Thanks a lot),"Oct 21, 2023",1,Itachis_Main,96,"May 10, 2023","Although I haven't solved this yet, for those who have trouble understanding the question, I try my best to explain.The question requires you to find a subsequence from a given array, whose sum should have a maximum sum.What is a subsequence? Meaning that you can remove any number from the array, or remove none of them, and then you can obtain a new array. This new array is called a subsequence.
+For example, given an array [1,2,3], the subsequences could be [1, 2, 3] (remove no number), [2, 3] (remove 1), [1, 3] (remove 2), or [1] (remove 2 and 3)."
+"contains-duplicate
+",40,37,@dilsherb sort internally uses more than one loop I'd bet.,"Sep 17, 2023",0,z_acc,25,"Apr 12, 2019","I used 2 for-loops to solve this problem, it's easy to understand."
+"decoded-string-at-index
+",130,129,"try not to expand the string fully. Think about reducing search size.
+One tip is that the kth element of a string s of size N is same as the k%Nth element.
+Happy Coding!!","Sep 27, 2023",0,reassurance,0,"Sep 27, 2023","Tried to get the whole String until length of K-1 is achieved using StringBuilder
+""y959q969u3hb22odq595""
+222280369
+Got stuck on this testcase (case no= 33)
+what should I do ?"
+"word-pattern
+",215,214,The mapping is supposed to be bijective so every element should have a one-one relation,"Jul 20, 2023",0,rampageousrj,0,"Jun 27, 2023","Testcase: 32/41
+pattern = ""abba""
+s = ""dog dog dog dog""Output: true
+Expected: falseI use hashmap to solve this question
+a -> dog
+b -> dog
+b -> dog
+a -> dog
+key contain same value then why it is showing expected false."
+"toeplitz-matrix
+",24,23,,"Nov 26, 2024",0,tashriqueahmed,2,"Oct 31, 2022",I am not getting perfect answers to the follow-up questions ...Can anyone help me out?
+"swapping-nodes-in-a-linked-list
+",7,2,who can blame u when the function is literally named swapNodes lmfao,"Jun 24, 2023",4,pyush98,111,"Apr 04, 2022",I focused my solution on swapping nodes instead of swapping values which is considerably more difficult as there are multiple edge cases to consider. I see lots of short solutions where only the value is swapped. I feel like this problem description deserves more clarification as to what is expected.
+"defanging-an-ip-address
+",4,1,l agree with you.,"Apr 08, 2023",0,cavidanbagiri,130,"Jan 13, 2023","Can we stop putting solutions in the discussion area. People are looking for tips and hints in this area, not the answer."
+"meeting-rooms-iii
+",56,53,"After meeting 3, the earliest free room will be room 2
+so [3,7] -> [3+8, 7+8] at room 2
+and 4,6 -> [4+9, 6+9] at room 1
+since room 0 gets freed at last, only one meeting will take place there.","Aug 03, 2023",0,shru15,5,"Jun 23, 2023","May someone explain why this meetings [[0,10],[1,9],[2,8],[3,7],[4,6]] will return 1?
+I thought it should beSo, the room 0, 1 will held 2 meetings, then it should return 0 ?"
+"the-number-of-the-smallest-unoccupied-chair
+",50,49,please tell me what is confusing about this question. to me it is perfectly clear and well written,"Oct 11, 2024",0,neks,8,"Oct 11, 2024","""Wow, what a perfectly clear question. I totally understood every word... not confusing at all!"""
+"contains-duplicate
+",53,51,Explain pls,"Jan 19, 2024",0,ronaldorawat,9,"Apr 09, 2022",lmao
+"maximum-distance-in-arrays
+",214,213,because you can not pick the smallest number and biggest number from the same array,"Aug 16, 2024",1,huynhnamdo,0,"Aug 16, 2024","Why this testcase return 4 instead of 5?
+[[1,4],[0,5]]"
+"count-good-numbers
+",46,44,@karnativr2611 i also got the same problem did you find out,"Jul 16, 2024",0,shubhdeep_02,0,"Jan 28, 2024","Can some one let me know why the below code is failing for n=50.
+var countGoodNumbers = function (n) {
+if (n == 1) {
+return 5;
+}
+let evenVal = 1, oddVal = 1;
+if (n % 2 == 0) {
+evenVal = n / 2;
+oddVal = n / 2;
+} else {
+evenVal = (Math.floor(n / 2)) + 1;
+oddVal = Math.floor(n / 2);
+}
+let x = (findPower(5, evenVal)) % (1000000007);
+let y = (findPower(4, oddVal)) % (1000000007);
+return ((x * y) % (1000000007));
+};"
+"maximum-value-of-k-coins-from-piles
+",23,21,"I was doing the same thing, with TLE at 77/122. Your solution made me think about this problem in a different way. Thanks","Apr 15, 2023",1,NoobyNoob,2,"Apr 15, 2023",whats the best way to track the index of each pile? using a tuple so i can cache the results is giving me TLE at 77/122
+"delete-nodes-and-return-forest
+",196,195,"@jsm209
+Honestly, I don't remember much now. Broadly speaking, Idea is to parse first and then break the links next - clean. This is possible when we do dfs to the lowest node and then break the chain as you backtrack the recursion.","Jun 03, 2024",0,maheshs,-4,"May 17, 2024",Simple and Clean - 97% Runtime and 85% Memory
+"partition-string-into-substrings-with-values-at-most-k
+",12,9,The problem description is ambiguous as it says -,"Mar 09, 2023",0,SUMITZET,1,"Jan 08, 2023",How does the first example satisfy the condition Each digit of s is part of exactly one substring.?
+"koko-eating-bananas
+",130,128,"You need to divide every piles[i] / k (where k = 14), round up, then sum. Doing this will produce the hours the guards are away for 823855818.","May 15, 2024",0,ferris_rs,2,"Aug 07, 2023","I don't understand one case. There are 18 piles, but the expected answer is 14. How the expected answer could be less than the number of piles if each pile takes at least 1 hour?piles =
+[332484035,524908576,855865114,632922376,222257295,690155293,112677673,679580077,337406589,290818316,877337160,901728858,679284947,688210097,692137887,718203285,629455728,941802184]
+h =
+823855818"
+"adding-two-negabinary-numbers
+",3,2,Negasonic Teenage Warhead? Just add Nega prefix to anything,"Oct 21, 2024",0,blablablaster,5,"Apr 18, 2024",Nah who named it that.
+"cheapest-flights-within-k-stops
+",27,24,It is Today !! 22 Jan 2024 is the day !! Jai Shree Ram,"Jan 21, 2024",13,marknaman05,137,"Jan 26, 2023","Jai Shree Ram, flight is going to Ayodhya"
+"roman-to-integer
+",115,114,"Yes it can be done by replacing the string:
+lV = IIII IX = IIIIIIIII
+XL = XXXX XC = XXXXXXXXX
+CD = CCCC CM = CCCCCCCCC","Aug 22, 2024",0,mihirpatel1112002,0,"Aug 08, 2024",can it be done without hash table??
+"array-wrapper
+",26,25,They didn't. This is how JS works internally according to the specs. You can find a good summary of it in the MDN docs.,"Jun 15, 2023",1,rcomesan,0,"Jun 15, 2023","I would know if they actually modified the JavaScript's environment for this problem to make it accepts operator overloading, or they wrote it like that just to provide a simple explanation..."
+"the-skyline-problem
+",30,28,"Same. Seemed a ridiculous question to me, and I have never had to use this sort of logic in daily job. They actually gave me the job anyway.","Mar 10, 2024",0,jeffreyoboe1,0,"Sep 07, 2023","Was asked this question in an interview, and I had no idea how to solve it..."
+"longest-happy-string
+",234,233,@mega01 means it can occur <=a times,"Aug 23, 2023",0,ANKITKRCSP,0,"Dec 02, 2022","s contains at most a occurrences of the letter 'a'.
+s contains at most b occurrences of the letter 'b'.
+s contains at most c occurrences of the letter 'c'.
+can someone explain the definition of this? really confuse about the descriptions here"
+"find-kth-bit-in-nth-binary-string
+",134,133,"Your solution is brute force, so you're not qualified to say this problem is easy.","Oct 19, 2024",0,cgl0408,0,"Oct 19, 2024",Should be marked Easy !!! Simple Simulation Problem ! Implement what is asked !
+"minimum-deletions-to-make-character-frequencies-unique
+",44,43,yes,"Sep 14, 2023",0,DamianIvanochko,1,"Sep 14, 2023","Hey guys, my solution seems to be correct but it gave wrong output for
+s =""bbcebab""
+Output : 3
+Expected : 2We can see that
+b comes 4 times and a,c,e come one times each, if we delete any two elements in this group, we would have frequencies of 4,1,0 and 0 which is unique.So the minimum deletions should be 2 instead of 3.Correct me if I am wrong."
+"max-dot-product-of-two-subsequences
+",6,5,✔,"Oct 08, 2023",0,rajkariya2003,49,"Oct 08, 2023",wEEkeND RuiNeD suCeSSfUlLy !!
+"minimum-processing-time
+",21,18,"@mohitpal2621 No I think it is not like that.
+It is 18th second not 18 seconds buddy.","Oct 08, 2023",0,rajatsaini,1,"Oct 08, 2023","I have a doubt, it is not mentioned in the question that each processor must excecute 4 tasks...therefore as in sample test case 2...processors 1 executes 4 assigned tasks till 18 ....therefore after 18 it is free why should not we assign next 4 tasks on processor 1 again itself which will give is ans as 21 instead of assigning it on proceesor 2 which gives us ans as 23.If I am wrong please correct meThanks"
+"merge-k-sorted-lists
+",3,1,"@wangjian2015la writing a compiler from scratch could make any easy problem hard. Does it mean that every easy problem should be marked as hard now?
+easy = naive approach + simplicity of code
+medium = brute force won't work || code is not that easy to write (example is backtracking)
+hard = you really need to think about the efficiency + it's hard to code","Apr 09, 2024",4,frolik,371,"May 26, 2019","This problem should not be marked as hard.
+Medium is more proper based on the other problems on leetcode."
+"similar-string-groups
+",60,59,"The answer is 1 because blw and bwl are smiliar, wlb and blw are similar.","Dec 12, 2023",0,MeloWang0308,0,"Oct 21, 2023","[""blw"",""bwl"",""wlb""]for this test what should be the answer??"
+"implement-stack-using-queues
+",45,43,"It is very easy to cheat. In fact, if the editorial is unlocked LeetCode actually provides a COPY button with their solution so you don't even have to select the text!","Aug 29, 2023",0,psionl0,2,"Aug 28, 2023",This question isn't great as there's no way to enforce the use of two queues in the implementation. The follow-up question is trivial to solve in python.
+"lexicographically-smallest-equivalent-string
+",107,106,"@Mister_CK If you want to do it like this, can we not store just the lexographically smallest equivalent of each character in a 26X2 matrix. Then all you need to do is replace a character with it's matrix counterpart.","Jan 14, 2023",0,sk03167,0,"Jan 14, 2023",any one have solution rather than (DSU)?
+"longest-path-with-different-adjacent-characters
+",134,132,"@Flo It was same, little more or less - but this should not have been a hard, should just be a medium like yesterday's problem","Jan 13, 2023",0,sarpalmadhav,0,"Jan 13, 2023",I found this one easier to implement than the one from yesterday
+"meeting-rooms-iii
+",116,115,Usually interview either tests you to implement the heap with very simple question or test your ability to apply it. This would be later I believe.,"Feb 18, 2024",0,feng3245,1,"Sep 24, 2023",are we even allow to use heapq.heapify() function in the interview?
+"count-items-matching-a-rule
+",5,3,This helped. thank you,"May 14, 2024",0,Maulik06,19,"Jan 23, 2024","above description is very poor so i explain here properly-----
+You are given an array items, where each items[i] is a list [typei, colori, namei] representing the type, color, and name of the ith item.You are also given a rule represented by two strings, ruleKey and ruleValue. The rule defines a condition that an item must meet to be considered a match.The conditions for a match are as follows:If ruleKey is ""type"", then the item must have the same type as ruleValue.
+If ruleKey is ""color"", then the item must have the same color as ruleValue.
+If ruleKey is ""name"", then the item must have the same name as ruleValue.
+Your task is to count the number of items in the items array that match the given rule."
+"house-robber
+",10,7,😂,"Feb 02, 2024",0,jackk10,714,"Nov 13, 2019","""You are a professional robber planning to rob houses along a street.""I refuse to believe that a professional robber would ever attempt to rob a street that had no houses on it. The description should be updated to indicate that the robber is perhaps an amateur robber, or a blind robber."
+"sort-characters-by-frequency
+",200,198,@nirutgupta78 thanks,"Dec 03, 2022",0,himanshu_210,0,"Dec 03, 2022","s=list(S)
+s.sort()
+temp=list(set(s))
+l1=[]
+l2=[]
+new=''
+for i in temp:
+l1.append(i)
+l2.append(s.count(i))while True :
+if len(l1) == 0:
+return new
+new+=max(l2)*l1[l2.index(max(l2))]
+l1.pop(l2.index(max(l2)))
+l2.pop(l2.index(max(l2)))"
+"determine-if-a-cell-is-reachable-at-a-given-time
+",183,182,"No, it's 10^9 but pretty much like it is","Nov 08, 2023",0,doraani,0,"Nov 08, 2023",Grid size is infinite?
+"path-with-minimum-effort
+",53,52,because leetcode wants people to buy premium,"Jun 07, 2024",0,niteshsaxena03,1,"Sep 16, 2023",why editorial is locked everyday?
+"maximum-length-of-pair-chain
+",88,87,It just means that you still need to provide a more optimal solution for the solution to be accepted. It has happened with me a couple of time before.,"Aug 26, 2023",0,user0411bt,0,"Aug 26, 2023","class Solution {
+public:
+int solve(vector<vector> &pairs, int prev, int curr, vector<vector> &dp) {
+if(curr == pairs.size()) return 0;"
+"count-the-number-of-fair-pairs
+",263,262,"u can swap i and j, so sorting is allowed","Mar 08, 2023",0,c4tdog,0,"Feb 12, 2023",can someone explain how can we sort if i<j??
+"course-schedule
+",231,230,"The problem of finding the maximum number of courses that can be taken, given a set of prerequisites, is a slightly different problem. This variant requires you to identify the largest acyclic subgraph (DAG) in the given graph, which is a difficult problem known as the Maximum Acyclic Subgraph Problem and is NP-Hard.","Jul 13, 2023",0,bparanj,0,"Jul 13, 2023","follow up :
+what if we have to calculate the max number of doable courses"
+"valid-boomerang
+",9,8,"This right here, plus multiply is faster than divide","Sep 20, 2024",0,trashytrash,3,"Feb 01, 2024","Cross multiply to avoid divide by zero, fractions and other pain areas."
+"valid-perfect-square
+",30,28,"it solved my problem, why?","Jun 21, 2024",0,geum_,2,"Jun 17, 2024",Use Long Long instead of int
+"split-a-string-into-the-max-number-of-unique-substrings
+",23,18,Thnx bro for giving this everyday 👍,"Oct 21, 2024",1,shubhankar5002,48,"Oct 21, 2024",TESTCASES--------------->
+"remove-nodes-from-linked-list
+",139,138,"You should ensure that the stack (st) is not empty on each iteration of the inner while loop in the monotonic stack implementation. If the stack is empty, it can lead to undefined behavior, which might have been the root cause of your error. To prevent this, amend while (st.top() < x) to while (!st.empty() && st.top() < x.","May 06, 2024",1,Moupiya001,0,"May 06, 2024","I started to write navie solution then optimizing it. However my naive solution is giving error and I cannot debug it.class Solution {
+public:
+ListNode* removeNodes(ListNode* head) {
+// Inefficient Solution
+stack st;
+stack st2;
+ListNode * temp = head;
+while(temp->next){
+int x = temp->val;
+if(!st.empty()){
+while(st.top()<x) st.pop();
+st.push(x);
+}
+else st.push(x);
+temp=temp->next;
+}"
+"coin-change-ii
+",45,44,This helped me solve the problem. Thank you!,"Aug 11, 2023",0,poiuyt123,4,"Aug 11, 2023","When faced with a coin change problem, it's essential to adopt a mindset that involves exploring all possible avenues to reach the desired outcome (Recursion as one would say). The problem can be likened to determining how many distinct ways one can achieve a particular target value using given coins.Before diving into dynamic programming (DP) solutions, it's wise to lay the groundwork with a recursive approach. In simple terms, envision two primary options: either selecting a coin or not. If you opt to select a coin, a subsequent choice arises: whether to pick the same coin again or proceed with a coin of lesser value. Alternatively, if you decide not to select a coin, the focus shifts to considering the next available coin in the set."
+"number-of-atoms
+",63,62,LMAO,"Oct 26, 2024",0,aristokat,11,"Jul 14, 2024",I mast****ted 3 times in the span of 3 hours while solving this damn problem.
+"longest-palindrome
+",77,76,"I understand how array usage is better for speed (even with the cost of initialising all values to their default), but it would not handle different constraints and is more obscure - does not convey your intent. Generally array is for a set of values while map is for tracking values.","Jun 04, 2024",0,Oliver_Day,2,"Jun 04, 2024","No need of hashmap/hashset, just use a frequency array as string only contains lowercase or uppercase letters. Reducing hash overhead improves performance by a LOTOnce you have the frequencies of every letter, answer is very straightforward. We can consider all even frequencied letter as part of palindrome, as half can go on left end and half on other end. So sum all of those
+For odd frequencies, we can take ALL but ONE (or simply f - 1) because f - 1 will either result in an even number or 0 (if singular letter where f = 1). Can simply increment answer by f - 1 in these cases, as those f - 1 letters can be placed half and half just like above!"
+"coin-change
+",30,28,dp[i][j] ? is this 2d dp?,"Nov 04, 2023",0,kieuwanlee4120,26,"Nov 04, 2019",
+"longest-ideal-subsequence
+",9,7,us bro,"Apr 25, 2024",1,dash123---,70,"Apr 25, 2024","Being here ,despite of exams tomorrow! 🙂🙂"
+"maximum-nesting-depth-of-the-parentheses
+",99,98,dont post ans here dude,"Jan 02, 2023",3,its_adit,1,"Dec 07, 2022","class Solution {
+public:
+int maxDepth(string s) {
+int res=0,curr=0;
+for(int i=0;i<s.length();++i){"
+"camelcase-matching
+",9,8,"No need to fix anything, the description and the problem itself is broken to an extent that it should be taken down.","Nov 07, 2024",0,sarpalmadhav,5,"Apr 14, 2023","The last sentence of the description should be:
+You can insert lowercase character at any position and you should not remove any characters.
+So
+pattern ""Foba"" will match: ""FooBar"", ""FaoBra""; will not match: ""FoBaFoBa"", ""FooBarTest"", ""Foba"""
+"minimum-number-of-operations-to-make-all-array-elements-equal-to-1
+",2,1,"Yes, your reasoning is absolutely correct. As per the problem, you need to inspect each element of the array to determine if the number 1 is present or if a pair of numbers exists such that their greatest common divisor (gcd) is 1. This requires at least linear time, O(N), where N is the length of the array.","Jun 26, 2023",0,bparanj,8,"Apr 30, 2023","I think it's quite easy to prove that it impossible to solve this problem in O(1) time complexity.
+Imaging you have an array of length N, for which the asnwer is ""-1"" - that is, you cannot make all elements equal to 1 using any number of operations. Now, insert number ""1"" at a random index of the array, and now you can make all other numbers equal to 1. In order to find this ""1"" you need O(N) time complexity."
+"power-of-four
+",46,41,"@psionl0 Exactly, the log function is not O(1). Not sure how its implemented in other languages, but I guarantee you that C++'s std::log and JavaScript's Math.log implementations use loops.","Oct 23, 2023",0,alraisi96,6,"Oct 23, 2023",Very easy! just use log2
+"next-greater-node-in-linked-list
+",4,3,Poor Description. They should've asked us to do it with linear space directly.... Apparently I wasted 15mins to try and build a solution with constant space complexity. ONLY to get TLE on ONE TEST CASE (it passed 75/76 cases and the failed test case is where head was having a ZILLION nodes approx,"Jul 21, 2024",0,ramakrishna1607,9,"Apr 01, 2019","Almost all of our methods are using O(n) time, O(n) space with a stack.
+Is there a better way that we could only use O(1) space?
+I can only figure out O(1)space with O(n2) time."
+"find-the-maximum-length-of-a-good-subsequence-ii
+",23,22,@amitbansal13 i got it thanks dude,"Jun 08, 2024",0,raghavachekuri,-1,"Jun 08, 2024",i think both questions are similar what is the differenece of 3 and 4
+"h-index
+",39,38,Definition of h is The h-index is defined as the maximum value of h such that the given researcher has published at least h papers that have each been cited at least h times. See it is written at least h papers not exact h papers,"May 07, 2023",2,user2118U,10,"Sep 15, 2015","Hi,I came across a situation: given citations = [3, 1, 7, 8, 9]. What will be the answer be?According to the definition of h-index on Wikipedia: ""A scientist has index h if h of his/her N papers have at least h citations each, and the other N − h papers have no more than h citations each.""When h=3, the definition will be ""A scientist has index 3 if 3 of his/her 5 papers have at least 3 citations each, and the other 2 papers have no more than 3 citations each."" Obviously wrong...."
+"same-tree
+",20,19,"you cant , current problem is a special case of what you subtree problem ie both tree are equal .","Jan 10, 2023",0,mrping_11,5,"Apr 13, 2021","So I didn't read this problem right and thought that what we need is to find whether q is a subtree of p (basically what this https://leetcode.com/problems/subtree-of-another-tree/ problem is about). So I wrote a subtree solution for this and it worked, there are no tests that check for a subtree case (e.g. [1,2,3] [2]). You can copypaste a solution from the problem I linked and it will work here. I wonder if there is a way to add a test for this problem?"
+"minimum-size-subarray-sum
+",133,132,Nahhh u need to fix UR code,"Sep 10, 2024",0,vredario,0,"Aug 31, 2024",Half of the test cases are straight up wrong someone needs to fix this.
+"widest-vertical-area-between-two-points-containing-no-points
+",216,215,https://leetcode.com/problems/widest-vertical-area-between-two-points-containing-no-points/solutions/4433636/fastest-python-solution/,"Dec 21, 2023",0,ArnaX_08,0,"Dec 21, 2023",This is not what you are thinking it took 2 hours solve this problem still got wrong as I was not solving this problem
+"flatten-binary-tree-to-linked-list
+",5,1,"@olivierkessler Plus, why would the difficulty be based off the straight forward non-optimal solution? That's not how it works lmaoooo. Like for median of 2 sorted arrays, theres obviously an O(N) solution that everyone can think of but the optimal is O(logN).","Feb 23, 2024",0,youngbryanyu,131,"Feb 16, 2023",change difficulty to hard
+"3sum-with-multiplicity
+",16,15,use modulus,"Nov 02, 2023",0,Pratham8383,0,"Aug 16, 2023","My code fails the test case 39/72.
+arr =
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,...]"
+"best-time-to-buy-and-sell-stock-with-transaction-fee
+",42,40,"@EricRaw wow, totally missed that. Thanks","Jun 22, 2023",0,paresh_singh,7,"Jun 22, 2023","Greedy to solve stock problems.
+Just a hint: sell = max(sell, prices[i] - fee- buy)"
+"find-positive-integer-solution-for-a-given-equation
+",33,32,Why bother going to 1000? The constraints give you 2<=x+y<=z+1<=101,"Nov 08, 2023",1,realitant,0,"Aug 22, 2023","In this question it is said that there will be a hidden function which takes two values x and y and gives the output Z.
+And also, the values of x and y lie in the range 1 to 1000 including 1 and 1000.
+Using Linear search, we run a for loop from x=1 to <=1000 and another for loop for y from y=1 to <=1000, here the time complexity is O(N^2) as for every value of x we run the y loop from 1 to 1000. and every time we call the hidden function by passing x and y and if the value returned by hidden function is equal to z, we add it to the list.
+For Example :-
+first iteration x =1 and y=1;
+second iteration x=1 and y=2;
+third iteration x=1 and y= 3;
+""
+""
+""
+last iteration x=1000 and y=1000."
+"break-a-palindrome
+",17,15,Thanks for the Cases!,"Oct 10, 2022",0,atharva-agrawal,3,"Oct 10, 2022","Think in Terms of Below Cases!CASE 1 : Single Letter Strings Like 'a'/'b'
+CASE 2 : If Starting Letter of Palindromic String is Not 'a'
+CASE 3 : If Starting Letter of Palindromic String is 'a'Try it Yourself Before Clicking here."
+"consecutive-numbers
+",8,5,"They tell you "" id is an autoincrement column. "" and then this?!","May 23, 2024",12,feed0,91,"Apr 17, 2024","Something is wrong with the 22 test case. The one should be in the answer, but expected prints nothing:
+Input
+Logs ="
+"water-bottles
+",140,138,"Initially you have 24 filled bottles which become will empty once you drink all. Now, on exchanging each 4 empty bottles with one full bottle you will get 6 filled bottles (24/4=6). Now out of these 6 empty bottles, 4 empty bottles can be used in exchange 1 filled bottle, which is the 31'st bottle here.
+So now max. no. of filled bottles anyone can drink is 24+6+1=31.
+Hope it helps!!","Jul 07, 2024",1,akanksha_2_code,0,"Jul 07, 2024",can anyone explain me for bottles = 24 and extra = 4 (answer is 31). should not it be 30 ?
+"missing-number
+",6,1,@kavinmano2211 Since you are not using a different array so your space complexity is O(1),"Feb 20, 2024",1,_Epsilon,260,"May 28, 2022","This problem can be solved by 3 methods:
+1.Hashing
+2.Sum FormulaLets dicuss this method that which is more effiecient and why it has to be used:-"
+"maximum-score-words-formed-by-letters
+",123,122,Follow this template and always make the tree diagram for better understanding,"May 24, 2024",0,mercer80,0,"May 24, 2024",not able to understand backtracking
+"smallest-string-starting-from-leaf
+",252,249,Backtracking is a fairly standard algorithm. Medium is about the correct classification.,"Apr 17, 2024",0,psionl0,0,"Apr 17, 2024",Should be a hard problem.
+"flatten-nested-list-iterator
+",26,24,Dayum 2016!!!!,"Aug 29, 2023",12,akash_vannam,20,"Apr 08, 2016","For this problem ""Run Code"" button is not working and code can't be tested. Please fix it :)"
+"ambiguous-coordinates
+",4,3,Yes,"Sep 16, 2023",0,vivek_-_kr,1,"Nov 04, 2022",why new look????
+"maximum-ice-cream-bars
+",38,36,We will all make it bro :),"Jan 06, 2023",0,real_nitin_negi,28,"Jan 06, 2023",Why are we here ?Just to suffer....
+"reverse-bits
+",14,13,"wait, REALLY?, DUDE THATS WHY IT WASNT WORKING!! I JUST THOUGHT I WAS A DUMBASS","Nov 18, 2024",0,shayan1986k,32,"Apr 11, 2024","The problem description is flat out false. They describe how you would have an input of 00000010100101000001111010011100, which corresponds to the integer 43261596. The method signature lists this as an int (I'm working in python, so there's unlimited precision for these). The test cases list the input as 00000010100101000001111010011100. The actual input is instead 43261596. The problem wants you to convert from an int to the bit representation, reverse it, then convert back. And that would be fine if that's what the problem said to do! But instead it describes being given an incomplete string representation of a 32 bit number, filling it out with any missing leading zeroes, reversing it, and converting it to a normal int.I don't like having my time wasted by imprecise or actively misleading problem descriptions. Half the difficulty here comes from guessing what the writer meant and failed to articulate, not from writing the actual algorithm."
+"maximum-number-of-events-that-can-be-attended
+",78,77,"Surely, because you can only chose 1 event to attend in a day
+So because all events start at day 1 and end at day 2
+so if you chose one of them to attend at the first day and another one to attend at the second day, so the answer is 2
+Because after two days all event will end","Jul 15, 2023",0,ychaaibi,0,"Jul 15, 2023","[[1,2],[1,2],[1,2],[1,2],[1,2]] , Expected Output :- 2 , Why ?😥 Description is unclear"
+"maximize-the-total-height-of-unique-towers
+",11,9,Location?,"Sep 29, 2024",0,abhisek169,7,"Sep 28, 2024",The exact same problem was asked in Microsoft OA for intern 2024.
+"apply-operations-to-make-two-strings-equal
+",23,20,your string also is in part of the state 🧐,"Oct 08, 2023",3,vijay97,1,"Oct 08, 2023",I SOLVED IT BUT WAS UNABLE TO MEMOIZE :(
+"find-total-time-spent-by-each-employee
+",9,8,@tin_le Subtle,"Jun 25, 2024",0,ByteMePlz,5,"Jun 14, 2022","Hi team,
+I first ran the code without SUM and couldn't return the total addition of 2 rows. Does anyone know the reason behind that? Thank you!SELECT event_day AS day, emp_id, (SUM(out_time) - SUM(in_time)) AS total_time
+FROM Employees
+GROUP BY emp_id, event_day"
+"min-cost-to-connect-all-points
+",119,118,"@Plasticc If you have better solution than O(n^2), please share!","Aug 29, 2023",0,atanusaha143,0,"Jun 13, 2023",Is there any solution for 1 <= points.length <= 100000?
+"number-of-good-paths
+",148,147,"is it solvable with dfs? I thought it had to be union find, which I understand to be a different algorithm","Jan 15, 2023",0,Mister_CK,0,"Jan 15, 2023","I am able to write psedo code and comprehend the question, but I am unable to properly express the dfs function. Any advise pls?"
+"minimum-number-of-operations-to-make-x-and-y-equal
+",34,31,"Operation 1: 20 / 5 = 4
+Operation 2: 4 + 1 = 5
+Operation 3: 5 / 5 = 1","Jan 06, 2024",0,yashasvi_shivansh_07,0,"Jan 06, 2024","Can someone please explain , how the correct output is 3 for x = 20 and y = 1"
+"immediate-food-delivery-ii
+",22,21,bro does it really matter? Just find out how to solve it,"Oct 04, 2024",1,MerlinXu,14,"Oct 08, 2023",It's really not a medium level ques
+"daily-temperatures
+",15,11,"@14Greets I understand exactly why my solution is too inefficient, but coming up with a better one is challenging for me.","Dec 18, 2022",3,SayYesToTrees,77,"Dec 18, 2022",the last input is bonkers
+"height-checker
+",53,52,"@IGriffin308 I know I've seen some kind of hashing algorithm somewhere before where you can reverse check which indices are included in a sum total with negligible margin for error. I'm not sure exactly how it works, but my mind goes to how a Fourier series can pull apart the simple frequencies of a complex wave form","Jun 10, 2024",0,IGriffin308,1,"Jun 10, 2024",I can clearly think of the easiest solution (as the label also says 😛). However i couldnt think of any optimization to the space complexity. Is it possible to achieve in constant space. Anybody ?
+"lowest-common-ancestor-of-a-binary-search-tree
+",12,7,Welcome to my club,"Feb 06, 2024",2,rogue66,149,"Nov 20, 2022","so this is lowest common ancestor, not smallest common ancestor. I am an idiot"
+"sequential-digits
+",11,7,@jems1123 LEET''S GOO THENNN!!,"Feb 02, 2024",0,TasneemAyham,147,"Feb 02, 2024","WHO'S WITH ME ON THE FEBRUARY BADGE GUYS??!!!
+Feb here we come!!"
+"reverse-linked-list
+",291,290,"@yassineseddaoui
+thanks.
+but if it linked list, then why in head is` Input: head = [1,2,3,4,5]","Jul 26, 2023",0,arsen172317,0,"Jul 26, 2023","Hi guys, can anyone please explain to me what's wrong with my solution, in webstorm it works well done.var reverseList = function(head,y=0) { if (y !== Math.floor(head.length / 2)) { [head[y], head[head.length - 1 - y]] = [head[head.length - 1 - y], head[y]]; // ++y; reverseList(head,y+1); } return head };"
+"count-subarrays-with-fixed-bounds
+",16,15,No it's not final. There would be others afterwards.,"Mar 31, 2024",1,sergei99,40,"Mar 31, 2024",The final boss of sliding window problems has arrived!
+"reordered-power-of-2
+",8,7,Thank you!!,"Sep 10, 2024",0,prateek_29,1,"Aug 15, 2024",in this question for TLE they have given a large integer multiple of 10. Just make a specific condition to deal with multiple of 10 100 10000 etc . Rest will run if you have a good approach.
+"frog-position-after-t-seconds
+",3,1,"You can't jump up in the tree, you can only go down and down untill you can not","Jan 25, 2023",1,Chouhan_Gourav,21,"Mar 08, 2020","8
+[[2,1],[3,2],[4,1],[5,1],[6,4],[7,1],[8,7]]
+7
+7Answer 0"
+"number-of-submatrices-that-sum-to-target
+",53,52,That's a valid point: hint's second part seems to only apply for this non-negative case.,"Jan 28, 2024",0,Dzuchun,8,"Jan 28, 2024",This would be so much easier if numbers couldn't be negative...
+"search-suggestions-system
+",16,15,As soon as you reach 3 suggestions at any level you should avoid dfs to other child nodes that will reduce your time complexity I believe.,"May 15, 2024",0,swapnildarmora,13,"May 30, 2023","binary search got 35ms
+trie got 976ms lol"
+"minimum-number-of-k-consecutive-bit-flips
+",9,6,@laggerk it's not actually. It's much harder than these two,"Jun 24, 2024",0,NDR0216,84,"Jun 24, 2024","This is an advanced version of yesterday contest question, 3191. Minimum Operations to Make Binary Array Elements Equal to One I"
+"delete-and-earn
+",16,12,@daring-calf This comment should be add in hint section. I solved the problem after seeing this😄,"Jan 29, 2024",6,ksvijayan06,84,"Dec 18, 2022",This is House Robber in disguise !! He doesn't wanna know he is trying a heist and wants us to help him/her !!
+"basic-calculator
+",43,41,"@FaangLeetcoder It looks like the question is updated, and this expression is an invalid expression now.","Nov 20, 2022",0,nirutgupta,3,"May 27, 2021","Test case:
+""+48 - -2""Answer should be 50, not 46."
+"minimum-number-of-operations-to-make-array-xor-equal-to-k
+",64,63,"Follow XOR property :-
+same bit xor = 0
+different bit xor = 1
+1 xor 1 = 0
+1 xor 0 = 1
+0 xor 1 = 1
+0 xor 0 = 0","Apr 29, 2024",1,_BREEZE_,1,"Apr 29, 2024",Can anyone tell me how to think about which bit to flip ?
+"article-views-i
+",18,17,@Amit Joshi Stop posting solutions in discussion section,"Jul 05, 2024",17,Swaraj_Kotapati,149,"Jan 09, 2023","Use this (please upvote)
+select distinct(author_id) as id from views where author_id=viewer_id order by author_id;"
+"minimum-number-of-changes-to-make-binary-string-beautiful
+",15,10,"honestly , felt like I am the clown for thinking the easiest way out","Nov 05, 2024",1,sidhanttiwari03,54,"Aug 20, 2024","did around 700+ problems(lc+gfg) never felt this much embarrased. that's direct harrasment, tried methods from divide and conquer to divide the shit into halves recursively and in the end it was just a for loop. Feeling like i'm the best clown🤡"
+"remove-k-digits
+",69,66,by seeing the topics section,"Apr 11, 2024",4,rajnish08,6,"Dec 06, 2023",how did people recognize that this question can be solved using monotonic stack ?
+"find-common-characters
+",28,25,that is what i am thinking,"Jun 05, 2024",0,khushil-7,62,"Jun 05, 2024",Why is it return vector of string not vector of char
+"find-kth-bit-in-nth-binary-string
+",130,129,There is a better solution than building the string.,"Oct 19, 2024",0,nebojsazak,0,"Oct 19, 2024","eh, nothing but pure labour"
+"clone-graph
+",19,17,@user5774bS lmaooo,"Jul 05, 2024",0,Abraham09,16,"Sep 28, 2023","lol, return copy.deepcopy(node), done."
+"non-decreasing-array
+",2,1,thanks a lot,"Jul 27, 2024",0,geine,49,"Oct 04, 2019","Hello, everybody! I'd like to provide my way of looking at this problem, will be glad to receive your feedback, guys!First, let's denote a peak index (p) the one where a drop starts (a[p] > a[p + 1]). We have to find it, and make sure that it's the only one since:"
+"design-circular-deque
+",94,93,"Don't, for god sake🤦‍♂️","Nov 16, 2024",0,Joy1654,0,"Sep 28, 2024",We can use a Deque (ArrayDeque in java) directly to solve this
+"grumpy-bookstore-owner
+",24,20,"It's not easy, so it's okay if you took 2 minutes to solve it. It's the maximum time a child would take to solve it, so a good starting point (edit: this is a joke btw)","Jun 21, 2024",12,Salt8754,100,"Jun 21, 2024",Hate it when you finally complete a question and everyone in the Discussion talking about how easy it was :(
+"largest-odd-number-in-string
+",16,15,@wiho777 xd,"Dec 27, 2023",0,eagle_322,34,"Jun 22, 2023",Hint: just search for the last odd digit
+"maximum-xor-for-each-query
+",3,1,It's more confusing than the actual logic IMAO!,"Nov 08, 2024",17,Algo_Prep04,213,"Sep 13, 2024",Bit Manipulation logics
+"reformat-department-table
+",44,42,Using plain case statements will only return one value for the same id as we are grouping by id and not the month. Using sum will return a value in all columns/months where we have revenue.,"Feb 09, 2023",1,sai_tiger,0,"Jan 21, 2023",Why do we use sum or any aggregate function in this solution?
+"construct-quad-tree
+",2,1,Same here. I hate wasting my own damn time to read this whole shit.,"Nov 04, 2024",0,jshim2705,376,"Feb 27, 2023",I don't feel like reading the whole question
+"find-number-of-ways-to-reach-the-k-th-stair
+",12,9,what does DP stand for,"Jun 08, 2024",0,unswactuarial1,17,"May 19, 2024",idk why but DP problems looks kinda easy after we see the solution .
+"interleaving-string
+",4,1,great intution 🔥🔥🎉,"Aug 25, 2023",1,Curious_hritik,139,"Mar 22, 2022","So you need to ask yourself ..why is dp used here?
+In first look this questions looks pretty simple and can be done using 2 pointers.Then you implement the 2 pointer approach and upon submission your code get a wrong ans on the below testcase.This test case then tells you why this que is asking for a dp solution.s1 = ""aabc""
+s2 = ""abad""
+s3= ""aabadabc"""
+"range-sum-of-bst
+",76,75,"class Solution {
+int sum =0;
+public int rangeSumBST(TreeNode root, int low, int high) {
+if(root==null) return 0;
+if(root.val>=low && root.val <= high){
+rangeSumBST(root.left,low,high);
+System.out.println(root.val);
+sum += root.val;
+rangeSumBST(root.right,low,high);
+}
+if(root.val<low){
+rangeSumBST(root.left,low,high);
+}
+else{
+rangeSumBST(root.right,low,high);
+}
+return sum;
+}
+}
+Same code runs perfectly fine on local enviornment on vscode.
+I don'y know how to share pictures but i'll post links to my local code plz check it out and help me plzzz","Feb 19, 2023",0,Pranshu1sati,0,"Feb 26, 2021",
+"maximum-number-of-moves-in-a-grid
+",56,55,"@AdiitYA12_1 context : he was trying to imitate you, since you wrote ""Description is poor. They could have made it better"". He just showed his disbelief in you by saying ""Comment is poor. They could have made it better"" as the description is quite clear : at least for me and for @neks too, I guess. So to criticize him on the basis of his used pronouns is not quite appropriate.","Oct 29, 2024",1,Joshi_Y,4,"Oct 29, 2024",Description is poor .They could have made it better
+"maximum-value-at-a-given-index-in-a-bounded-array
+",13,9,the numbers should be positive,"Jun 10, 2023",0,swatantrajain_02,85,"Jun 10, 2023","How I read this problem is you have n kids, maxSum dollar, and index is your special or favourite child. Need to distribute the max dollar b/w n kid with given condition. (Fev kid(index) should get max amount)"
+"best-time-to-buy-and-sell-stock-with-cooldown
+",110,109,we buy a stock on 2nd Day(price=1) and sell it on 3rd Day(price=6) so profit is 5 till now. Now we buy a stock on 6th Day (price=0) and sell it on 7th day(price=2) so profit= 5+2=7,"Dec 23, 2022",0,ayushkumarj4,0,"Dec 23, 2022","[6,1,6,4,3,0,2]
+Why is the expected outcome = 7 here?PLEASE ASSIST"
+"nth-highest-salary
+",4,1,"I take it back, For those looking for the solution make sure to put a semicolon at the end of the set expression, like this: SET N=N-1; sounds ridiculous, but that what worked for me.","Aug 18, 2023",0,Prof-xed,169,"Oct 06, 2022",None of the solutions working. It just throws Runtime error. I have tried solutions from discussions as well. Throws Runtime Error even though there is no mistake in the query. SOme leetcode bug.
+"make-the-string-great
+",221,219,"you really have to know which one is larger, but the difference itself is just mod('a' - 'A')","Apr 05, 2024",0,Hilbertmf,0,"Jan 24, 2024",Terrible problem. requires you to know that the difference between capital and small of alphabet in ascii is 32.
+"minimum-moves-to-spread-stones-over-grid
+",15,14,for sure . the difficulty is completely misleading,"Dec 22, 2023",0,gamefana,6,"Sep 13, 2023",Shouldn't this problem be Hard?
+"reorganize-string
+",67,66,"It can, you're probably reading the error logs wrong","Sep 28, 2024",0,ejini6969,0,"May 02, 2024","Can someone explain why ""vvvlo"" cannot be rearrange to ""vlvov""? and the answer is """"?"
+"count-number-of-homogenous-substrings
+",6,1,"Damn, you're right!
+Until recent time I had thought that need change ""level"" labels, but one similar to your comment told me that I have more experience... I remembered myself as beginner who struggling with easy problems.","Nov 09, 2023",2,JarKz,166,"Nov 09, 2023","Dear LeetCoders, if you find a medium/hard problem that, in your opinion, should be levelled down, please refrain from stating that in the discussion section as that will demoralize our fellow brothers/sisters. It might lead to comparisons between each other, disputes and wavering confidence.
+Remember: we were all in their place once!
+Happy LeetCoding!!"
+"combination-sum-ii
+",5,1,@ajinkode You should never be expected to guess rules from test cases using inductive logic. Obviously,"Mar 13, 2024",39,MAA1117,178,"Jan 17, 2023",where in the question is it mentioned that th ans should be in sorted order?
+"h-index
+",146,145,useful information,"Nov 23, 2024",0,harikrishnanaruchsamy,0,"Mar 07, 2024","What makes this question interesting, though, is not understanding how the h-index is calculated. 😁😁 After I read about the h-index on Wikipedia, I was able to solve it within five minutes.😊."
+"find-all-duplicates-in-an-array
+",94,92,@UmeshKumaar15 I'm at 294. So I haven't got any chance. :'( :D,"Mar 25, 2024",0,semelyik,3,"Mar 25, 2024",This problem just checks if you solved 300+ problems on leetcode. Not sure if this is a good problem to ask in the interview.
+"sum-of-matrix-after-queries
+",25,21,"I think you have traversed queries in reverse order right.. but you need to make sure that no further changes can be made on already processed row or column.
+for that you can use hashmap or a hashset
+check this testcase..","Jun 04, 2023",3,pranay318,2,"Jun 04, 2023",can anyone tell the right approach for such problem? only 2284 / 2688 passed
+"find-words-that-can-be-formed-by-characters
+",78,77,"@bunkerman For counting a single item, .count() will usually be faster because it avoids the overhead of creating an entire Counter object.
+For counting multiple items, Counter will generally be faster as it processes the iterable in a single pass.","Oct 14, 2024",0,ejini6969,0,"Dec 02, 2023","General Python doubt: why is .count() method faster than the Counter() method? The words here are short, will it overtake it in the general case or will .count() always be faster?"
+"number-of-atoms
+",326,324,@zabaxa Thanks man,"Jul 15, 2024",0,anujmore,0,"Jul 14, 2024",When do we need to add and when do we need to multiply the formula?
+"shift-2d-grid
+",3,1,For 1D array follow up is O(1) space. No such thing here.,"May 30, 2024",1,DakPrescott,31,"Aug 13, 2023",How on earth 2D array rotation is easy when 1D array rotation is medium?
+"time-taken-to-mark-all-nodes
+",23,22,"To make it simple, consider the problem as a weighted directional graph. To reach even adjacent nodes it takes 2 weight and to reach odd adjacent nodes it takes 1 weight. Goal is to find the distance/weight to reach the farthest node.","Aug 14, 2024",0,pratik2512,0,"Aug 14, 2024",Can anyone could explain about the time ?
+"non-decreasing-array
+",9,7,"LIS will not work in this case in nlog(n) 1,4,1,2","Aug 25, 2024",0,harshdeep2111,8,"Apr 19, 2023",Think of longest increasing subsequence (LIS) and use that to get the answer.if LIS>=n-1 then think what would be the result.
+"number-of-ways-to-split-a-string
+",2,1,"Thank you so much, this is very helpful!! Never thought of using prefix sum.","Dec 19, 2023",0,xeniawann,24,"Sep 05, 2020","Just in case anyone is still finding it difficult to understand the algorithm for the general case..Consider the example :-
+s = ""100100010100110""We see that there are 6 ones in the string.
+For a valid way to split,each part must have 2 ones.If we traverse the string and track the number of ones encountered so far at each index,we see:
+ones = [1,1,1,2,2,2,2,3,3,4,4,4,5,6,6]"
+"replace-employee-id-with-the-unique-identifier
+",33,32,@ikhariyafaizal I tried to use full join but it said I should check my sever version,"Jul 21, 2024",0,mosesajayi,4,"Sep 30, 2023","why can't we use full join? I've got so many bugs running it.
+SELECT EmployeeUNI.unique_id, Employees.name FROM Employees FULL JOIN EmployeeUNI USING(id);shows that Unknown column 'Employees.name' in 'field list'"
+"special-array-ii
+",10,8,us moment,"May 19, 2024",0,dinakarrajkotipalli,9,"May 19, 2024","[586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586]
+[586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823]
+Useful test cases ---
+535 / 536 test cases passed 1 Test case costs me the question"
+"range-sum-of-sorted-subarray-sums
+",69,67,Remember to mod the result by 10^9 + 7 since the sum of the subarrays can be large,"Aug 04, 2024",0,itsbi03,2,"Jul 12, 2023",I guess your 53rd test case is not correct
+"ipo
+",427,426,"For the second, we can easily explain it as the profits being ""net"" profits. That is, if we spend 20 on project X, we make 3 in net profit -- meaning we made 23 in gross profits (recouping our initial 20 of investment.)","Jun 15, 2024",0,4onen,0,"Jan 24, 2024","2 Issues with this:Another example: Test case:
+k=2, w=1, profits=[10, 2, 3, 1], capitals = [3, 1, 1, 3]I have two source codes, the one that is giving here 14 as the answer is accepted and one that gives 4 isn't."
+"find-the-safest-path-in-a-grid
+",190,189,"// 1 is correct output. Read the description carefully. Maximum Safeness factor of a path is minimum manhattan distance from a cell to a thief in path. You start journey from (0,0) position. Minimum manhatten distance from (0,0) to nearest thief is 1. The nearest thief for (0,0) is (0,1). So, your path journey start with safeness factor 1. what ever you choose any kind of path, Your safeness factor always be 1.","May 15, 2024",0,Tazri,0,"May 15, 2024","Initially I thought unique ways using bfs works and counting how I'm reaching end.but I found this case which fails it
+output is 1 instead of 2"
+"add-strings
+",27,26,"i think looping from end to start would be better. from start to end, handling the carry becomes difficult in my opinion.","Aug 23, 2023",0,pradyotprksh4,5,"Dec 26, 2022","Code is behaving differently than expected.
+`int i = num1.length() - 1;
+int j = num2.length() - 1;
+long sum = 0;
+int p = 0;
+int n1, n2;"
+"find-the-length-of-the-longest-common-prefix
+",17,14,@adityakumar8068 once again you saved me doing wrong submission :),"Sep 24, 2024",2,shubhamCraveil,39,"Sep 24, 2024",TESTCASES------------------->
+"lexicographical-numbers
+",3,1,"i had to look up the solution for this problem, i might be restarted","Sep 22, 2024",0,fergalicrizz,168,"Sep 21, 2024","oh boy i can't wait to tell everyone in 1337code how this medium should be easy, even after chatgpt solved it for me, everyone will think im so cool!"
+"longest-palindromic-subsequence
+",116,115,for which input it is giving tle?,"May 22, 2023",0,ash030,0,"May 19, 2023",Why is this giving tle?
+"min-cost-climbing-stairs
+",24,22,"Basically they are asking that, we have to return the minimum cost when we reach the top floor. If we pay the floor i cost they we can go floor i + 1 or i + 2. It depend upon our choice.
+Every floor have their cost which is stored in the cost array.","Oct 13, 2023",4,Bharat_2110301,82,"Nov 24, 2020",Can someone explain me what exactly the question is asking ? I am not able to understand the question ?
+"leaf-similar-trees
+",53,52,yes I know we could use the concept generator and yield keyword to do this beautifully in python. but is there any way to do it in c++?,"Jun 27, 2024",0,takeiteasydragon,4,"Dec 08, 2022",Is there a way that we can compare the leave one by one instead of generating all leave at once?
+"maximum-element-after-decreasing-and-rearranging
+",45,43,my thoughts exactly,"Nov 15, 2023",0,midnightnomadd,6,"Nov 15, 2023",I think the phrasing of this question is kinda odd. Doesn't the '2 adjacent elements has to be less than 1' meant that we can always have 1 as the adjacent element and the maximum be 1?
+"last-stone-weight-ii
+",54,53,Yes there is overlapping subproblem when we have stones of same weigt...,"May 07, 2024",0,Joy1654,0,"Dec 07, 2023","I have a very basic question here, what are the overlapping subproblem and optimal substructure here?I can solve it with this code, but to me this just lists all the possibilities. What is the optimal substructure here?memo = {0}
+for i in stones:
+memo = {i+j for j in memo}|{abs(i-j) for j in memo}
+return min(memo)"
+"pacific-atlantic-water-flow
+",145,143,@nikhila01 Thanks. I read it wrong. Sorry for the silly question-_-,"Jun 06, 2023",0,glard,0,"Jun 05, 2023","why does ""[3,0] -> [4,0] -> Atlantic Ocean"" work in the Example 1?"
+"maximum-number-of-darts-inside-of-a-circular-dartboard
+",9,8,Great proof. I was taking a similar approach and got to prove case 1 but never got to case 2. This is helpful,"Jan 24, 2023",0,senthilPalanisamy,5,"May 24, 2020",I wanted to give reasoning to prove why optimum circle can have atleast 2 points on its circumference without sacrificing on maximum number of points it can contain.We need to prove following two things:Proof of 1:
+"immediate-food-delivery-ii
+",202,201,"I think this is incorrect, if an individual has more than one deliveries on the same day and they both arrive immediately, it's going to boost the nominator.","Sep 04, 2023",0,cehwang1120,0,"Aug 29, 2023","Easy Solution, first get the first order details for each customer and then calculate immediate percentage:select (ROUND (sum(CASE WHEN order_date = customer_pref_delivery_date THEN 1 ELSE 0 END) / count(*) , 4) * 100) as immediate_percentage from Delivery where (customer_id, order_date) in (select distinct customer_id, min(order_date) from Delivery group by customer_id);"
+"minimum-seconds-to-equalize-a-circular-array
+",6,1,OOPS!!!,"Aug 05, 2023",0,shantanumapari17,45,"Aug 05, 2023",My face when BFS on max Frequency elements doesn't work :O
+"soup-servings
+",32,31,"I think , Lets Say
+for each move your have 4 options you can chose from them with prob 0.25 , with base case : a empty first and A and B empty together
+Variables -> A ml, B ml,
+Recurrance :","Jul 29, 2023",0,khemendra123b,8,"Jul 29, 2023",This is a DP problem. The hard part is to find out the recursive recurrence!
+"find-the-minimum-area-to-cover-all-ones-ii
+",25,24,@ag_ressive I’m bot.😂,"Jun 24, 2024",0,t38178,0,"Jun 23, 2024",Spent an hour to solve this later realizing I couldn't optimize it. One advice move on to next problem.
+"sales-analysis-iii
+",10,7,"Hey can you explain the impact group by has in the product_id 2 in the sample example given in the problem? or how does group by work generally in such scenario's.
+Any reply would be highly appreciated!!","Feb 04, 2023",0,weebhav,21,"Dec 15, 2022","Select p.product_id, p.product_name
+from Product p join Sales s
+on p.product_id = s.product_id
+group by s.product_id
+having min(s.sale_date) >= '2019-01-01' and max(sale_date) <= '2019-03-31'"
+"middle-of-the-linked-list
+",97,94,get confused at the same place.,"Jan 25, 2023",0,lelale,1,"Jan 07, 2023",Why can't you just say while fast.next rather than why fast and fast.next surely if fast.next is true fast will automatically be true too?
+"minimum-cost-to-convert-string-i
+",37,36,@briancode99 Took some time. I get what those algo did but just went off structure after recursion/memo failed without knowing should be shortest path etc.,"Jul 27, 2024",0,feng3245,17,"Dec 24, 2023",I knew it will be done by graphs and shortest path algo but still :(
+"binary-search-tree-iterator
+",3,1,"@GardientDesecnt Why would you badmouth someone whose efforts are facilitating whatever you are trying to achieve by solving problems on LeetCode, whether that is job interview prep or just becoming a better coder?","Jul 22, 2024",6,archit436,92,"Sep 18, 2023",bro who writes these
+"is-graph-bipartite
+",133,132,"should be quite simple if you draw it.
+-node 0 is connected to node 1 [1]
+-node 1 is connected to node 0 and 3 [0,3]
+-node 2 is connected to node 3 [3]
+-node 3 is connected to node 1 and 2 [1,2]
+you get the following graph:
+1-----0
+|
+|
+3-----2
+you can colour node 0 white, node 1 black, node 3 white, node 2 black
+--> the graph is bicolourable --> the graph is bipartite --> return true","May 19, 2023",0,Diyo,0,"May 19, 2023","[[1],[0,3],[3],[1,2]] can anyone please explain me this case"
+"count-the-number-of-fair-pairs
+",238,237,buddy ...the logic was spot on but how to come up with the intuition like during interview ? Thanks,"Nov 13, 2024",0,parthdesai4194,0,"Nov 13, 2024","Problem is good try to break down in two subproblemthen your answer is subProblem_2 - subProblem_1
+it give you correct answer"
+"coin-change-ii
+",153,152,The difference is the order that doesn't matter in Combination Sum 4. It's causing some problems with me.,"Sep 09, 2023",0,TasneemAyham,0,"Sep 09, 2023",this is so much similar to combination sum 4
+"count-the-number-of-consistent-strings
+",40,38,"This is a approach I have used, but I think it is generally less readable (unless you have carefully encapsulated you bit logic into a separate set of functions that show what is going on in their names). An int is generally a number not a bitmap. So even though it is slower I would generally prefer a HashMap for readability.","Sep 12, 2024",2,Oliver_Day,8,"Sep 12, 2024","If you're looking for optimizations, you can try using bit manipulation to replace your HashMapThis is possible without any significant tomfoolery because the number of letters in the alphabet is less than the size of an integer"
+"design-a-stack-with-increment-operation
+",9,7,"good luck, bro","Sep 30, 2024",0,MaxTrustis,55,"Sep 30, 2024",Today is my sessional exam but not prepared 😭
+"generate-a-string-with-characters-that-have-odd-counts
+",5,2,oh my god hahahahaahhaha,"Dec 03, 2023",0,Mouli_ch,61,"Dec 23, 2020","If interviewer give you such question, I think you could quite the interview directly. because this company will collapse in some day!"
+"island-perimeter
+",82,81,I think you forgot a boundary += 4 somewhere.,"Apr 18, 2024",0,psionl0,3,"Mar 22, 2023","Here is the hint...
+If the current cell value is 1. Check for all four direction and just check for the edge cases i.e, out of boundary
+if(grid[i][j]==1){
+if(i>0 && grid[i-1][j]==1) boundary--;
+if(i<row-1 && grid[i+1][j]==1) boundary--;
+if(j>0 && grid[i][j-1]==1) boundary--;
+if(j<col-1 && grid[i][j+1]==1) boundary--;
+}"
+"delete-duplicate-emails
+",247,246,"Please read carefully the statement in the description: Delete all the duplicate emails, keeping only one unique email with the smallest id.
+For SQL users, please note that you are supposed to write a DELETE statement and not a SELECT one.","Jul 25, 2023",0,0x49D1,0,"Jul 25, 2023","why its not working: SELECT DISTINCT id, email from Person;"
+"final-prices-with-a-special-discount-in-a-shop
+",37,36,"you donot have to find the smallest element but have to find the smallest ""closest"" element","Aug 02, 2024",0,akhil_767,0,"Jan 29, 2024","Input: prices = [8,4,6,2,3]
+Output: [4,2,4,2,3]Shouldn't the ans[0] be 2 since 2 > 0 and 6 <= 8. Wouldn't this solution be better than Example 1?"
+"binary-tree-tilt
+",16,15,That's the tilt for the root node. You need to compute the tilts for all nodes and return the sum of all of these tilts.,"Feb 22, 2023",1,deleted_user,2,"Jan 30, 2019",So when this tree is visualized it looks like
+"integer-break
+",29,27,Splits will be n/x,"Oct 06, 2023",5,V1j1g15hu21,8,"Oct 06, 2023","Tips:-We need to split any number into some specific smaller number to get maximum product.Say we have a number n, we split it into only x's. So there will be total (x/n) splits.The product will be, p = x^(x/n).To get the maximum of p, we need dp/dx then equate it to 0."
+"longest-turbulent-subarray
+",25,24,Because we need to find the subarray not the subsequence.,"Jul 03, 2024",0,bhanunegi420,0,"May 26, 2024","Input: arr = [9,4,2,10,7,8,8,1,9]
+Output: 5
+Explanation: arr[1] > arr[2] < arr[3] > arr[4] < arr[5]
+why the output is not [9,4,9,8,10,1,2] length = 7 ."
+"binary-search-tree-iterator
+",34,33,It is unbelievable that the only meaningful message is situated the third page only.,"Sep 28, 2024",0,andreysolovyev_ssd,2,"Jul 20, 2024","If you store all values into a stack or a list, it would require O(N) extra space. Try Morris traversal method and use node.right as the next node."
+"create-hello-world-function
+",32,30,"bro not console.log it directly return
+joke or what idk","Jul 04, 2024",1,Pratikkale26,18,"Nov 20, 2023",been on this for 3 hours now
+"repeated-substring-pattern
+",119,117,"Impossible, all valid testcases have to be at least size 1.","Aug 27, 2023",0,andykimchris,0,"Aug 26, 2023",I am getting a timelimit exeeded error on last testcase 129 and the intersting thing is the input is empty. can anyone tell me what to do?
+"actors-and-directors-who-cooperated-at-least-three-times
+",48,46,runtime error,"Dec 28, 2022",0,Apica_Sharma,0,"Dec 28, 2022","select actor_id, director_id
+from ActorDirector group by 1,2
+having count(*)>=3"
+"minimum-time-to-make-rope-colorful
+",60,59,yeah bro even I thought why we need dp here they should try to keep things as simple as possible,"Dec 27, 2023",0,Ashish_4k,1,"Dec 27, 2023",tf is dp in the problem tags?????
+"remove-element
+",470,469,"Great!
+Now lets read the rules together.","Aug 26, 2023",0,georgezakharov,0,"Aug 26, 2023","class Solution {
+public:
+int removeElement(vector& nums, int val) {"
+"power-of-three
+",2,1,@mikocot You write another program (in something like python) to write the code for you. ;),"Nov 10, 2024",0,stirfoo,180,"Aug 03, 2023",I was going through the the submissions and I found this hilarious :)))
+"find-in-mountain-array
+",257,256,i did that first and i made many calls to MuntainArray.get(). finding peak is the best way i suppose,"Oct 12, 2023",0,crm2704,0,"May 18, 2023","Can I just find the middle element and then perform binary search in the ascending half? If element is not present in the ascending half, then I will perform binary search in descending half. If not present in both, return -1.Why are people solving by finding the peak element? Can I solve it with my approach? Thanks in advance"
+"minimum-increment-operations-to-make-array-beautiful
+",24,23,You haven't returned dp[n] in the fourth statment of your code.,"Oct 30, 2023",0,Chakit_Bhandari,0,"Oct 30, 2023","I don't know why am I getting TLE if I do recursion + memoization from the end and when I start it from front of array it worked. Please check if I am missing something in this code:`class Solution {
+public:"
+"diagonal-traverse-ii
+",27,25,"Because u are traversing each element one time and total element are N , Time complexity will be O(n).","Nov 22, 2023",1,Bharat_2110301,6,"Nov 22, 2023","Can someone please explain :Why is the complexity of this part O(N) not O(N^2) Please🙏 I am so confused
+My whole life has turned upside down ⬆️⬇️
+I feel I have been betrayed 😠😒😡🥹🥹🤬"
+"rearrange-spaces-between-words
+",3,1,passed it on 2nd attempt,"Feb 05, 2024",0,brahmp98,10,"Dec 07, 2022",Why this question is marked as easy ? (-_-)
+"find-mode-in-binary-search-tree
+",112,110,returned array doesn't count as extra space.,"Nov 01, 2023",0,neks,0,"Nov 01, 2023","""Could you do that without using any extra space?"" No, because the return value requires initializing a new array."
+"maximum-points-after-collecting-coins-from-all-nodes
+",17,12,Not divide by 2. Add another parameter that stores how many times the second operation is used in the current subtree. Second operation divides all coins in the subtree by 2. If second operation is executed twice then some of the nodes will have their coins divided by 4.,"Oct 29, 2023",0,gautamsw5,0,"Oct 29, 2023","Can someone tell me why this code isn't valid? It fails on this testcase:
+edges = [[0,1],[2,1],[3,0],[3,4],[5,0],[6,4],[7,1],[6,8],[9,5]]
+coins = [9,0,9,6,7,6,5,7,1,10]
+k = 7
+Output: 15
+Expected: 14"
+"evaluate-reverse-polish-notation
+",107,106,stack concept itself is a medium level. so most of the questions tagged will be medium. Same goes with trees🌲and graphs 📈 basic questions.,"Jan 30, 2024",0,jangbahadur,0,"Jan 30, 2024","Why is this medium question?
+Just a simple stack implementation.
+It should be tagged as easy."
+"monthly-transactions-i
+",38,37,"As others have pointed out, you can use the month reference in the group by statement instead. Saves one duplication.","Jul 12, 2024",0,davidzwa,1,"Jun 18, 2024","Select DATE_FORMAT(trans_date,""%Y-%m"") as month,country,
+count(*) as trans_count,
+sum(case when state='approved' then 1 else 0 end ) as approved_count,
+sum(amount) as trans_total_amount,
+sum(case when state='approved' then amount else 0 end ) as approved_total_amount
+from Transactions
+group by DATE_FORMAT(trans_date,""%Y-%m""),Country"
+"minimum-amount-of-time-to-fill-cups
+",23,21,well using the sort function makes the time nlogn,"Aug 15, 2024",0,e4_c5_c3-1-0,0,"Apr 14, 2023","I don't get why most solution use brute force... It's 2 simple steps. Here's mine, beating 100% in time and memory (O(1) in both). Leave a star if it's helpful.
+https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/solutions/3416051/fully-explained-o-1-o-1-beats-100/"
+"shortest-path-in-binary-matrix
+",19,15,The length of a clear path is the number of visited cells of this path. So you are visiting two cells hence answer is 2,"Jun 18, 2023",0,himral_garg_235,16,"Jun 30, 2019","[[0,1],[1,0]] my output is 1 because we can reach diagonally in one step
+why it is 2"
+"count-the-number-of-fair-pairs
+",230,229,same boat.,"Nov 13, 2024",0,RedGreenPanda,0,"Nov 13, 2024",Use Binary Search o.w. TLE on 47/54
+"shortest-subarray-with-or-at-least-k-ii
+",56,55,same... this one is really tricky with super long windows.,"Nov 10, 2024",0,okraus42,6,"Nov 10, 2024",This Still hurts me
+"string-to-integer-atoi
+",371,370,"This problem doesn't really have edge cases. The description gives you a precise algorithm to implement. If some tests cases fail, don't try to fix them one by one. Read the algorithm again and find where you made the mistake in the implementation.","Feb 15, 2024",2,FXCastells,0,"Feb 15, 2024","I would give this problem a big thumb down. After wasting more than an hour, still it has hidden multiple edge cases. WTF!
+Could have used this time to solve other better problems. Please don't waste your time on this."
+"number-of-dice-rolls-with-target-sum
+",159,158,Me fr,"Dec 26, 2023",0,amanguptaeg7890,0,"Dec 26, 2023","Who is going to play with 30, 30 faced dices."
+"find-all-duplicates-in-an-array
+",71,68,no need of using count,"Feb 22, 2024",0,aaditya_981100,7,"Jan 24, 2021",
+"find-the-minimum-area-to-cover-all-ones-ii
+",29,24,it was the last problem,"Jun 23, 2024",6,shubhamt45054,0,"Jun 23, 2024",Spent an hour to solve this later realizing I couldn't optimize it. One advice move on to next problem.
+"lemonade-change
+",27,25,Thanks Man. It worked,"Aug 15, 2024",0,deepc8994,56,"May 01, 2024","Hint:In this problem (and in real life situations too, if you are making cash transaction regularly). always use largest denomination money first for giving the change. If you don't have it, keep going one denomination level lower, until you have one."
+"running-sum-of-1d-array
+",47,45,"this way is not good. it changes the input array ""nums"", and makes the meaning of ""runningSum"" different.","Jan 06, 2024",0,LucasLin126,3,"Nov 13, 2022","For C, you can do it in place without having to malloc the new array."
+"sort-integers-by-the-number-of-1-bits
+",22,21,"@WaI2k2 fr man, this is definitely hardtober","Oct 30, 2023",0,subhajitrajak,3,"Oct 30, 2023",After HARD work they finally let us rest in EASY.
+"valid-anagram
+",190,189,"@Uttam In the last loop, you're only checking characters from s against their counts in t. If t contains characters not present in s, it won't catch that.","Oct 21, 2024",0,ejini6969,0,"Jan 30, 2024","class Solution {
+public boolean isAnagram(String s, String t) {
+if (s.length() != t.length())
+return false;"
+"greatest-common-divisor-of-strings
+",6,1,"@TheFuriousSnail It's easy to misunderstand what ""greatest common divisor"" means if you're math is rusty. It would've been better worded with something like, ""What's the smallest repeating set of characters?"" LeetCode would be more helpful if the questions were written in laymen terms with real world problems instead of this weird CS major terminology.","Sep 22, 2023",15,corysimmons,725,"Dec 03, 2022",Problem is poorly stated
+"sliding-puzzle
+",227,226,@jsun303 dude why do we both have the same profile pic lol!! Kaori for the win,"Nov 07, 2024",1,marcApollo,0,"Apr 16, 2024","d*mn, I'm so stupid"
+"snapshot-array
+",100,99,"upper_bound() for pair(x, y) will return an iterator pointing to the position of pair
+(i) whose first value is equal to x and second value is greater than y.
+or
+(ii) whose first value is greater than x.","Jun 11, 2023",0,vivekpande0512,0,"Jun 11, 2023","Why INT_MAX is used in target pair of upper_bound function ?How upper bound will compare and return?auto it = upper_bound(historyRecords[index].begin(), historyRecords[index].end(), make_pair(snap_id, INT_MAX));"
+"maximum-69-number
+",11,9,lol true,"Nov 07, 2022",1,raunak51299,78,"Nov 07, 2022","Not sure about NNN streak, but guys let's not break lc daily challenge streak"
+"maximum-number-of-coins-you-can-get
+",7,6,"let's say there is a distribution for {9,8,3}, {7,6,2}, {5,4,1} now the alice will take 9,7,5 and you will take the second largest which will comes out to be 8,6,4 which is equal to 18. So the answer to this is choose the smallest to give it to the bob and doing so will boost your profit.",10 hours ago,0,Vedant_Tiwari,35,"Dec 26, 2022","I don't understand why for this test case: [9,8,7,6,5,1,2,3,4], the expected output is 18 and not 15?
+When ordered:
+[1,2,3,4,5,6,7,8,9]
+The coins the second person is choosing would be 2, 5 and 8 which = 15?"
+"strong-password-checker
+",37,34,"Your solutions leaves:
+bbaaaaaaaAaa1acccc. which still leaves a ton of repeats: I would solve it as such:","Dec 12, 2022",5,OchEric,2,"Oct 06, 2022","""bbaaaaaaaaaaaaaaacccccc""
+can be fixed by:bb | no change
+aaa #1 | delete a character
+aaa #2 | delete a character
+aaa #3 | delete a character
+aaa #4 | capitalize a character
+aaa #5 | replace character with number
+ccc #6 | delete a character
+ccc #7 | delete a character"
+"design-neighbor-sum-service
+",21,20,watch any Leetcode guide tutorial about how to use this on Youtube.,"Aug 10, 2024",0,BlackPearl7703,0,"Aug 06, 2024",Hi i'm new i can't find a space where i can write my solution please help me i wanna solve it but can't find where
+"path-with-maximum-probability
+",238,236,"Best time to do this was yesterday, and guess what the second best time to do it is today...🙂","May 21, 2024",2,Joy1654,1,"Jun 28, 2023",I just wish that I should have spend more time on leetcode during college. I just can't figure out problems without looking at solutions.
+"dota2-senate
+",81,79,,"Aug 14, 2024",2,AlexanderPershin,3,"Nov 21, 2022","for those confused by how ""DDRRR"" is a D victory,
+In the first round the 2 Ds get to go first and eliminate 2 of the Rs,
+but the last R has yet to go, so it's equivalent to ""RDD"" which is a win for D"
+"longest-uncommon-subsequence-i
+",10,9,You are a hero,"Oct 28, 2024",0,strobobrain,32,"May 17, 2023","Wow, what a stupid way to ask if both strings are equal. If not, return the longer length."
+"reverse-string-ii
+",11,9,"basically u r supposed to reverse k elements from starting and then skip k , and swap next k .. and so on Happy Coding","Aug 03, 2024",1,Aryan22122,81,"Feb 21, 2023",Is it me or you also didn't understand the Q's
+"teemo-attacking
+",6,1,tf is wrong with you mate?,"Jan 30, 2023",9,satyam_rai15,34,"Sep 29, 2020",this is greatest leetcode question #1 ever xDI will wear Teemo hat I bought at the 2016 LCS in Los Angeles while doing this problem ^^
+"count-all-possible-routes
+",82,80,"@marcus121 ah i get it. so you save some time if your fuel is less than d if d is the maximun distance between cities. but if your starting fuel is much larger than d you are not actually saving much time becasue you still need to go over the whole loop most of the time.
+So, does the sorting and the O(1) to O(log n) increase of indexing time really worth the trade off?","Jun 25, 2023",0,Kaltu,0,"Jun 25, 2023","The leetcode proposed solution has O(n^2 * fuel) time complexity, where n = len(locations). However, sorting the locations array should decrease that."
+"maximum-difference-between-node-and-ancestor
+",51,49,"@bhuppidhamii just use stack and store (node, min, max)","Jan 11, 2024",0,phamtuan199911,5,"Dec 09, 2022",An interesting variation would be to solve without using recursion.
+"take-k-of-each-character-from-left-and-right
+",217,215,"In the first test case k=2, you gotta remove a character from left or right, so that a,b and c's occurance is >= 2. First they remove 2a's and 1b from left (3 steps). Now the count is a =2, b = 1, c =0 and string is 'aaaacaabc'.","Nov 20, 2024",1,s0m3_1,0,"Nov 20, 2024",am i the only one who cant understand the problem like what they are asking....??????
+"to-be-or-not-to-be
+",149,148,"This looks correct to me. Note, if you've not done error handling in js before it's expected to see an error message in the console for your second statement expect(5).notToBe(5); because expecting 5 not to equal 5 is an (expected) error.","Feb 18, 2024",0,akthrow,0,"Feb 11, 2024","var expect = function(val) {
+return {
+toBe: (val2) => {
+if (val === val2) return true;
+else throw new Error(""Not Equal"");
+},
+notToBe: (val2) => {
+if (val !== val2) return true;
+else throw new Error(""Equal"");
+}
+}
+};"
+"diameter-of-binary-tree
+",79,77,i just started trees yesterday so its very usefull for me,"Feb 27, 2024",1,Ajay019,3,"Feb 27, 2024",confirmed tree week guys.
+"minimum-common-value
+",14,12,@IamHazra This is not luck. This is what happens when you study in a boys only school X_X,"Mar 09, 2024",0,Zag495,38,"Mar 09, 2024","A Friendly Tips -
+Don't use HashSet:- It's not optimal
+Brute Force:- TLE
+Use 2 Pointer:- Imagine nums1 as your Crush and nums2 as You, embarking on your journey together. When your Crush finds something common with You, she will respond by saying, 'You deserve better.'Another Tips : use this to get a better run time-
+if (nums1[nums1.length-1] < nums2[0] || nums2[nums2.length-1] < nums1[0]) return -1; //In Java"
+"best-team-with-no-conflicts
+",28,25,"I did the same thing basically except the reverse (min age and go on scores highest -> lowest), got time limit exceeded...","Jan 31, 2023",2,dev-null0,9,"Jan 31, 2023","You can treat it as yet another ""take - don't take"" DP. The DP parameters can be the current index and the current maximum age considered. You should of course sort it before doing the DP."
+"sort-integers-by-the-number-of-1-bits
+",89,88,@psionl0 kinda annoying,"Oct 30, 2023",1,shivasaineelam,-1,"Nov 06, 2022",https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/solutions/2329760/google-netflix-interview-optimized-code/
+"maximum-swap
+",106,105,"it is easy try two pointers concept you will get the answer and pass all test cases
+i think you got 9193 answer
+expected answer is 9913
+you will have to interchange digits once and get max value
+try to interchange 0th index and 2nd index
+you will get the answer correctly
+to solve this run second loop from right to left","Oct 17, 2024",0,Sai_govinda,1,"Feb 20, 2023","Can someone tell me why inputting 1993 into the maximumSwap expects the output as9913,I do not get it from the example 2`
+Input: num = 9973
+Output: 9973
+Explanation: No swap."
+"kth-distinct-string-in-an-array
+",154,153,"Because you are counting strings that appear an odd number of times, not just those that appear one time.","Aug 05, 2024",0,amproulx,0,"Oct 03, 2023","why is my code not working?class Solution {
+public String kthDistinct(String[] arr, int k) {
+LinkedList ok = new LinkedList<>();
+int i;
+for(String s :arr)
+{
+if(!ok.contains(s))
+{
+ok.add(s);
+}
+else
+{
+ok.remove(s);
+}
+}
+if(k>ok.size())
+return """";
+return ok.get(k-1);
+}
+}"
+"find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance
+",5,4,I have to change my system theme to light to see the picture.,"Jul 26, 2024",0,renjuashokan,219,"Feb 15, 2024",Images background should be white. In dark theme it's not look properly.
+"split-linked-list-in-parts
+",187,186,You need to traverse to know,"Sep 08, 2024",0,JCeccarelli,0,"Feb 01, 2024",but we aren't even given the number of nodes. how are we supposed to know the total without actually trasversing?
+"swapping-nodes-in-a-linked-list
+",103,102,It's gonna be a good week to earn points them LOL,"May 15, 2023",0,rayrogar,0,"May 15, 2023",This week gonna be a Link list week. Lol
+"number-of-provinces
+",41,39,"It's the adjacency Matrix form of a graph..[1,1,0] means node 1 is connected with node 2","Jan 10, 2023",2,deleted_user,8,"Nov 13, 2018","I just don't understand the question at all. Does it form a friend circle if they are direct friends or indrect (or either) ?In case of
+[[1,1,0],
+[1,1,0],
+[0,0,1]]How does 2nd student themself form a circle without another friend ?Someone please enlighten me"
+"divide-array-into-arrays-with-max-difference
+",98,95,The 2nd sentence says,"Feb 01, 2024",0,aitachii,1,"Feb 01, 2024","With nums = [1,3,3,2,7,3], k = 3, why can't we return [1, 2, 3] [3, 3] [7]? Why does it say it's not possible to divide the array satisfying all conditions?"
+"find-eventual-safe-states
+",42,41,to reverse the graph,"May 02, 2024",1,QuantumMIT,2,"Jul 12, 2023",Most of the solution in solutions tab are creating adj list again even though they have already given us the adj list XD
+"minimize-the-maximum-difference-of-pairs
+",56,53,@r_y_s ok got it thx buddy,"Apr 10, 2023",0,Mek_san,5,"Apr 10, 2023","nums = [8,9,1,5,4,3,6,4,3,7]
+p =4
+my o/p is 2
+expected is 1
+can anyone explain how?"
+"sum-of-left-leaves
+",83,81,I'm guessing that an interviewer wouldn't jump up and down with joy if you do that. Modifying an input is far less acceptable outside of leetCode (although returning a modified input is sometimes acceptable).,"Apr 15, 2024",1,psionl0,0,"Apr 14, 2024","Anyone Tried it by calculating height of each node? coz I did
+is that ok to modify TreeNode object to add height variable in that object if this question comes in interview?"
+"count-and-say
+",19,17,you look like geek,"Sep 08, 2023",0,DamianIvanochko,8,"Sep 07, 2023",Count and...
+"check-if-point-is-reachable
+",12,11,gcd gives the final result that you would get after successive subtraction.,"Jan 24, 2023",0,quorarowdy,1,"Jan 21, 2023","Can anyone explain the logic behind the solutions? If we try moving from target to (1, 1) won't both operations be reversed. I see people reversing the first operation, but still using the gcd for the subtraction part."
+"longest-subarray-of-1s-after-deleting-one-element
+",115,114,oh nvm,"Sep 11, 2023",0,mkaradeniz,0,"Sep 11, 2023",it says 'you should delete one element from it.' but there are cases without 0's.
+"valid-palindrome-ii
+",46,43,brother it is O(n^2) solution,"Aug 14, 2023",12,iamsagarmaheta,2,"Mar 01, 2023","Any reason why this soulution gets timeout? For me it looks like its O(n) time, but it fails at one case' `class Solution {"
+"distribute-coins-in-binary-tree
+",49,48,"""Acceptance rate is high bcz No one tried it by themselves. so don't get demotivated."" - https://leetcode.com/problems/distribute-coins-in-binary-tree/description/comments/2175750","May 18, 2024",6,UberNoober,33,"Aug 18, 2023",The acceptance rate 72%🥲
+"make-sum-divisible-by-p
+",58,56,yes i did also,"Oct 03, 2024",0,CO2ANNU,13,"Oct 03, 2024",Using sliding window but failed...
+"best-poker-hand
+",10,9,"Great idea, I started doing this but then decided to check for the flush first and then continue with 1 table after that to avoid having to store all ranks and suits","Aug 06, 2024",0,quinnblackford,0,"Mar 29, 2024",Funny challenge...
+"maximum-total-damage-with-spell-casting
+",134,133,@Antriksh_Telang got it. Thanks.,"Jun 16, 2024",0,slow_pointer,-1,"Jun 16, 2024","[7,1,6,3] should have a max of 11 as in 7,1,3
+In a testcase it's giving max as 10."
+"course-schedule
+",116,115,"In this problem, the courses are represented as integers from 0 to numCourses-1. So when numCourses is 3, the possible courses are 0, 1, and 2.","Jul 13, 2023",1,bparanj,1,"Jul 20, 2019","3
+[[1,0]]how is this possible to return true? Doesn't this mean that we want to take 3 courses, but there are only 2 courses in the list? There are no cycles in the graph, but there are only 2 nodes?"
+"non-overlapping-intervals
+",42,41,"@bparanj optimal solution for [[1, 5], [2, 3], [3, 4], [4, 5]] is 1 removal, not 0.","Aug 30, 2024",1,shoehorn42,7,"Nov 01, 2016","It's easy to think that:I know how to do it in greedy in O(nlgn) time, but I wonder why this cant work...
+This idea failed in the last test case(that with 10k inputs).I can't figure out why... Can someone help me?please...?
+Thanks your time for seeing these. Thank you~"
+"apply-operations-to-maximize-score
+",26,25,@letitbesb how 17 and 13 picks 2? nvm parsed 1 incorrectly,"Aug 17, 2023",0,pandawwq,0,"Aug 13, 2023","Could someone verify if the following picks are correct?[6,1,13,10,1,17,6]
+27"
+"delete-nodes-from-linked-list-present-in-array
+",12,9,"nuh uh, idk shit about linked lists, i hate it","Sep 06, 2024",1,winnerman,36,"Jul 14, 2024",After soo many year a linked list question in a contest is a pure blessing .. Thanks LeetCode...
+"water-bottles-ii
+",5,1,There is a loop hole in it as well.,"Jul 10, 2024",0,anuraggulati241,60,"Mar 31, 2024","Another nonsense problem description, brought to you by Leetcode's desire to publish as many poor-quality questions as possible."
+"minimum-remove-to-make-valid-parentheses
+",6,1,@PotatoKing_TheFirst yep I also didn't use,"Apr 06, 2024",0,kartikeyoz,75,"Jun 04, 2023",Finally solved a stack string medium question without help !!
+"couples-holding-hands
+",15,14,agreed like the solution is kinda easy can be done in o(n) easily.,"Oct 08, 2024",0,Deekshant_Singhal,0,"May 22, 2024",should definetly be marked easy same as cf div 1 questions
+"minimum-operations-to-make-binary-array-elements-equal-to-one-i
+",35,34,"yes, for example if you have an element x and you XOR it with y:
+x ^ y = z (assume)","Jun 23, 2024",1,lakkshyag,1,"Jun 23, 2024",Why do the single for loop solutions work when the solution says the procedure can be repeated any number of times? Is it some property of ^= ?
+"lexicographically-smallest-string-after-substring-operation
+",61,60,"Since we have to perform the operation once, need to change the last 'a'","Jun 11, 2023",0,ShashankBhat,0,"Jun 11, 2023","The question is not clearly defined. At one point, it says to form lexicographically smaller strings but has ""aaaa.."" as an invalid testcase."
+"path-with-minimum-effort
+",136,135,"Problem is not in including commented line . Try running your code with that line you will still not be able to pass last test case. This is all because there is problem in your code while calculating and updating dist[nrow][ncol] . Take example, dist[nrow][ncol] is 6, your pcost is 3 , you go inside if with hope that pcost till now with current path is less so can go on this next step nrow,ncol with either this max value in this path or if diff=difference bwtween row,col and nrow,ncol is less than dist[nrow][ncol] even if diff is greater than pcost .
+So you have skipped checking this part . Update your code with this and then dry run it for such an example :
+int diff=max(abs(heights[nrow][ncol]-heights[row][col]),pcost);
+dist[nrow][ncol]=min(dist[nrow][ncol],diff);
+pq.push({dist[nrow][ncol],{nrow,ncol}});
+Hope this help you!!","May 27, 2023",0,sandhya_yadav,0,"Feb 08, 2023","What is the importance of the line in my below code?
+if(row == m-1 && col == n-1) return pcost;Without this line it is not passing the last test case and the last test case so huge that it can't be debugged manually"
+"running-sum-of-1d-array
+",21,17,It’s for the caller function to determine the size of your returned result.,"Jan 29, 2023",2,ce81245ff9f3,35,"Oct 23, 2022","While coding, this problem in c, i am unable to understand what this return size argument is?
+Im new to coding."
+"number-of-sub-arrays-with-odd-sum
+",12,7,"A subarray is not defined as an array that contains a subset of the elements of the original array. It is a slice of the original array. This means that in a subarray elements must have the same neighbors as in the original array. So [1,2,3] is a subarray of [1,2,3,4,5,6,7], but [1,3,5] is not a subarray of [1,2,3,4,5,6,7].","Dec 07, 2022",1,deleted_user,4,"Dec 13, 2021","How can the sub arrays for [1,2,3,4,5,6,7] only be 16? I'm seeing 64 different subarrays that add to an odd number.[1] = 1
+[3] = 3
+[5] = 5
+[7] = 7
+[1, 2] = 3
+[1, 4] = 5
+[1, 6] = 7
+[2, 3] = 5
+[2, 5] = 7
+[2, 7] = 9
+[3, 4] = 7
+[3, 6] = 9
+[4, 5] = 9
+[4, 7] = 11
+[5, 6] = 11
+[6, 7] = 13
+[1, 2, 4] = 7
+[1, 2, 6] = 9
+[1, 3, 5] = 9
+[1, 3, 7] = 11
+[1, 4, 6] = 11
+[1, 5, 7] = 13
+[2, 3, 4] = 9
+[2, 3, 6] = 11
+[2, 4, 5] = 11
+[2, 4, 7] = 13
+[2, 5, 6] = 13
+[2, 6, 7] = 15
+[3, 4, 6] = 13
+[3, 5, 7] = 15
+[4, 5, 6] = 15
+[4, 6, 7] = 17
+[1, 2, 3, 5] = 11
+[1, 2, 3, 7] = 13
+[1, 2, 4, 6] = 13
+[1, 2, 5, 7] = 15
+[1, 3, 4, 5] = 13
+[1, 3, 4, 7] = 15
+[1, 3, 5, 6] = 15
+[1, 3, 6, 7] = 17
+[1, 4, 5, 7] = 17
+[1, 5, 6, 7] = 19
+[2, 3, 4, 6] = 15
+[2, 3, 5, 7] = 17
+[2, 4, 5, 6] = 17
+[2, 4, 6, 7] = 19
+[3, 4, 5, 7] = 19
+[3, 5, 6, 7] = 21
+[1, 2, 3, 4, 5] = 15
+[1, 2, 3, 4, 7] = 17
+[1, 2, 3, 5, 6] = 17
+[1, 2, 3, 6, 7] = 19
+[1, 2, 4, 5, 7] = 19
+[1, 2, 5, 6, 7] = 21
+[1, 3, 4, 5, 6] = 19
+[1, 3, 4, 6, 7] = 21
+[1, 4, 5, 6, 7] = 23
+[2, 3, 4, 5, 7] = 21
+[2, 3, 5, 6, 7] = 23
+[3, 4, 5, 6, 7] = 25
+[1, 2, 3, 4, 5, 6] = 21
+[1, 2, 3, 4, 6, 7] = 23
+[1, 2, 4, 5, 6, 7] = 25
+[2, 3, 4, 5, 6, 7] = 27"
+"delete-columns-to-make-sorted
+",55,54,"@kunaljainwin Lets make itmore interesting by adding
+Minimum number of columns to be deleted.","Jan 03, 2023",0,kunaljainwin,0,"Jan 14, 2019","The given problem now feels more like a programming exercise than a serious algorithm interview question.As the title, I wonder if this problem is still solvable if the description is changed to delete columns to make the remaining characters in every string sorted?"
+"two-sum
+",1204,1203,You don't have to search through a hash table for the key. You compute a hash function for the key which gives you the index in the hash table where you need to get your value. O(1).,"Jul 16, 2023",0,psionl0,0,"Nov 06, 2022","Why is hashmap/dictionary so much faster?It's just having the index stored and adressed with a number as a key, as opposed to storing the number in a list and adressing it with its index. Doesn't it still have to search through a ""list"" of keys?The description says there's exactly one solution, but that doesn't mean there aren't repeated elements which are not part of the solution. In that case, i can see why a dictionary could be faster, as the number of keys is less than the size of the list.Is the testing done with a ton of repeated elements, or is it something about dictionaries that makes them fundamentally faster? Am I missing something?"
+"remove-outermost-parentheses
+",101,100,💡 Discussion Rules,"Jun 19, 2024",0,roger2023,0,"Jan 23, 2023","class Solution {
+public String removeOuterParentheses(String s) {if(s==null || s.length()==0){int j=0, cnt=0;"
+"ipo
+",304,303,"No, you can't.","Jun 15, 2024",0,Aetherus,0,"Jun 15, 2024",Do I assume that the profits and captial are sorted lists?
+"magnetic-force-between-two-balls
+",64,63,@jyscao excatly that's shameful,"Jun 20, 2024",0,Vedant_Tiwari,18,"Nov 15, 2023","✅Ques. No. 1552
+✅Ques. No. 1870
+✅Ques. No. 875
+✅Ques. No. 1283
+✅Ques. No. 1482
+✅Ques. No. 2064"
+"count-the-number-of-fair-pairs
+",64,60,@xorrr experiencing TLE with BS. should check two pointer approach.,"Nov 13, 2024",0,RedGreenPanda,6,"Nov 02, 2023",I determined upper and lower bound using binary search .Then counted the fair pair . Isn't it right way ?
+"single-number-iii
+",98,96,GOOD EXPLANATION!,"May 31, 2024",0,rds8rds,0,"Jul 04, 2023","step 1: Find xor of all elements let ""xxor""
+step 2: Find rightmost set bit of ""xxor"" let (i) bit set
+step 3: Divide all elements into 2 set ->
+set 1 contain xor of all ele whose ith bit set
+set 2 contain xor of all ele whose ith bit is not set
+step 4 :canditate1 will be in set1 and candidate2 will be in set2."
+"erect-the-fence
+",12,7,Haha been there . I have been ignoring these type of problems :),"Nov 19, 2022",3,DumbProgrammer,45,"Nov 19, 2022",This problem is definitely gonna break my streak for this November challenge.
+"sign-of-the-product-of-an-array
+",5,1,"By the way i read, it felt to me that we are the once who has to write the signFunc(). So yeah its all about perspective.","May 02, 2023",0,Minatokun,157,"Mar 27, 2023","error: cannot find 'signFunc' in scopeThe description leads us to think there is an implemented signFunc but there isn't. We have to write it for ourselves. Just don't say ""there is a function"" where there isn't. It is a simple function, we can write it, just don't say it is already available."
+"valid-tic-tac-toe-state
+",18,17,"@garima_2605 Because O won in his last turn, but X had another turn anyway. (X has an extra mark)","Mar 13, 2024",1,alinarhip,1,"Mar 08, 2024","Why this should return false?
+[""OXX"",""XOX"",""OXO""]"
+"knight-dialer
+",29,26,LOL,"Nov 27, 2023",1,psionl0,5,"Nov 27, 2023",Can someone list all the possible outputs of example 3? i think its lazy for them to not list them as they did with example 1 and 2.
+"maximum-number-of-vowels-in-a-substring-of-given-length
+",156,155,there cannot be a substring with length < k that has more vowels than a the max substring of length k...,"May 05, 2023",1,gc-leetcode,0,"May 05, 2023","In the question is explicitly mentioned that length of substring should be of length k. However, in the testcases, it is also counting substrings whose length is less than k.Please correct this."
+"xor-queries-of-a-subarray
+",174,172,If you know bit manipulation then there is no need for hints,"Sep 13, 2024",0,Gagan121,0,"Sep 13, 2024",should be marked easy.
+"best-time-to-buy-and-sell-stock-with-transaction-fee
+",60,58,,"Jun 22, 2023",2,er245hdfvs,3,"Jun 22, 2023","Ever since i started leetcoding, i have never cracked a recursion or dynamic programming problem. Albeit I haven't tried that many. Just wanted to ask fellow coders if they had the same problem and how they overcame it. Anything deeper to know other than practice practice practice? Thank you"
+"kth-distinct-string-in-an-array
+",3,1,Upvote me 2 so I can do the same thing,"Aug 05, 2024",2,Dapperfin,147,"Aug 05, 2024","Upvote me so I can downvote people who comment ""This question was so easy"""
+"crawler-log-folder
+",294,292,"Yep, I see a stack would be useful if we needed to print the current folder, e.g. if there was a pwd operation. As that's not the case, storing the current depth is enough for the answer.","Jul 10, 2024",1,augustojr,0,"May 08, 2024","We can solve this question easily using an integer hierarchy which contains current hierarchy level. Initially, it will be 0 as it starts at main(root folder). Then we change it according to each log and the final hierarchy will be the answer.I don't get why it is tagged as stack though."
+"flip-string-to-monotone-increasing
+",25,21,@rajan_jasani9 depends on you how you implement it.,"Jan 17, 2023",1,nishant7372,41,"Jan 17, 2023","Count no. of 1's to flip on LHS + no. of 0's to flip on RHS for each index i and return minimum no. of flips.Step 1. For each index i, calc sum of (no. of 1's on LHS + no .of 0's on RHS of i).
+Step 2. Concurrently, update min when sum<min. (Perform step 1 and 2 using single loop).
+Step 3. Return min."
+"koko-eating-bananas
+",12,7,"Can't we do repeated tripling or even more? It would improve the time complexity, wouldn't it?","Nov 26, 2023",0,dimi14,1.4K,"Mar 08, 2023",double it and give it to the next monkey.
+"number-of-submatrices-that-sum-to-target
+",30,25,"What are their cheating methods? I've looked at their code, but I couldn't figure it out.","Jan 28, 2024",1,qazFatNerd,94,"Jul 20, 2019",
+"count-of-substrings-containing-every-vowel-and-k-consonants-ii
+",22,20,Didn't fail for me. Probably you applied it wrongly.,"Sep 29, 2024",3,siddharth96shukla,2,"Sep 29, 2024",why sliding window failed?? anyone please
+"list-the-products-ordered-in-a-period
+",8,5,Its a leap year,"Feb 15, 2023",1,VasudhaMishra,5,"Dec 14, 2022","can anyone tell me why we can't use
+where o.order_date between '2020-02-01' and '2020-02-28' ?"
+"domino-and-tromino-tiling
+",132,131,Time to solve it! :),"Jun 29, 2024",0,agnisharma,0,"Jan 16, 2024","will solve it after 4,5 months ... today enough time wasted"
+"number-of-good-leaf-nodes-pairs
+",32,29,"Daily Routine :
+Wake up early
+Start solving daily challenge problem
+If I solve it myself then, post the solution
+else learn from Youtube or Editorial
+again sleep ..","Jul 18, 2024",4,venkatsaikilli464,79,"Jul 18, 2024","Good morning peeps. Thought after solving question I'll sleep.
+Now after waking up, I'll solve"
+"strong-password-checker
+",7,6,They didn't wanted to hire but just play with feeble Human Resources.,"Aug 18, 2024",1,NitkarshChourasia,30,"Dec 31, 2022",Believe or not this was the first question asked in my today's interview.
+"sequential-digits
+",95,94,yeah,"Feb 02, 2024",0,Ashish_4k,0,"Feb 02, 2024","We can manually generate all the possible numbers between 10 and 10^9. Store this element in an array and then traverse through the array to check whether each element is in the range.All possible candidates(36):
+{12,23,34,45,56,67,78,89,123,234,345,456,567,678,789,1234,2345,3456,4567,5678,6789,12345,23456,34567,45678,56789,123456,234567,345678,456789,1234567,2345678,3456789,12345678,23456789,123456789}"
+"reverse-string-ii
+",24,23,thank buddy,"Jun 18, 2024",0,atharv123_aj,14,"Mar 11, 2023","QuestionSimplified:
+We've given a string s and integer k,
+we've to do some operations on that string
+But there are some condtions which is as follows:Case−I : for every 2 * k characters of that string s reverse the first k characters then go for another 2k chars and reverse the first k chars and go on..Case−II : while doing case-i if few chars are left and that chars are not eqaul 2k then if they lie in the range of k to 2k (k included) then reverse the first k chars and dont do anything on other chars."
+"find-the-child-who-has-the-ball-after-k-seconds
+",13,12,"Yes, we can but it might be difficult to get the maths solution quickly in an interview","Jun 10, 2024",0,Sarichi,5,"Jun 09, 2024",You can solve this in one line using math
+"minimum-penalty-for-a-shop
+",65,63,"Your approach is already efficient. However, small optimizations can be made, Pre-calculate the count of 'Y' so you don't need to decrease it iteratively, use a single loop to compute both prefix and suffix counts simultaneously. With these changes, the time complexity remains O(n), but fewer operations are performed within the loop.","Aug 29, 2023",1,janis__,0,"Aug 29, 2023","This is my approach can I optimize it even more?I traverse the string and count the number of 'Y' (count_y)
+I declare the prefix count of n to 0 and keep the idx to -1
+then I run a loop and count penalty as:
+int penalty=count_y+pre_n;
+if(penalty<minPenalty){
+minPenalty=penalty;
+idx=i;
+}
+then I check customer[i]
+if it is equal to N then suff_n++ else count_y--"
+"sentence-similarity-iii
+",178,177,@DVD_Mathadis so either prefix or suffix is optional,"Oct 06, 2024",0,muddy_danger,0,"Oct 06, 2024",Is this test case wrong ?
+"minimum-height-trees
+",29,26,"@zvilutis A linked list like graph is the best test case to understand the solution.
+A leaf node as root will give the maximum height. So we keep removing them.
+Check the Hint to know when to stop.","Apr 23, 2024",1,drdamanraaj,42,"Mar 28, 2023","hint: delete those nodes with only one connection repeatly, the only 1 or 2 nodes left are the answer."
+"maximum-length-of-a-concatenated-string-with-unique-characters
+",98,97,Good work keep it up,"Jan 23, 2024",0,mochiball123,0,"Jan 23, 2024","Solved after investing 1 hour, Finally Building some confidence in recursion :)"
+"find-the-sum-of-subsequence-powers
+",3,1,@mankisnoob 544 / 547 passed,"Mar 30, 2024",0,Kovid_krishnan_30,8,"Mar 30, 2024",Tried sorting + backtracking but got TLE...
+"sliding-window-maximum
+",16,11,Thank you so much for sharing !!!,"May 04, 2024",0,akashrajakku,210,"Mar 02, 2021","If you are looking for explanation of the solution approach i recommend you read these two pages of
+Competitive Programmer’s Handbook - Antti Laaksonen"
+"check-if-binary-string-has-at-most-one-segment-of-ones
+",27,26,"I agree. Bad description. I could not understand why for the string """"1001"", the output should be false and for the string ""1000"", the output should be true, there are no contiguous ones in both cases, so the oneSegmentCount <= 1 in both cases, so it should be true.","May 13, 2024",0,user0329a,6,"Mar 07, 2021",i can not understand the question in anyway from description
+"possible-bipartition
+",4,1,This comment cracked me up lol,"Dec 21, 2022",6,prasflames16,102,"Dec 21, 2022",Should we return false if people hate themselves?
+"minimum-increment-to-make-array-unique
+",26,25,🤣🤣,"Jun 14, 2024",0,ROHANMANNA,97,"Jun 14, 2024","LEETCODE TESTCASES WHILE RUNNING CODE 🤡🤡🤡,
+LEETCODE TESTCASES WHILE SUBMITTING CODE 🗿🗿🗿."
+"minimum-number-of-flips-to-make-binary-grid-palindromic-i
+",5,4,"me hehe, but couldn't solve 3","Aug 04, 2024",0,neelbhatta22,2,"Aug 03, 2024",Who solved this problem
+"number-of-submatrices-that-sum-to-target
+",87,86,Why do people keep suggesting a hash map? I managed to beat 100% runtime-wise using 2D prefix sums alone. I've looked at a few hash map solutions and I genuinely can't tell what it's for.,"Jan 28, 2024",2,4onen,1,"Jan 28, 2024","Prerequisite :🧠 Maximum sum rectangle in a 2D matrix
+Hint :🧠 Prefix Sum , HashMap
+<<>>"
+"minimum-number-of-changes-to-make-binary-string-beautiful
+",196,195,"The idea is to make the whole string beautiful without splitting into alternating patterns like ""10"" and ""01"". So for ""1001"", we’d need two changes to make it ""1100"" or ""0011"".","Nov 05, 2024",0,nush22,0,"Nov 05, 2024","Confused by this question. If s is ""1001"" and it is split in two giving ""10"" and ""01"", then both substrings have even lengths and contain only 0 or 1, making it beautiful. Why is any change required? The output be 0 according to the description of the problem. Isn't any even length string containing 1 or 0 beautiful by these rules?"
+"invalid-tweets
+",79,78,Wow ......,"Feb 08, 2024",1,I_M_Varun_Singh_24,1,"Jan 23, 2024",select tweet_id from Tweets where tweet_id=2
+"ipo
+",283,279,the affordability of the project depends on the capital not on the profit so select the project with maximum profit within the range of your current capital. try to think of a data structure for that specific purpose.,"Jun 15, 2024",0,ajaydewangan,0,"Jun 15, 2024","Please help me understand why would the following give incorrect result...
+This gives incorrect result for 10th test case. Here's what I tried to do in my code:
+first I created a vector of pairs to store the capital and profit of each project together. I sorted this vector by profits in descending order so that whenever I find a affordable project I find the one which gives me maximum profit and mark it used by changing that project's capital to -1. Then I run a loop until I choose k projects or no project can be afforded in the current capital at hand.Here is the link to my code:
+https://leetcode.com/problems/ipo/submissions/1288971176?envType=daily-question&envId=2024-06-15"
+"find-if-array-can-be-sorted
+",54,49,bubba sort 🫡🫡,"Nov 06, 2024",6,shivam532004,13,"Nov 06, 2024","lets make this problem super easy , 100% beat runtime and 97% beat memory ☠️1] instead of using bubba sort or any type of sort which has O(n^2) complexity,
+use bubba sort for only one iteration i mean use only one for loop which act same as
+bubba sort
+eg :)- [3 16 8 4 2] :
+first 3 and 16 will sort & bits are also same = [3 16 8 4 2]
+second 16 and 8 will sort & bits are also same= [3 8 16 4 2]
+third 16 and 4 will sort & bits are also same= [3 8 4 16 2]
+last 16 and 2 will sort & bits are also same = [3 8 4 2 16]
+after first first loop updated array values will be = [3 8 4 2 16]
+so it means first loop work fine"
+"lexicographical-numbers
+",29,25,bruh this helps a lot ✌️✌️,"Sep 21, 2024",1,kartikgarg991,40,"May 21, 2024",For n=1000
+"maximum-difference-between-node-and-ancestor
+",111,107,7 and 0 nodes are not related,"Jan 11, 2024",0,ilya_myakotin,0,"Jan 11, 2024","[2,4,3,1,null,0,5,null,6,null,null,null,7]
+why answer is 5? why not 7?"
+"maximum-enemy-forts-that-can-be-captured
+",52,51,You cannot have your own fort in the way I believe. Though this is not mentioned as a constraint in the problem. Poorly worded.,"Sep 20, 2023",0,arkdev9,0,"Aug 26, 2023","[-1,-1,0,1,0,0,1,-1,1,0] - expected:1Wrong test case answer. You can 100% see its to, from index 3 - 6 we have 2 forts that can be captured. Why does leetcode have wrong testcases?"
+"soup-servings
+",29,24,"@radiosilence
+Thanks for the explanation.
+The way I understood it would work (counting the occurances in your detailed analysis), was:","Jul 29, 2023",2,pansysk75,10,"Jul 29, 2023",can anyone explain for n=100 how it is 0.71875??
+"filter-elements-from-array
+",109,107,"actually it says we have to keep those values who returns true (truthy value) and
+-2 + 1 = -1 (truthy)
+-1 + 1 = 0 (falsy)
+0 + 1 = 1 (truthy)
+1 + 1 = 2 (truthy)
+2 + 1 = 3 (truthy)","Jun 24, 2023",1,Pushkraj,0,"Jun 22, 2023","can someone explain why 3 example output is [-2,0,1,2] and not the [-1,0,1,2,3] if the fn function is just incrementing every arr[i] values?
+updated after 3 minutes: I understood why. Code uses if, that only checks boolean values, -1 + 0 = 0 and 0 is 'false' boolean value"
+"students-and-examinations
+",47,42,I think there is no need of grouping by student_name while you are grouping by student_id.,"Oct 27, 2023",1,Deepakkag,12,"Dec 09, 2019","/* Write your PL/SQL query statement below */select
+st.student_id,
+st.student_name,
+s.subject_name,
+count(e.subject_name) attended_exams
+from
+students st
+cross join subjects s
+left join Examinations e
+on
+e.student_id=st.student_id and
+e.subject_name =s.subject_name
+group by st.student_id,s.subject_name,st.student_name
+order by st.student_id,s.subject_name"
+"increasing-triplet-subsequence
+",161,160,"10,12,13","Sep 17, 2024",0,miparnisari,0,"Aug 29, 2024","How come [20,100,10,12,5,13] is true? Can someone please explain?"
+"arithmetic-slices-ii-subsequence
+",39,38,And so are going to be you if you keep slabbering this joke 1000-th time.,"Jan 07, 2024",5,sergei99,9,"Jan 07, 2024",leetcode intern got fired in january
+"find-kth-bit-in-nth-binary-string
+",179,178,This task is not about creating any strings whatsoever.,"Oct 19, 2024",0,sergei99,0,"Oct 14, 2023","Can someone help ? I am getting time limit exceeded.
+class Solution {
+public char findKthBit(int n, int k) {
+String str=getString(n,k);
+return str.charAt(k-1);
+}"
+"minimum-sum-of-four-digit-number-after-splitting-digits
+",46,45,Thanks for posting your solution here but not in the Solutions section.,"Mar 15, 2024",0,statucci,0,"Feb 21, 2023","class Solution {
+public int minimumSum(int num) {
+int[] nums=new int[4];
+for (int i=0; i<nums.length;i++){
+nums[i]=num%10;
+num/=10;"

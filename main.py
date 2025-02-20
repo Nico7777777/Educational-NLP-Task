@@ -13,7 +13,7 @@ import time
 import csv
 
 # FIREFOX_DRIVER = "/home/andrei.nicola/apps/geckodriver"
-FIREFOX_DRIVER = "/snap/bin/geckodriver"
+FIREFOX_DRIVER = "/home/nick/apps/geckodriver"
 PROBLEMS_FILE = "links/linkuri_probleme.txt"
 FREE_PROBLEMS_FILE = "links/linkuri_free_probleme.txt"
 
@@ -24,10 +24,8 @@ user_timeout = 3
 consent = False
 driver = None
 
-class UntrackedException(Exception):
-    def __init__(self, message):
-        self.message = message
-
+path_disc = "datasets/discussion-test.csv"
+path_prob = "datasets/problemset-test.csv"
 
 def dump_fremium_problems():
     global fremium_problems
@@ -41,10 +39,8 @@ def open_discussion():
         )
         discussion_element = driver.find_element(By.XPATH, "//*[contains(text(), 'Discussion')]")
         discussion_element.click()  # Dă click pe element
-        # print("Click pe elementul 'Discussion' efectuat cu succes!")
     except Exception as e:
         return
-        # print(f"Eroare: {e}")
 
 def get_topics() -> Union[str, None]:
     try:
@@ -57,10 +53,8 @@ def get_topics() -> Union[str, None]:
             l = tag_.get_attribute('outerHTML')
             start = l.find(">") + 1
             stop = l.find("<", start + 1)
-            # print(l[start:stop])
             return l[start:stop]
     except Exception as e_:
-        # print(f"Eroare: {e_}")
         return None
 
 def get_difficulty() -> Union[str, None]:
@@ -69,10 +63,8 @@ def get_difficulty() -> Union[str, None]:
             EC.presence_of_all_elements_located((By.XPATH, "//div[contains(@class, 'text-difficulty')]"))
         )
         tag = driver.find_element(By.XPATH, "//div[contains(@class, 'text-difficulty')]")
-        # print(tag.text)
         return tag.text
     except Exception as e_:
-        # print(f"Eroare: {e_}")
         return None
 
 def acc_sub_accrate() -> Union[tuple[str, str, str], tuple[None, None, None]]:
@@ -81,12 +73,9 @@ def acc_sub_accrate() -> Union[tuple[str, str, str], tuple[None, None, None]]:
             EC.presence_of_all_elements_located((By.XPATH, "//div[contains(@class, 'text-label-1 dark:text-dark-label-1 text-sm font-medium')]"))
         )
         values = driver.find_elements(By.XPATH, "//div[contains(@class, 'text-label-1 dark:text-dark-label-1 text-sm font-medium')]")
-        # for value in values:
-            # print(value.text)
         tup = (value.text for value in values)
         return tup
     except Exception as e_:
-        # print(f"Eroare: {e_}")
         return None, None, None
 
 def go_to_next_comment_page(drv, timeout=2) -> bool:
@@ -97,13 +86,10 @@ def go_to_next_comment_page(drv, timeout=2) -> bool:
         )
         if next_button:
             next_button.click()
-        # print("a mers ok")
         return True
     except (NoSuchElementException, TimeoutException):
-        # print(f"NoSuchElementException / TimeoutException -> cel mai probabil butonul este inactiv, semn ca este ultima pagina de discutii")
         return False
     except ElementClickInterceptedException:
-        # print("ElemetClickInterceptedException")
         return False
 
 def expand_read_more(parent_div) -> bool:
@@ -117,8 +103,15 @@ def expand_read_more(parent_div) -> bool:
     except (NoSuchElementException, ElementClickInterceptedException, TimeoutException):
         return False
 
+# TODO: trebuie ca dupa ce verific asta sa si apas pe 'Show more replies' pana cand dispare
 def has_responses(div) -> bool:
     global consent
+    while True:
+        show_more_replies_button = div.find_elements(By.XPATH, ".//*[contains(text(), 'Show more replies')]")
+        if not show_more_replies_button:
+            break
+        for button in show_more_replies_button:
+            button.click()
     while True:
         try:
             reply = WebDriverWait(div, 2).until(
@@ -128,7 +121,6 @@ def has_responses(div) -> bool:
             time.sleep(0.4)
             return True
         except (NoSuchElementException, TimeoutException):
-            # print("TimeoutException in has_responses")
             return False
         except ElementClickInterceptedException:
 
@@ -177,19 +169,32 @@ def do_consent():
         return
 
 def comment_wrapper_aux(com_anc):
-    try:
-        # class = flex w-full flex-col py-3
-        sixth_parent_div = com_anc.find_element(By.XPATH, "ancestor::div[6]")
-        # class = mt-2 flex w-full flex-col text-label-2 dark:text-dark-label-2
-        second_child_div = sixth_parent_div.find_element(By.XPATH, "div[2]")
-        # class = FN9Jv
-        fourth_descendant_div = second_child_div.find_element(By.XPATH, "./descendant::div[4]")
-        # COMMENT TEXT
-        split_comment_texts = fourth_descendant_div.find_elements(By.XPATH, ".//p")
-        return sixth_parent_div, second_child_div, fourth_descendant_div, split_comment_texts
-    except Exception as e:
-        print(f"{e}")
-        raise UntrackedException("Comment_wrapper_aux")
+    # class = flex w-full flex-col py-3
+    sixth_parent_div = com_anc.find_element(By.XPATH, "ancestor::div[6]")
+
+    # TODO: resolve stale
+    # class = mt-2 flex w-full flex-col text-label-2 dark:text-dark-label-2
+    second_child_div = sixth_parent_div.find_element(By.XPATH, "div[2]")
+
+    # class = FN9Jv
+    fourth_descendant_div = second_child_div.find_element(By.XPATH, "./descendant::div[4]")
+
+    # TODO:
+    # COMMENT TEXT
+    # read_more_button = WebDriverWait(fourth_descendant_div, 10).until(
+    #     EC.element_to_be_clickable((By.XPATH, ".//*[contains(text(), 'read more')]"))
+    # )
+    # read_more_button = fourth_descendant_div.find_element(By.XPATH, ".//*[contains(text(), 'read more')]")
+    # all_comment_text = "blablabla"
+    # if read_more_button is None:
+    #     print("Butonul de read more NU A FOST GASIT")
+    #     # Apasă pe butonul "read more"
+    # else:
+    #     read_more_button.click()
+    #     all_comment_text = read_more_button.get_attribute('innerHTML')
+
+    all_comment_text = fourth_descendant_div.get_attribute('innerHTML')
+    return sixth_parent_div, second_child_div, fourth_descendant_div, all_comment_text
 
 def get_date_(sixth_parent_div):
     date_tag = sixth_parent_div.find_element(By.XPATH, ".//span")
@@ -221,12 +226,10 @@ def get_response_upvotes(el):
 def get_response_text(el):
     try:
         wrapper = WebDriverWait(el, 10).until(
-            EC.presence_of_element_located((By.XPATH, ".//div[contains(@class, 'FN9Jv')]"))
+            EC.presence_of_element_located((By.XPATH, ".//div[contains(@class, 'mYe_l')]"))
         )
-        text_tag = wrapper.find_element(By.XPATH, ".//p")
-        text = text_tag.text
-        return text
-    except NoSuchElementException:
+        return wrapper.get_attribute('innerHTML')
+    except NoSuchElementExceptiondiscussion:
         return ""
 
 def get_description():
@@ -240,10 +243,85 @@ def get_description():
         return None
 
 def seek_for_responses(problem):
+    time.sleep(3)
     pag = 1
     comment_id = 0
-    tries = 0
     while True:
+        # Reîncercări pe fiecare pagină
+        retries = 0
+        max_retries_per_page = 3
+        page_processed = False
+        
+        while retries < max_retries_per_page:
+            try:
+                # Aici gasesc lista de comentarii
+                root_users_on_page = WebDriverWait(driver, user_timeout).until(
+                    EC.presence_of_all_elements_located((By.XPATH, "/*//a[starts-with(@href, '/u/') and normalize-space(text()) != '']"))
+                )
+
+                # Procesează comentariile de pe această pagină
+                for root_user in root_users_on_page:
+                    try:
+                        sixth_parent_div, second_child_div, fourth_descendant_div, comment_text = comment_wrapper_aux(root_user)
+
+                        # DATE & UPVOTES
+                        date, upvotes = get_date_(sixth_parent_div), get_upvotes(second_child_div)
+                        # PROBLEM NAME
+                        problem_name_ = problem[problem.rfind('/') + 1:-1]
+
+                        comment_id += 1
+                        writer_2.writerow([problem_name_, comment_id, 0, comment_text, date, upvotes, root_user.text])
+
+                        # Verifică dacă există buton "READ MORE"
+                        if expand_read_more(sixth_parent_div):
+                            print(f"\\tHAS 'READ MORE' BUTTON")
+                            if has_responses(sixth_parent_div):
+                                parent_id = comment_id
+
+                                # Navighează către răspunsuri
+                                parent_div = sixth_parent_div.find_element(By.XPATH, "..") 
+                                responses_block = parent_div.find_element(By.XPATH, ".//div[2]") 
+
+                                try:
+                                    div_elements = WebDriverWait(parent_div, 10).until(
+                                        EC.presence_of_all_elements_located((By.XPATH, ".//div[contains(@class, 'flex w-full px-3 pb-2 pt-4 transition-[background] duration-500')]"))
+                                    )
+                                except TimeoutException:
+                                    continue
+
+                                for el in div_elements:
+                                    comment_id += 1 
+                                    username = get_response_username(el) 
+                                    date = get_response_date_(el) 
+                                    upvotes = get_response_upvotes(el) 
+                                    text = get_response_text(el) 
+
+                                    writer_2.writerow([problem_name_, comment_id, parent_id, text, date, upvotes, username])
+                    except StaleElementReferenceException:
+                        print(f"Sarim peste comentariul {comment_id}")
+                        continue
+                page_processed = True
+                break
+
+            except StaleElementReferenceException:
+                retries += 1
+                print(f"Pagina {pag} a eșuat. Reîncercăm... ({retries}/{max_retries_per_page})")
+                
+            
+            if not page_processed and retries >= max_retries_per_page:
+                print(f"Nu am putut procesa pagina {pag} după {max_retries_per_page} încercări.")
+                break
+
+        if not go_to_next_comment_page(driver):
+            break
+        
+        pag += 1
+
+def seek_for_responses2(problem):
+    pag = 1
+    comment_id = 0
+    while True:
+        tries = 0
         try:
             # Aici gasesc lista de comentarii
             com_ancs = WebDriverWait(driver, user_timeout).until(
@@ -299,9 +377,6 @@ def seek_for_responses(problem):
                             writer_2.writerow([problem_name_, comment_id, parent_id, text, date, upvotes, username])
                 except StaleElementReferenceException:
                     break
-                except UntrackedException as e:
-                    print(f"{e}")
-                    break
 
             else:
                 if go_to_next_comment_page(driver):
@@ -316,10 +391,10 @@ def seek_for_responses(problem):
                 continue
             else:
                 return
-
+            
 def check_clean():
-    file_path1 = Path("datasets/discussion.csv")
-    file_path2 = Path("datasets/problemset.csv")
+    file_path1 = Path("dataset/discussion-test.csv")
+    file_path2 = Path("dataset/problemset-test.csv")
     if file_path1.is_file():
         file_path1.unlink()
     if file_path2.is_file():
@@ -328,34 +403,33 @@ def check_clean():
 
 if __name__=="__main__":
     dump_fremium_problems()
-    # print("blabla 1")
     firefox_options = Options()
-    firefox_options.add_argument("--headless")
-    # Inițializează driverul pentru Firefox
+    # firefox_options.add_argument("--headless")
+    
     driver = webdriver.Firefox(service=service, options=firefox_options)
-    # print("blabla 2")
 
-    # check_clean()
-    csv_1 = open("datasets/problemset.csv", mode="a", newline="")
-    csv_2 = open("datasets/discussion.csv", mode="a", newline="")
+    check_clean()
+    csv_1 = open(path_prob, mode="a", newline="")
+    csv_2 = open(path_disc, mode="a", newline="")
 
     writer_1 = csv.writer(csv_1)
     writer_2 = csv.writer(csv_2)
 
-    # writer_1.writerow(["Id", "Problem Name", "Description", "Difficulty", "Accepted", "Submissions", "Acceptance Rate"])
-    # writer_2.writerow(["Problem Name", "Id", "Parent_Id", "Text", "Date", "Up Votes", "Username"])
+    writer_1.writerow(["Id", "Problem Name", "Description", "Difficulty", "Accepted", "Submissions", "Acceptance Rate"])
+    writer_2.writerow(["Problem Name", "Id", "Parent_Id", "Text", "Date", "Up Votes", "Username"])
 
-    n = len(fremium_problems)
-    pb = ["https://leetcode.com/problems/minimum-cost-to-cut-a-stick/"]
-    for i in range(len(pb)):
+    testers = ["https://leetcode.com/problems/zigzag-conversion"]
+    n = len(testers)
+
+    for i in range(n):
         print(f"Problema cu idx {i}")
-        problem = pb[i]
+        problem = testers[i]
         do_consent()
-        pb = pb[i]
+        pb = testers[i]
         driver.get(pb)
 
         # PROBLEM_NAME
-        problem_name = problem[problem.rfind('/')+1:-1]
+        problem_name = problem[problem.rfind('/')+1:]
         # DIFFICULTY, TOPICS
         dif, topics = get_difficulty(), get_topics()
         # ACCURACY, SUBMISSIONS, ACCEPTANCE_RATE
