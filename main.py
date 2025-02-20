@@ -4,7 +4,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import (TimeoutException, StaleElementReferenceException,
-                                        NoSuchElementException, ElementClickInterceptedException)
+                                        NoSuchElementException, ElementClickInterceptedException,
+                                        ElementNotInteractableException)
 from selenium import webdriver
 from scrapper import *
 from pathlib import Path
@@ -55,7 +56,6 @@ def has_responses(div) -> bool:
             time.sleep(0.4)
             return True
         except (NoSuchElementException, TimeoutException):
-            print("NSEE / TLE")
             return False
         except ElementClickInterceptedException:
 
@@ -122,20 +122,14 @@ def seek_for_root_comments(problem):
                             parent_id = comment_id
                             print(f"Comentariul {comment_id} are răspunsuri.")
 
-                            parent_div = sixth_parent_div.find_element(By.XPATH, "..") 
-                            responses_block = parent_div.find_element(By.XPATH, ".//div[2]") 
+                            parent_div = sixth_parent_div.find_element(By.XPATH, "..")
 
-                            # TODO: sa apas pana cand nu mai exista butonul de show more
                             try:
-                                div_elements = WebDriverWait(parent_div, 10).until(
-                                    EC.presence_of_all_elements_located((By.XPATH, ".//div[contains(@class, 'flex w-full px-3 pb-2 pt-4 transition-[background] duration-500')]"))
-                                )
-                                print(f"div_elements size -> {len(div_elements)}")
-                                print(parent_div.get_attribute('class'))
+                                # print(parent_div.get_attribute('class'))
                                 while True:
                                     try:
                                         show_more_button = parent_div.find_element(By.XPATH, ".//div[contains(text(), 'Show more replies')]")
-                                        print(show_more_button.get_attribute('class'))
+                                        print("Dau click pe 'Show more replies'")
                                         
                                         driver.execute_script("arguments[0].scrollIntoView();", show_more_button)
                                         time.sleep(1)
@@ -148,10 +142,17 @@ def seek_for_root_comments(problem):
                                         print("elemenul nu poate fi accesat, trebuie sa dam mai mult scroll")
                                         driver.execute_script("window.scrollBy(0, 500)")
                                         time.sleep(1)
+                                    except ElementNotInteractableException:
+                                        print("Am terminat de dat click pe 'Show more replies'!")
+                                        break
 
                             except TimeoutException:
                                 continue
 
+                            div_elements = WebDriverWait(parent_div, 10).until(
+                                EC.presence_of_all_elements_located((By.XPATH, ".//div[contains(@class, 'flex w-full px-3 pb-2 pt-4 transition-[background] duration-500')]"))
+                            )
+                            print(f"div_elements size -> {len(div_elements)}")
                             for el in div_elements:
                                 comment_id += 1 
                                 username = get_response_username(el) 
@@ -161,9 +162,7 @@ def seek_for_root_comments(problem):
                                 print(f"{username} a raspuns")
 
                                 writer_2.writerow([problem_name_, comment_id, parent_id, text, date, upvotes, username])
-                        else:
-                            print(f"Comentariul {comment_id} nu are răspunsuri.")
-                        inp = input("blabla=")
+                      
                     except StaleElementReferenceException:
                         print(f"Sarim peste comentariul {comment_id}")
                         continue
@@ -212,7 +211,7 @@ if __name__=="__main__":
     writer_1.writerow(["Id", "Problem Name", "Description", "Difficulty", "Accepted", "Submissions", "Acceptance Rate"])
     writer_2.writerow(["Problem Name", "Id", "Parent_Id", "Text", "Date", "Up Votes", "Username"])
 
-    testers = ["https://leetcode.com/problems/zigzag-conversion"]
+    testers = ["https://leetcode.com/problems/zigzag-conversion", "https://leetcode.com/problems/reverse-integer"]
     n = len(testers)
 
     for i in range(n):
