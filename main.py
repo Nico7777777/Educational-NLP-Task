@@ -7,6 +7,8 @@ from selenium.common.exceptions import (TimeoutException, StaleElementReferenceE
                                         NoSuchElementException, ElementClickInterceptedException,
                                         ElementNotInteractableException)
 from selenium.webdriver.common.action_chains import ActionChains
+# from selenium.webdriver.common.cookie import Cookie
+from datetime import date
 from selenium import webdriver
 from scrapper import *
 import time
@@ -34,6 +36,7 @@ def has_responses(div) -> bool:
             time.sleep(0.4)
             return True
         except (NoSuchElementException, TimeoutException):
+            print("NSLE / TLE")
             return False
         except ElementClickInterceptedException:
             if not consent: # Consent - big white box
@@ -61,9 +64,9 @@ def has_responses(div) -> bool:
                     driver.save_screenshot("debug.png")
                     print("Butonul de consimțământ nu este disponibil.")
                     # consent = True
-                    return False
+                    return True
             else: # Google cookie - small left-bottom corner pop-up
-                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                return True
                 # TODO: Aici as putea gestiona fereastra aia mica de cookies
                 # print("Am intrat pe else")
                 # screenshot = cv2.imread("screenshot.png")
@@ -122,6 +125,7 @@ def has_responses(div) -> bool:
             #     except TimeoutException:
             #         print("Butonul de cookie nu este disponibil.")
             #         return True
+    return True
 
 
 def seek_for_root_comments(problem):
@@ -158,6 +162,7 @@ def seek_for_root_comments(problem):
                         comment_id += 1
                         writer_2.writerow([problem_name_, comment_id, 0, comment_text, date, upvotes, root_user.text])
 
+                        print(f"Suntem la comentariul {comment_id}")
                         # Check for responses
                         if has_responses(sixth_parent_div):
                             parent_id = comment_id
@@ -169,7 +174,9 @@ def seek_for_root_comments(problem):
                                 # print(parent_div.get_attribute('class'))
                                 while True:
                                     try:
-                                        show_more_button = parent_div.find_element(By.XPATH, ".//div[contains(text(), 'Show more replies')]")
+                                        show_more_button = WebDriverWait(parent_div, 4).until(
+                                            EC.presence_of_element_located((By.XPATH, ".//div[contains(text(), 'Show more replies')]"))
+                                        )
                                         print("Dau click pe 'Show more replies'")
                                         
                                         driver.execute_script("arguments[0].scrollIntoView();", show_more_button)
@@ -270,5 +277,12 @@ if __name__=="__main__":
 
 
         open_discussion(driver)
+        driver.delete_cookie("CONSENT")
+
+        # Creează un nou cookie 'CONSENT' cu valoarea dorită
+        cookie_value = f"YES+shp.gws-{date.today().strftime('%Y%m%d')}-0-RC2.en+FX+374"
+        driver.add_cookie({"name":"CONSENT", "value":cookie_value})
+        # driver.refresh()
+
         seek_for_root_comments(problem_name) # writer2 is called in-here
     driver.quit()

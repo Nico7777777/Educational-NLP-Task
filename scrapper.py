@@ -17,8 +17,8 @@ fremium_problems = []
 user_timeout = 5
 consent = False
 
-path_disc = "datasets/discussion-test.csv"
-path_prob = "datasets/problemset-test.csv"
+path_disc = "datasets/discussion-test1.csv"
+path_prob = "datasets/problemset-test1.csv"
 
 
 def check_clean():
