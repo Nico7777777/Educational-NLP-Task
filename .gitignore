@@ -3,3 +3,10 @@
 .idea/*.xml
 ./CodeforcesComments/*
 token.txt
+page_source.txt
+cookie_div.txt
+./datasets/discussion-test.csv
+./datasets/problemset-test.csv
+button.png
+debug.png
+screenshot.png

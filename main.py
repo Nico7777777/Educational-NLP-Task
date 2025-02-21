@@ -6,45 +6,23 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import (TimeoutException, StaleElementReferenceException,
                                         NoSuchElementException, ElementClickInterceptedException,
                                         ElementNotInteractableException)
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
 from scrapper import *
-from pathlib import Path
-from typing import Union
 import time
 import csv
+import cv2
 
-
-def go_to_next_comment_page(drv, timeout=2) -> bool:
-    try:
-        # drv.find_element(By.XPATH, "//button[@aria-label='next']")
-        next_button = WebDriverWait(drv, timeout).until(
-            EC.element_to_be_clickable((By.XPATH, "//button[@aria-label='next']"))
-        )
-        if next_button:
-            next_button.click()
-        return True
-    except (NoSuchElementException, TimeoutException):
-        return False
-    except ElementClickInterceptedException:
-        return False
-
-def expand_read_more(parent_div) -> bool:
-    try:
-        read_more_button = WebDriverWait(parent_div, 1).until(
-            EC.element_to_be_clickable((By.XPATH, ".//div[contains(@class, 'text-md flex w-full items-center justify-center text-label-1 dark:text-dark-label-1')]"))
-        )
-        read_more_button.click()
-        expand_read_more(parent_div)
-        return True
-    except (NoSuchElementException, ElementClickInterceptedException, TimeoutException):
-        return False
 
 # TODO: trebuie ca dupa ce verific asta sa si apas pe 'Show more replies' pana cand dispare
 def has_responses(div) -> bool:
     global consent
     
-    while True:
+    tries_responses = 0
+    max_tries_responses = 3
+    while tries_responses < max_tries_responses:
         try:
+            tries_responses += 1
             # Here we click the 'Show X Replies' button
             reply = WebDriverWait(div, 3).until(
                 EC.element_to_be_clickable((By.XPATH, ".//div[contains(@class, 'flex items-center gap-1 group shrink-0 cursor-pointer transition-colors')]"))
@@ -58,20 +36,83 @@ def has_responses(div) -> bool:
         except (NoSuchElementException, TimeoutException):
             return False
         except ElementClickInterceptedException:
-
             if not consent: # Consent - big white box
                 try:
+                    time.sleep(5)
+                    # THE FIRST BUTTON
                     consent_button = WebDriverWait(div, 2).until(
                         EC.element_to_be_clickable((By.XPATH, "//button[@aria-label='Consent']"))
                     )
                     print("Am gasit butonul de use data Consent!")
                     consent_button.click()
                     consent = True
+
+                    span_element = WebDriverWait(driver, 5).until(
+                        EC.element_to_be_clickable((By.XPATH, "//span[contains(text(), 'close') and @aria-label='true']"))
+                    )
+                    print("A mers span-ul")
+                    inp = input("STOP")
+                    html_content = driver.page_source
+
+                    # Open a .txt file in write mode and save the HTML content
+                    with open("page_source.txt", "w", encoding="utf-8") as file:
+                        file.write(html_content)
                 except TimeoutException:
+                    driver.save_screenshot("debug.png")
                     print("Butonul de consimțământ nu este disponibil.")
                     # consent = True
                     return False
-            # else: # Google cookie - small left-bottom corner pop-up
+            else: # Google cookie - small left-bottom corner pop-up
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                # TODO: Aici as putea gestiona fereastra aia mica de cookies
+                # print("Am intrat pe else")
+                # screenshot = cv2.imread("screenshot.png")
+                # button_template = cv2.imread("button.png", cv2.IMREAD_UNCHANGED)
+
+                # # Convertește în alb-negru pentru o mai bună potrivire
+                # button_gray = cv2.cvtColor(button_template, cv2.COLOR_BGR2GRAY)
+                # screenshot_gray = cv2.cvtColor(screenshot, cv2.COLOR_BGR2GRAY)
+
+                # # Folosește template matching pentru a găsi poziția butonului
+                # result = cv2.matchTemplate(screenshot_gray, button_gray, cv2.TM_CCOEFF_NORMED)
+                # min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+                # button_x, button_y = max_loc
+                # button_w, button_h = button_template.shape[1], button_template.shape[0]
+
+                # button_center_x = button_x + button_w // 2
+                # button_center_y = button_y + button_h // 2
+
+                # window_position = driver.get_window_rect()
+                # real_x = window_position["x"] + button_center_x
+                # real_y = window_position["y"] + button_center_y
+
+                # # Simulează un click pe coordonatele găsite
+                # actions = ActionChains(driver)
+                # actions.move_by_offset(real_x, real_y).click().perform()
+
+                # # Revino cu mouse-ul la poziția inițială pentru a evita probleme
+                # actions.move_by_offset(-real_x, -real_y).perform()
+                
+                # driver.save_screenshot("after-debug.png")
+
+                # iframes = WebDriverWait(driver, 4).until(
+                #     EC.presence_of_all_elements_located((By.TAG_NAME, "iframe"))
+                # )
+                # print(f"Număr de iframe-uri găsite: {len(iframes)}")
+
+                # for index, iframe in enumerate(iframes):
+                #     print(f"Iframe {index + 1}: {iframe.get_attribute('name') or iframe.get_attribute('id')}")
+                #     try:
+                #         cookie_button = WebDriverWait(div, 2).until(
+                #             EC.presence_of_element_located((By.XPATH, "//button[@aria-label='Dismiss privacy and legal settings display']"))
+                #         )
+                #         print("Am găsit butonul de cookie!")
+                #     except Exception as e:
+                #         print(f"Nu am găsit butonul de cookie")
+                #         # print(f"{e}")
+                #         continue
+                # inp = input("blabla")
+
             #     try:
             #         cookie_button = WebDriverWait(div, 2).until(
             #             EC.element_to_be_clickable((By.XPATH, "//button[@aria-label='Dismiss privacy and legal settings display']"))
@@ -184,14 +225,6 @@ def seek_for_root_comments(problem):
         pag += 1
         time.sleep(2)
         # inp = input("BLABLA=")
-
-def check_clean():
-    file_path1 = Path("datasets/discussion-test.csv")
-    file_path2 = Path("datasets/problemset-test.csv")
-    if file_path1.is_file():
-        file_path1.unlink()
-    if file_path2.is_file():
-        file_path2.unlink()
 
 
 if __name__=="__main__":
